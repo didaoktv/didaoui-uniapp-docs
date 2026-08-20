@@ -14,7 +14,7 @@ hero:
       link: /guide/quick-start
     - theme: alt
       text: GitHub
-      link: https://github.com/ddktv/DidaoUI-uniapp
+      link: https://github.com/didaoktv/didaoui-uniapp
 
 features:
   - icon: 🧩
