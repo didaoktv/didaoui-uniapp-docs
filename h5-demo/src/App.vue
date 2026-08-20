@@ -100,4 +100,34 @@ page {
 .demo-fill {
   width: 100%;
 }
+
+/* === 自定义滚动条 (暗色 + 帝王金, 对齐文档站) === */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245, 166, 35, 0.35) transparent;
+}
+
+/* Chromium / WebKit / Edge / Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 166, 35, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f5a623;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 </style>
