@@ -30,37 +30,36 @@
   --didao-info-500: #00bcd4;
   --didao-vip-500: #9c27b0;
 
-  /* === 发光 / 玻璃拟态 === */
+  /* === 发光 / 玻璃拟态（浅色默认值，暗色在 .dark 中覆盖） === */
   --shadow-glow-gold: 0 0 24px rgba(245, 166, 35, 0.4), 0 0 48px rgba(245, 166, 35, 0.2);
   --shadow-glow-blue: 0 0 24px rgba(45, 75, 160, 0.5), 0 0 48px rgba(45, 75, 160, 0.25);
-  --glass-bg: rgba(23, 23, 23, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(0, 0, 0, 0.06);
   --glass-blur: 20px;
 
   /* === 字体 === */
   --font-display: 'Playfair Display', serif;
   --font-sans: 'Noto Sans SC', system-ui, sans-serif;
 
-  /* === VitePress 主题色覆盖 (暗色优先，强制 dark 调色板) === */
-  --vp-c-brand-1: var(--didao-primary-500);
-  --vp-c-brand-2: var(--didao-primary-400);
+  /* === VitePress 浅色调色板（对齐 guide/theme.md 浅色映射） === */
+  --vp-c-brand-1: var(--didao-primary-600);
+  --vp-c-brand-2: var(--didao-primary-500);
   --vp-c-brand-3: var(--didao-primary-600);
-  --vp-c-brand-light: var(--didao-primary-400);
+  --vp-c-brand-light: var(--didao-primary-500);
   --vp-c-brand-lighter: var(--didao-primary-100);
   --vp-c-brand-dark: var(--didao-primary-600);
   --vp-c-brand-darker: var(--didao-primary-900);
 
-  --vp-c-bg: var(--didao-neutral-900);
-  --vp-c-bg-alt: var(--didao-neutral-800);
-  --vp-c-bg-elv: #141414;
-  --vp-c-bg-soft: var(--didao-neutral-800);
-  --vp-c-border: rgba(255, 255, 255, 0.08);
-  --vp-c-divider: rgba(255, 255, 255, 0.06);
-  --vp-c-text-1: #f5f5f5;
-  --vp-c-text-2: #b0b0b0;
+  --vp-c-bg: #fafafa;
+  --vp-c-bg-alt: #ffffff;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f5f5f5;
+  --vp-c-border: rgba(0, 0, 0, 0.1);
+  --vp-c-divider: rgba(0, 0, 0, 0.06);
+  --vp-c-text-1: #1a1a1a;
+  --vp-c-text-2: #424242;
   --vp-c-text-3: #757575;
   --vp-c-sponsor: var(--didao-primary-500);
-  --vp-c-gutter: var(--didao-neutral-700);
 
   --vp-font-family-base: var(--font-sans);
   --vp-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -72,9 +71,29 @@
   --vp-home-hero-image-filter: blur(40px);
 }
 
-/* ponytail: appearance:false 已强制不切换，但确保根背景为暗 */
+/* === 暗色调色板（html.dark 时生效，保持原暗色视觉不变） === */
+.dark {
+  --glass-bg: rgba(23, 23, 23, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --vp-c-brand-1: var(--didao-primary-500);
+  --vp-c-brand-2: var(--didao-primary-400);
+  --vp-c-brand-3: var(--didao-primary-600);
+
+  --vp-c-bg: var(--didao-neutral-900);
+  --vp-c-bg-alt: var(--didao-neutral-800);
+  --vp-c-bg-elv: #141414;
+  --vp-c-bg-soft: var(--didao-neutral-800);
+  --vp-c-border: rgba(255, 255, 255, 0.08);
+  --vp-c-divider: rgba(255, 255, 255, 0.06);
+  --vp-c-text-1: #f5f5f5;
+  --vp-c-text-2: #b0b0b0;
+  --vp-c-text-3: #757575;
+  --vp-c-gutter: var(--didao-neutral-700);
+}
+
 html {
-  background: var(--didao-neutral-900);
+  background: var(--vp-c-bg);
 }
 
 body {
@@ -193,7 +212,7 @@ body {
   border: 1px solid var(--vp-c-border);
   border-radius: 12px;
   overflow: hidden;
-  background: var(--didao-neutral-800);
+  background: var(--vp-c-bg-soft);
 }
 
 .demo-block__header {
@@ -201,7 +220,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--vp-c-bg);
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
@@ -242,7 +261,7 @@ body {
   gap: 12px;
   padding: 12px;
   border-radius: 12px;
-  background: var(--didao-neutral-800);
+  background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-border);
 }
 
@@ -266,10 +285,14 @@ body {
   text-transform: uppercase;
 }
 
-/* === 自定义滚动条 (暗色 + 帝王金) === */
+/* === 自定义滚动条 (帝王金，两套主题通用) === */
 /* Firefox */
 * {
   scrollbar-width: thin;
+  scrollbar-color: rgba(245, 166, 35, 0.5) transparent;
+}
+
+.dark * {
   scrollbar-color: rgba(245, 166, 35, 0.35) transparent;
 }
 
@@ -284,8 +307,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(245, 166, 35, 0.35);
+  background: rgba(245, 166, 35, 0.5);
   border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(245, 166, 35, 0.35);
 }
 
 ::-webkit-scrollbar-thumb:hover {

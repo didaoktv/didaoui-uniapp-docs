@@ -151,8 +151,8 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    // 暗色优先：默认强制 dark
-    appearance: false,
+    // 暗色优先：默认 dark，右上角可切换浅色
+    appearance: 'dark',
 
     logo: '/logo.svg',
 
