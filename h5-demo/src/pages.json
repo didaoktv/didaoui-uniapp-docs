@@ -1,0 +1,466 @@
+{
+  "globalStyle": {
+    "navigationBarBackgroundColor": "#0A0A0A",
+    "navigationBarTitleText": "DidaoUI-uniapp",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0A0A0A",
+    "backgroundTextStyle": "dark"
+  },
+  "pages": [
+    {
+      "path": "pages/index/demo",
+      "style": {
+        "navigationBarTitleText": "DidaoUI-uniapp",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/button/demo",
+      "style": {
+        "navigationBarTitleText": "按钮 DdButton",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/input/demo",
+      "style": {
+        "navigationBarTitleText": "输入框 DdInput",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/switch/demo",
+      "style": {
+        "navigationBarTitleText": "开关 DdSwitch",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/checkbox/demo",
+      "style": {
+        "navigationBarTitleText": "复选框 DdCheckbox",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/radio/demo",
+      "style": {
+        "navigationBarTitleText": "单选框 DdRadio",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/search-bar/demo",
+      "style": {
+        "navigationBarTitleText": "搜索栏 DdSearchBar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/slider/demo",
+      "style": {
+        "navigationBarTitleText": "滑块 DdSlider",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/stepper/demo",
+      "style": {
+        "navigationBarTitleText": "步进器 DdStepper",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/date-picker/demo",
+      "style": {
+        "navigationBarTitleText": "日期选择器 DdDatePicker",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/field/demo",
+      "style": {
+        "navigationBarTitleText": "表单项 DdField",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/picker/demo",
+      "style": {
+        "navigationBarTitleText": "选择器 DdPicker",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/rate/demo",
+      "style": {
+        "navigationBarTitleText": "评分 DdRate",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/icon/demo",
+      "style": {
+        "navigationBarTitleText": "图标 DdIcon",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/icon-usage/demo",
+      "style": {
+        "navigationBarTitleText": "组件库使用的图标",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/upload/demo",
+      "style": {
+        "navigationBarTitleText": "上传 DdUpload",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/navigation/demo",
+      "style": {
+        "navigationBarTitleText": "底部导航 DdNavigation",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/top-navbar/demo",
+      "style": {
+        "navigationBarTitleText": "顶部导航栏 DdTopNavbar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/segmented-tab/demo",
+      "style": {
+        "navigationBarTitleText": "分段器 DdSegmentedTab",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/swipeable-tab/demo",
+      "style": {
+        "navigationBarTitleText": "可滑动标签 DdSwipeableTab",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/drawer/demo",
+      "style": {
+        "navigationBarTitleText": "抽屉 DdDrawer",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/tabbar/demo",
+      "style": {
+        "navigationBarTitleText": "标签栏 DdTabbar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/tabbar-item/demo",
+      "style": {
+        "navigationBarTitleText": "标签项 DdTabbarItem",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/backtop/demo",
+      "style": {
+        "navigationBarTitleText": "回到顶部 DdBacktop",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/collapse/demo",
+      "style": {
+        "navigationBarTitleText": "折叠面板 DdCollapse",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/collapse-item/demo",
+      "style": {
+        "navigationBarTitleText": "折叠项 DdCollapseItem",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/dropdown-menu/demo",
+      "style": {
+        "navigationBarTitleText": "下拉菜单 DdDropdownMenu",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/dropdown-item/demo",
+      "style": {
+        "navigationBarTitleText": "下拉项 DdDropdownItem",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/card/demo",
+      "style": {
+        "navigationBarTitleText": "卡片 DdCard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/room-card/demo",
+      "style": {
+        "navigationBarTitleText": "房间卡片 DdRoomCard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/feature-grid/demo",
+      "style": {
+        "navigationBarTitleText": "功能网格 DdFeatureGrid",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/sticky/demo",
+      "style": {
+        "navigationBarTitleText": "吸顶容器 DdSticky",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/tag/demo",
+      "style": {
+        "navigationBarTitleText": "标签 DdTag",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/stat-card/demo",
+      "style": {
+        "navigationBarTitleText": "统计卡片 DdStatCard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/champion-card/demo",
+      "style": {
+        "navigationBarTitleText": "冠军卡片 DdChampionCard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/avatar/demo",
+      "style": {
+        "navigationBarTitleText": "头像 DdAvatar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/badge/demo",
+      "style": {
+        "navigationBarTitleText": "徽标 DdBadge",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/list-cell/demo",
+      "style": {
+        "navigationBarTitleText": "列表项 DdListCell",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cell/demo",
+      "style": {
+        "navigationBarTitleText": "单元格 DdCell",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cell-group/demo",
+      "style": {
+        "navigationBarTitleText": "单元格组 DdCellGroup",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/count-down/demo",
+      "style": {
+        "navigationBarTitleText": "倒计时 DdCountDown",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/divider/demo",
+      "style": {
+        "navigationBarTitleText": "分割线 DdDivider",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/image/demo",
+      "style": {
+        "navigationBarTitleText": "图片 DdImage",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/progress/demo",
+      "style": {
+        "navigationBarTitleText": "进度条 DdProgress",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/skeleton/demo",
+      "style": {
+        "navigationBarTitleText": "骨架屏 DdSkeleton",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/empty-state/demo",
+      "style": {
+        "navigationBarTitleText": "空状态 DdEmptyState",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/step/demo",
+      "style": {
+        "navigationBarTitleText": "步骤项 DdStep",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/steps/demo",
+      "style": {
+        "navigationBarTitleText": "步骤条 DdSteps",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/modal/demo",
+      "style": {
+        "navigationBarTitleText": "模态框 DdModal",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/action-sheet/demo",
+      "style": {
+        "navigationBarTitleText": "动作面板 DdActionSheet",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/toast/demo",
+      "style": {
+        "navigationBarTitleText": "轻提示 DdToast",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/alert/demo",
+      "style": {
+        "navigationBarTitleText": "警告弹窗 DdAlert",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/loading/demo",
+      "style": {
+        "navigationBarTitleText": "加载 DdLoading",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/dialog/demo",
+      "style": {
+        "navigationBarTitleText": "对话框 DdDialog",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/overlay/demo",
+      "style": {
+        "navigationBarTitleText": "遮罩层 DdOverlay",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/popup/demo",
+      "style": {
+        "navigationBarTitleText": "弹出层 DdPopup",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/popover/demo",
+      "style": {
+        "navigationBarTitleText": "气泡菜单 DdPopover",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/popover-item/demo",
+      "style": {
+        "navigationBarTitleText": "气泡项 DdPopoverItem",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/swipe-action/demo",
+      "style": {
+        "navigationBarTitleText": "滑动单元格 DdSwipeAction",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/swipe/demo",
+      "style": {
+        "navigationBarTitleText": "轮播 DdSwipe",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/swipe-item/demo",
+      "style": {
+        "navigationBarTitleText": "轮播项 DdSwipeItem",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/pull-refresh/demo",
+      "style": {
+        "navigationBarTitleText": "下拉刷新 DdPullRefresh",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/loadmore/demo",
+      "style": {
+        "navigationBarTitleText": "触底加载 DdLoadmore",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/capsule-button/demo",
+      "style": {
+        "navigationBarTitleText": "胶囊按钮 DdCapsuleButton",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mini-program-navbar/demo",
+      "style": {
+        "navigationBarTitleText": "小程序导航栏 DdMiniProgramNavbar",
+        "navigationStyle": "custom"
+      }
+    }
+  ]
+}

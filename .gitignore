@@ -1,0 +1,9 @@
+node_modules/
+.vitepress/dist/
+.vitepress/cache/
+.vitepress/.temp/
+h5-demo/dist/
+h5-demo/node_modules/
+public/h5-demo/
+*.log
+.DS_Store

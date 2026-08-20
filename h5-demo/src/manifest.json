@@ -1,0 +1,28 @@
+{
+  "name": "DidaoUI-uniapp Demo",
+  "appid": "__UNI__DDKTVD",
+  "description": "@didaoktv/didaoui-uniapp 组件库 H5 演示应用",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "h5": {
+    "title": "DidaoUI-uniapp Demo",
+    "router": {
+      "mode": "hash",
+      "base": "./"
+    },
+    "devServer": {
+      "port": 5174,
+      "https": false,
+      "host": "0.0.0.0"
+    },
+    "publicPath": "./",
+    "template": "index.html",
+    "async": {
+      "loading": "AsyncLoading",
+      "error": "AsyncError",
+      "delay": 200,
+      "timeout": 60000
+    }
+  }
+}

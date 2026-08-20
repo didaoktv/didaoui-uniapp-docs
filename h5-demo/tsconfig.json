@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": false,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["@dcloudio/types", "vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
