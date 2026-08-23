@@ -114,6 +114,27 @@ import { DdBadge } from '@didaoktv/didaoui-uniapp'
 
 <style scoped>
 .demo-page { }
-.badge-box{width:100rpx;height:100rpx;background:#2a2a2a;border-radius:12rpx;display:flex;align-items:center;justify-content:center;color:#ccc;}
-.badge-box-sm{width:80rpx;height:80rpx;background:#2a2a2a;border-radius:12rpx;display:flex;align-items:center;justify-content:center;color:#ccc;}
+.badge-box {
+  min-width: 100rpx;
+  height: 100rpx;
+  background: #2a2a2a;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  box-sizing: border-box;
+  padding: 0 12rpx;
+}
+
+.badge-box-sm {
+  width: 80rpx;
+  height: 80rpx;
+  background: #2a2a2a;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
 </style>
