@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "markdown-it-container": "^4.0.0",
     "typescript": "^5.4.0",
     "vitepress": "^1.4.0"
   }

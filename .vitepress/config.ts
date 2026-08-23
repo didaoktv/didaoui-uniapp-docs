@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
 import { existsSync } from 'node:fs'
+import container from 'markdown-it-container'
 
 // 本地开发: 同级存在组件库源码时 alias 过去（改源码即时热更新）
 // CI/Vercel: 目录不存在，回落到 node_modules 里的 npm 包
@@ -245,6 +246,25 @@ export default defineConfig({
     footer: {
       message: 'MIT 协议发布',
       copyright: '© 2026 ddktv · 帝到KTV',
+    },
+  },
+
+  // 注册 :::demo 自定义容器 — 让 markdown 中的 :::demo...::: 转为 DemoBlock 包裹
+  markdown: {
+    config(md) {
+      md.use(container, 'demo', {
+        validate(params: string) {
+          return params.trim().match(/^demo\s*(.*)$/)
+        },
+        render(tokens: any, idx: number) {
+          const token = tokens[idx]
+          if (token.nesting === 1) {
+            return `<div class="custom-block demo-container">\n`
+          } else {
+            return `</div>\n`
+          }
+        },
+      })
     },
   },
 
