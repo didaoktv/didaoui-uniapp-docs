@@ -9,7 +9,7 @@ const viteAlias = existsSync(libEntry)
   ? { resolve: { alias: { '@didaoktv/didaoui-uniapp': libEntry } } }
   : {}
 
-// ponytail: 侧边栏组件清单按任务 7 分类组织，与 @didaoktv/didaoui-uniapp index.ts 导出对齐
+// ponytail: 侧边栏组件清单按任务 8 分类组织，与 @didaoktv/didaoui-uniapp index.ts 导出对齐
 // 路径 /components/{slug} 对应 components/{slug}.md (cleanUrls)
 const componentSidebar = [
   {
@@ -29,6 +29,9 @@ const componentSidebar = [
       { text: 'Picker 选择器', link: '/components/picker' },
       { text: 'Rate 评分', link: '/components/rate' },
       { text: 'Upload 上传', link: '/components/upload' },
+      { text: 'Keyboard 键盘', link: '/components/keyboard' },
+      { text: 'Cascader 级联选择', link: '/components/cascader' },
+      { text: 'GoodsSku 商品规格', link: '/components/goods-sku' },
       { text: 'Icon 图标', link: '/components/icon' },
     ],
   },
@@ -65,17 +68,26 @@ const componentSidebar = [
       { text: 'Avatar 头像', link: '/components/avatar' },
       { text: 'Badge 徽标', link: '/components/badge' },
       { text: 'Tag 标签', link: '/components/tag' },
+      { text: 'Text 文本', link: '/components/text' },
+      { text: 'Link 超链接', link: '/components/link' },
+      { text: 'Copy 复制', link: '/components/copy' },
       { text: 'Progress 进度条', link: '/components/progress' },
       { text: 'Skeleton 骨架屏', link: '/components/skeleton' },
       { text: 'EmptyState 空状态', link: '/components/empty-state' },
       { text: 'StatCard 统计卡片', link: '/components/stat-card' },
       { text: 'RoomCard 房间卡', link: '/components/room-card' },
       { text: 'ChampionCard 冠军卡', link: '/components/champion-card' },
+      { text: 'BillDetail 账单明细', link: '/components/bill-detail' },
+      { text: 'WorkorderCard 工单卡片', link: '/components/workorder-card' },
+      { text: 'Calendar 日历', link: '/components/calendar' },
+      { text: 'Qrcode 二维码', link: '/components/qrcode' },
       { text: 'Image 图片', link: '/components/image' },
+      { text: 'Album 相册', link: '/components/album' },
+      { text: 'Parse 富文本', link: '/components/parse' },
+      { text: 'Markdown 渲染', link: '/components/markdown' },
+      { text: 'Coupon 优惠券', link: '/components/coupon' },
       { text: 'Steps 步骤条', link: '/components/steps' },
       { text: 'CountDown 倒计时', link: '/components/count-down' },
-      { text: 'CellGroup 单元格组', link: '/components/cell-group' },
-      { text: 'TabbarItem 标签栏项', link: '/components/tabbar-item' },
     ],
   },
   {
@@ -99,10 +111,19 @@ const componentSidebar = [
     collapsed: false,
     items: [
       { text: 'Swipe 轮播', link: '/components/swipe' },
-      { text: 'SwipeItem 轮播项', link: '/components/swipe-item' },
       { text: 'PullRefresh 下拉刷新', link: '/components/pull-refresh' },
       { text: 'Loadmore 触底加载', link: '/components/loadmore' },
       { text: 'Backtop 回到顶部', link: '/components/backtop' },
+    ],
+  },
+  {
+    text: 'Canvas 绘制',
+    collapsed: false,
+    items: [
+      { text: 'Barcode 条形码', link: '/components/barcode' },
+      { text: 'Cropper 图片裁剪', link: '/components/cropper' },
+      { text: 'Signature 签名板', link: '/components/signature' },
+      { text: 'Poster 海报生成', link: '/components/poster' },
     ],
   },
   {

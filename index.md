@@ -18,8 +18,8 @@ hero:
 
 features:
   - icon: 🧩
-    title: 61 组件
-    details: 覆盖表单 / 导航 / 布局 / 数据展示 / 浮层 / 交互 / 小程序专属，开箱即用。
+    title: 84 组件
+    details: 覆盖表单 / 导航 / 布局 / 数据展示 / 浮层 / 交互 / Canvas 绘制 / 小程序专属，含键盘、级联选择、商品规格、优惠券、条形码、签名板、海报生成等 KTV 业务组件。
     link: /components/button
     linkText: 浏览组件
   - icon: 📱

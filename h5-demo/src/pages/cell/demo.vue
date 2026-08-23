@@ -3,95 +3,115 @@
   <view class="demo-page">
 
     <view class="demo-section">
+      <text class="demo-title">分组 Group（默认通栏）</text>
+      <dd-cell-group title="预订信息">
+        <dd-cell title="包厢类型" value="VIP大包" />
+        <dd-cell title="到场时间" value="今晚 20:00" />
+        <dd-cell title="人数" value="8人" />
+      </dd-cell-group>
+      <text class="demo-note">默认通栏 + 首尾外框发丝线（border 默认 true）</text>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">内嵌分组 inset</text>
+      <dd-cell-group title="账户安全" inset>
+        <dd-cell title="手机号" value="138****8888" />
+        <dd-cell title="登录密码" value="已设置" is-link @click="tip('密码')" />
+        <dd-cell title="实名认证" value="未认证" is-link @click="tip('实名')" />
+      </dd-cell-group>
+    </view>
+
+    <view class="demo-section">
       <text class="demo-title">尺寸 Size</text>
-      <view class="dd-cell-col">
-        <dd-cell title="小号 SM" value="描述" size="sm" />
-        <dd-cell title="中号 MD" value="描述" size="md" />
-      </view>
+      <dd-cell-group inset>
+        <dd-cell title="标准 normal" value="描述" />
+        <dd-cell title="大号 large" value="描述" size="large" />
+      </dd-cell-group>
     </view>
 
     <view class="demo-section">
-      <text class="demo-title">必填 Required</text>
-      <view class="dd-cell-col">
-        <dd-cell title="姓名" required value="张先生" />
-        <dd-cell title="手机号" required value="138****8888" />
-        <dd-cell title="备注" value="可选" />
-      </view>
-    </view>
-
-    <view class="demo-section">
-      <text class="demo-title">链接 Link</text>
-      <view class="dd-cell-col">
-        <dd-cell title="个人资料" value="编辑" is-link @click="tip('个人资料')" />
-        <dd-cell title="隐私设置" is-link @click="tip('隐私')" />
-        <dd-cell title="退出登录" value="" is-link @click="tip('退出')" />
-      </view>
+      <text class="demo-title">点击态 clickable 与 click 事件</text>
+      <dd-cell-group inset>
+        <dd-cell title="可点击（无箭头）" clickable @click="tip('clickable')" />
+        <dd-cell title="链接 is-link" value="编辑" is-link @click="tip('is-link')" />
+        <dd-cell title="纯展示（无点击态）" value="只读" />
+      </dd-cell-group>
+      <text class="demo-note">click 事件总是抛出，clickable/is-link 只控制点击反馈样式</text>
     </view>
 
     <view class="demo-section">
       <text class="demo-title">箭头方向 Arrow Direction</text>
-      <view class="dd-cell-col">
+      <dd-cell-group inset>
         <dd-cell title="右箭头" is-link arrow-direction="right" @click="tip('右')" />
         <dd-cell title="左箭头" is-link arrow-direction="left" @click="tip('左')" />
         <dd-cell title="上箭头" is-link arrow-direction="up" @click="tip('上')" />
         <dd-cell title="下箭头" is-link arrow-direction="down" @click="tip('下')" />
-      </view>
+      </dd-cell-group>
     </view>
 
     <view class="demo-section">
-      <text class="demo-title">居中 Center</text>
-      <view class="dd-cell-col">
+      <text class="demo-title">页面跳转 url + linkType</text>
+      <dd-cell-group inset>
+        <dd-cell title="navigateTo 跳转" is-link url="/pages/switch/demo" />
+        <dd-cell title="redirectTo 跳转" is-link url="/pages/tag/demo" link-type="redirectTo" />
+      </dd-cell-group>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">图标 Icon 与标签 Label</text>
+      <dd-cell-group inset>
+        <dd-cell title="会员等级" icon="crown" label="黄金会员 · 享 92 折" value="G3" />
+        <dd-cell title="储值余额" icon="wallet" label="含赠送金额 ¥120" value="¥680.00" />
+      </dd-cell-group>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">插槽 Slots</text>
+      <dd-cell-group inset>
+        <dd-cell title="title 插槽" value="正常值">
+          <template #title>
+            <text style="color: #F5A623">自定义标题</text>
+          </template>
+        </dd-cell>
+        <dd-cell title="value 插槽">
+          <template #value>
+            <dd-tag type="primary" size="sm">进行中</dd-tag>
+          </template>
+        </dd-cell>
+        <dd-cell title="right-icon 插槽">
+          <template #right-icon>
+            <dd-icon name="search" />
+          </template>
+        </dd-cell>
+      </dd-cell-group>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">必填 Required 与边框 border</text>
+      <dd-cell-group inset>
+        <dd-cell title="姓名" required value="张先生" />
+        <dd-cell title="备注" value="可选" />
+        <dd-cell title="无边框行" value="border=false" :border="false" />
+      </dd-cell-group>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">居中 Center 与自定义标题样式</text>
+      <dd-cell-group inset>
         <dd-cell title="居中标题" value="居中内容" center />
-        <dd-cell title="居中必填" required value="居中必填内容" center />
-      </view>
+        <dd-cell title="金色标题" value="titleStyle" title-style="color:#F5A623;font-weight:600" />
+      </dd-cell-group>
     </view>
 
-    <view class="demo-section">
-      <text class="demo-title">标签 Label</text>
-      <view class="dd-cell-col">
-        <dd-cell title="用户名" label="用于登录" value="admin" />
-        <dd-cell title="邮箱" label="*必填" required value="test@test.com" />
-      </view>
-    </view>
-
-    <view class="demo-section">
-      <text class="demo-title">图标 Icon</text>
-      <view class="dd-cell-col">
-        <dd-cell title="消息" icon="chat-o" value="3 条" is-link @click="tip('消息')" />
-        <dd-cell title="收藏" icon="star" value="12 首" />
-        <dd-cell title="历史" icon="clock-o" value="30 条" />
-      </view>
-    </view>
-
-    <view class="demo-section">
-      <text class="demo-title">无边框 Borderless</text>
-      <view class="dd-cell-col">
-        <dd-cell title="项目一" value="值一" borderless />
-        <dd-cell title="项目二" value="值二" borderless />
-      </view>
-    </view>
-
-    <view class="demo-section">
-      <text class="demo-title">状态组合 States</text>
-      <view class="dd-cell-col">
-        <dd-cell title="图标+标签+必填+链接" icon="setting-o" label="系统设置" required is-link arrow-direction="right" @click="tip('设置')" />
-        <dd-cell title="居中+无边框" value="居中无边框" center borderless />
-        <dd-cell title="小号+必填+链接" required size="sm" is-link @click="tip('小号链接')" />
-      </view>
-    </view>
-    <dd-toast />
-    <demo-footer />
   </view>
 </template>
 
 <script setup lang="ts">
-import { DdCell, DdToast } from '@didaoktv/didaoui-uniapp'
-import { showToast } from '@didaoktv/didaoui-uniapp/components/dd-toast/dd-toast.vue'
-
-function tip(m){ showToast(m) }
+function tip(msg: string) {
+  uni.showToast({ title: msg, icon: 'none' })
+}
 </script>
 
 <style scoped>
 .demo-page { }
-.dd-cell-col{display:flex;flex-direction:column;background:#1a1a1a;border-radius:12rpx;overflow:hidden;}
 </style>

@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <view class="demo-page">
     <view class="home-header">
       <text class="home-title">DidaoUI-uniapp</text>
-      <text class="home-subtitle">帝到KTV UniApp 组件库 · 63 组件 · 5 端编译</text>
+      <text class="home-subtitle">帝到KTV UniApp 组件库 · 87 组件 · 5 端编译</text>
       <view class="home-author" @click="openAuthor">
         <text class="home-author-label" @click="openAuthor">作者</text>
         <text class="home-author-name">i@duminghong.com</text>
@@ -16,6 +16,7 @@
         <view v-for="c in categories.input" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -27,6 +28,7 @@
         <view v-for="c in categories.navigation" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -38,6 +40,7 @@
         <view v-for="c in categories.layout" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -49,6 +52,7 @@
         <view v-for="c in categories.display" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -60,6 +64,7 @@
         <view v-for="c in categories.overlay" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -71,6 +76,7 @@
         <view v-for="c in categories.interaction" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -82,6 +88,7 @@
         <view v-for="c in categories.miniprogram" :key="c.path" class="home-item" @click="go(c.path)">
           <text class="home-item-name">{{ c.name }}</text>
           <text class="home-item-en">{{ c.en }}</text>
+          <text v-if="c.ver" class="home-item-ver">{{ c.ver }}</text>
         </view>
       </view>
     </view>
@@ -107,6 +114,8 @@ interface CompDef {
   path: string
   name: string
   en: string
+  /** 新增组件的版本标记（如 v1.2.0），用于首页展示小徽标 */
+  ver?: string
 }
 
 const categories: Record<string, CompDef[]> = {
@@ -120,12 +129,19 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/slider/demo', name: '滑块', en: 'Slider' },
     { path: 'pages/stepper/demo', name: '步进器', en: 'Stepper' },
     { path: 'pages/date-picker/demo', name: '日期选择', en: 'DatePicker' },
+    { path: 'pages/calendar/demo', name: '日历', en: 'Calendar' },
     { path: 'pages/field/demo', name: '表单项', en: 'Field' },
+    { path: 'pages/form/demo', name: '表单', en: 'Form', ver: 'v1.2.0' },
     { path: 'pages/picker/demo', name: '选择器', en: 'Picker' },
     { path: 'pages/rate/demo', name: '评分', en: 'Rate' },
     { path: 'pages/upload/demo', name: '上传', en: 'Upload' },
     { path: 'pages/icon/demo', name: '图标', en: 'Icon' },
     { path: 'pages/icon-usage/demo', name: '组件库图标', en: 'IconUsage' },
+    { path: 'pages/keyboard/demo', name: '键盘', en: 'Keyboard', ver: 'v1.2.0' },
+    { path: 'pages/cascader/demo', name: '级联选择器', en: 'Cascader', ver: 'v1.2.0' },
+    { path: 'pages/goods-sku/demo', name: '商品SKU', en: 'GoodsSku', ver: 'v1.2.0' },
+    { path: 'pages/cropper/demo', name: '图片裁剪', en: 'Cropper', ver: 'v1.2.0' },
+    { path: 'pages/signature/demo', name: '签名', en: 'Signature', ver: 'v1.2.0' },
   ],
   navigation: [
     { path: 'pages/navigation/demo', name: '底部导航', en: 'Navigation' },
@@ -134,12 +150,9 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/swipeable-tab/demo', name: '可滑动标签', en: 'SwipeableTab' },
     { path: 'pages/drawer/demo', name: '抽屉', en: 'Drawer' },
     { path: 'pages/tabbar/demo', name: '标签栏', en: 'Tabbar' },
-    { path: 'pages/tabbar-item/demo', name: '标签项', en: 'TabbarItem' },
     { path: 'pages/backtop/demo', name: '回到顶部', en: 'Backtop' },
     { path: 'pages/collapse/demo', name: '折叠面板', en: 'Collapse' },
-    { path: 'pages/collapse-item/demo', name: '折叠项', en: 'CollapseItem' },
     { path: 'pages/dropdown-menu/demo', name: '下拉菜单', en: 'DropdownMenu' },
-    { path: 'pages/dropdown-item/demo', name: '下拉项', en: 'DropdownItem' },
   ],
   layout: [
     { path: 'pages/card/demo', name: '卡片', en: 'Card' },
@@ -155,15 +168,25 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/badge/demo', name: '徽标', en: 'Badge' },
     { path: 'pages/list-cell/demo', name: '列表项', en: 'ListCell' },
     { path: 'pages/cell/demo', name: '单元格', en: 'Cell' },
-    { path: 'pages/cell-group/demo', name: '单元格组', en: 'CellGroup' },
     { path: 'pages/count-down/demo', name: '倒计时', en: 'CountDown' },
     { path: 'pages/divider/demo', name: '分割线', en: 'Divider' },
     { path: 'pages/image/demo', name: '图片', en: 'Image' },
     { path: 'pages/progress/demo', name: '进度条', en: 'Progress' },
     { path: 'pages/skeleton/demo', name: '骨架屏', en: 'Skeleton' },
     { path: 'pages/empty-state/demo', name: '空状态', en: 'EmptyState' },
-    { path: 'pages/step/demo', name: '步骤项', en: 'Step' },
     { path: 'pages/steps/demo', name: '步骤条', en: 'Steps' },
+    { path: 'pages/bill-detail/demo', name: '账单明细', en: 'BillDetail' },
+    { path: 'pages/workorder-card/demo', name: '工单条目', en: 'WorkorderCard' },
+    { path: 'pages/qrcode/demo', name: '二维码', en: 'Qrcode' },
+    { path: 'pages/text/demo', name: '文本', en: 'Text', ver: 'v1.2.0' },
+    { path: 'pages/link/demo', name: '超链接', en: 'Link', ver: 'v1.2.0' },
+    { path: 'pages/copy/demo', name: '复制', en: 'Copy', ver: 'v1.2.0' },
+    { path: 'pages/album/demo', name: '相册', en: 'Album', ver: 'v1.2.0' },
+    { path: 'pages/parse/demo', name: '富文本解析器', en: 'Parse', ver: 'v1.2.0' },
+    { path: 'pages/markdown/demo', name: 'Markdown渲染', en: 'Markdown', ver: 'v1.2.0' },
+    { path: 'pages/coupon/demo', name: '优惠券', en: 'Coupon', ver: 'v1.2.0' },
+    { path: 'pages/barcode/demo', name: '条形码', en: 'Barcode', ver: 'v1.2.0' },
+    { path: 'pages/poster/demo', name: '海报', en: 'Poster', ver: 'v1.2.0' },
   ],
   overlay: [
     { path: 'pages/modal/demo', name: '模态框', en: 'Modal' },
@@ -175,12 +198,10 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/overlay/demo', name: '遮罩层', en: 'Overlay' },
     { path: 'pages/popup/demo', name: '弹出层', en: 'Popup' },
     { path: 'pages/popover/demo', name: '气泡菜单', en: 'Popover' },
-    { path: 'pages/popover-item/demo', name: '气泡项', en: 'PopoverItem' },
   ],
   interaction: [
     { path: 'pages/swipe-action/demo', name: '滑动单元格', en: 'SwipeAction' },
     { path: 'pages/swipe/demo', name: '轮播', en: 'Swipe' },
-    { path: 'pages/swipe-item/demo', name: '轮播项', en: 'SwipeItem' },
     { path: 'pages/pull-refresh/demo', name: '下拉刷新', en: 'PullRefresh' },
     { path: 'pages/loadmore/demo', name: '触底加载', en: 'Loadmore' },
   ],
@@ -226,18 +247,18 @@ function go(path: string) {
   font-size: 28rpx;
   font-weight: 700;
   color: #f5f5f5;
-  padding: 16rpx 32rpx;
+  padding: 16rpx;
   letter-spacing: 1rpx;
 }
 
 .home-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 24rpx;
   gap: 20rpx;
 }
 
 .home-item {
+  position: relative;
   background: #171717;
   border-radius: 12rpx;
   padding: 24rpx 16rpx;
@@ -252,10 +273,28 @@ function go(path: string) {
   background: #2a2a2a;
 }
 
+.home-item-name-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8rpx;
+}
+
 .home-item-name {
-  font-size: 26rpx;
+  font-size: 24rpx;
   color: #f5f5f5;
   font-weight: 500;
+}
+
+.home-item-ver {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  font-size: 18rpx;
+  color: #f5a623;
+  background: rgba(245, 166, 35, 0.12);
+  border-radius: 6rpx;
+  padding: 2rpx 8rpx;
 }
 
 .home-item-en {

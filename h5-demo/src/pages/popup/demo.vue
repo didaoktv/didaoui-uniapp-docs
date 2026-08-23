@@ -82,18 +82,21 @@ import { ref } from 'vue'
 import { DdPopup, DdButton } from '@didaoktv/didaoui-uniapp'
 
 const show = ref(false)
-const pos = ref('bottom')
+const pos = ref<'left' | 'right' | 'bottom' | 'center' | 'top'>('bottom')
 const showRounded = ref(false)
-const posRounded = ref('bottom')
+const posRounded = ref<'left' | 'right' | 'bottom' | 'center' | 'top'>('bottom')
 const showIcon = ref(false)
-const iconPos = ref('top-right')
+const iconPos = ref<'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'>('top-right')
 const showNoOverlay = ref(false)
 const showNoClose = ref(false)
 const showCustomSize = ref(false)
 
-function open(p: string) { pos.value = p; show.value = true }
-function openRounded(p: string) { posRounded.value = p; showRounded.value = true }
-function openIcon(p: string) { iconPos.value = p; showIcon.value = true }
+type PopupPos = 'left' | 'right' | 'bottom' | 'center' | 'top'
+type IconPos = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+
+function open(p: PopupPos) { pos.value = p; show.value = true }
+function openRounded(p: PopupPos) { posRounded.value = p; showRounded.value = true }
+function openIcon(p: IconPos) { iconPos.value = p; showIcon.value = true }
 function openNoOverlay() { showNoOverlay.value = true }
 function openNoClose() { showNoClose.value = true }
 function openCustomSize() { showCustomSize.value = true }

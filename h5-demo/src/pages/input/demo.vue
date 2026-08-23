@@ -24,7 +24,7 @@
       <text class="demo-title">密码可见 ShowPassword</text>
       <view class="demo-col">
         <dd-input v-model="pwd1" type="password" show-password placeholder="密码默认隐藏" />
-        <dd-input v-model="pwd2" type="password" show-password :model-value="'secret123'" placeholder="点击眼睛图标切换可见" />
+        <dd-input v-model="pwd2" type="password" show-password placeholder="点击眼睛图标切换可见" />
       </view>
     </view>
 

@@ -73,7 +73,7 @@
     <view class="demo-section">
       <text class="demo-title">Fullscreen — 全屏加载</text>
       <view class="demo-row">
-        <dd-button type="primary" @click="fs = true; setTimeout(()=>fs=false,2000)">全屏加载 2s</dd-button>
+        <dd-button type="primary" @click="showFullscreen">全屏加载 2s</dd-button>
       </view>
       <dd-loading :fullscreen="fs" text="加载中..." size="lg" />
     </view>
@@ -87,6 +87,11 @@ import { ref } from 'vue'
 import { DdLoading, DdButton } from '@didaoktv/didaoui-uniapp'
 
 const fs = ref(false)
+
+function showFullscreen() {
+  fs.value = true
+  setTimeout(() => (fs.value = false), 2000)
+}
 </script>
 
 <style scoped>

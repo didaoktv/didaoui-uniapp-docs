@@ -85,6 +85,13 @@
       }
     },
     {
+      "path": "pages/form/demo",
+      "style": {
+        "navigationBarTitleText": "表单 DdForm",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/picker/demo",
       "style": {
         "navigationBarTitleText": "选择器 DdPicker",
@@ -162,13 +169,6 @@
       }
     },
     {
-      "path": "pages/tabbar-item/demo",
-      "style": {
-        "navigationBarTitleText": "标签项 DdTabbarItem",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/backtop/demo",
       "style": {
         "navigationBarTitleText": "回到顶部 DdBacktop",
@@ -183,23 +183,9 @@
       }
     },
     {
-      "path": "pages/collapse-item/demo",
-      "style": {
-        "navigationBarTitleText": "折叠项 DdCollapseItem",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/dropdown-menu/demo",
       "style": {
         "navigationBarTitleText": "下拉菜单 DdDropdownMenu",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/dropdown-item/demo",
-      "style": {
-        "navigationBarTitleText": "下拉项 DdDropdownItem",
         "navigationStyle": "custom"
       }
     },
@@ -281,13 +267,6 @@
       }
     },
     {
-      "path": "pages/cell-group/demo",
-      "style": {
-        "navigationBarTitleText": "单元格组 DdCellGroup",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/count-down/demo",
       "style": {
         "navigationBarTitleText": "倒计时 DdCountDown",
@@ -326,13 +305,6 @@
       "path": "pages/empty-state/demo",
       "style": {
         "navigationBarTitleText": "空状态 DdEmptyState",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/step/demo",
-      "style": {
-        "navigationBarTitleText": "步骤项 DdStep",
         "navigationStyle": "custom"
       }
     },
@@ -407,13 +379,6 @@
       }
     },
     {
-      "path": "pages/popover-item/demo",
-      "style": {
-        "navigationBarTitleText": "气泡项 DdPopoverItem",
-        "navigationStyle": "custom"
-      }
-    },
-    {
       "path": "pages/swipe-action/demo",
       "style": {
         "navigationBarTitleText": "滑动单元格 DdSwipeAction",
@@ -424,13 +389,6 @@
       "path": "pages/swipe/demo",
       "style": {
         "navigationBarTitleText": "轮播 DdSwipe",
-        "navigationStyle": "custom"
-      }
-    },
-    {
-      "path": "pages/swipe-item/demo",
-      "style": {
-        "navigationBarTitleText": "轮播项 DdSwipeItem",
         "navigationStyle": "custom"
       }
     },
@@ -459,6 +417,132 @@
       "path": "pages/mini-program-navbar/demo",
       "style": {
         "navigationBarTitleText": "小程序导航栏 DdMiniProgramNavbar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/bill-detail/demo",
+      "style": {
+        "navigationBarTitleText": "账单明细 DdBillDetail",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/workorder-card/demo",
+      "style": {
+        "navigationBarTitleText": "工单卡片 DdWorkorderCard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/calendar/demo",
+      "style": {
+        "navigationBarTitleText": "日历 DdCalendar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/qrcode/demo",
+      "style": {
+        "navigationBarTitleText": "二维码 DdQrcode",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/text/demo",
+      "style": {
+        "navigationBarTitleText": "文本 DdText",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/link/demo",
+      "style": {
+        "navigationBarTitleText": "超链接 DdLink",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/copy/demo",
+      "style": {
+        "navigationBarTitleText": "复制 DdCopy",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/album/demo",
+      "style": {
+        "navigationBarTitleText": "相册 DdAlbum",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/parse/demo",
+      "style": {
+        "navigationBarTitleText": "富文本解析器 DdParse",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/markdown/demo",
+      "style": {
+        "navigationBarTitleText": "Markdown 渲染 DdMarkdown",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/keyboard/demo",
+      "style": {
+        "navigationBarTitleText": "键盘 DdKeyboard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/coupon/demo",
+      "style": {
+        "navigationBarTitleText": "优惠券 DdCoupon",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/goods-sku/demo",
+      "style": {
+        "navigationBarTitleText": "商品SKU DdGoodsSku",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cascader/demo",
+      "style": {
+        "navigationBarTitleText": "级联选择器 DdCascader",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/barcode/demo",
+      "style": {
+        "navigationBarTitleText": "条形码 DdBarcode",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cropper/demo",
+      "style": {
+        "navigationBarTitleText": "图片裁剪 DdCropper",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/signature/demo",
+      "style": {
+        "navigationBarTitleText": "签名 DdSignature",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/poster/demo",
+      "style": {
+        "navigationBarTitleText": "海报 DdPoster",
         "navigationStyle": "custom"
       }
     }

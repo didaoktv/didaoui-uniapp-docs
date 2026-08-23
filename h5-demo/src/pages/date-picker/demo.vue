@@ -49,7 +49,7 @@ import { DdDatePicker } from '@didaoktv/didaoui-uniapp'
 
 
 const show = ref(false)
-const type = ref('datetime')
+const type = ref<'time' | 'date' | 'range' | 'datetime'>('datetime')
 const val = ref('')
 const pickerTitle = ref('选择预订时间')
 function open(t, title){

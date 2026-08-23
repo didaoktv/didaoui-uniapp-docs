@@ -12,7 +12,13 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
     "noEmit": true,
-    "types": ["@dcloudio/types", "vite/client"]
+    "types": ["@dcloudio/types", "vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      // 与 vite.config.ts 的 alias 对齐：本地源码存在时优先于 node_modules 的 npm 包
+      "@didaoktv/didaoui-uniapp": ["../../DidaoUI-uniapp/index.ts"],
+      "@didaoktv/didaoui-uniapp/*": ["../../DidaoUI-uniapp/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.d.ts"],
   "exclude": ["node_modules", "dist"]
