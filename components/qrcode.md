@@ -47,7 +47,7 @@ function onReady(ok: boolean) {
 </DemoBlock>
 :::
 
-> 完整可交互演示：运行 `npm run dev:h5`（端口 5174）后访问二维码页（基础收款码 / 尺寸颜色 / 纠错级别）。
+> 完整可交互演示：运行 `npm run dev:h5`（端口 5274）后访问二维码页（基础收款码 / 尺寸颜色 / 纠错级别）。
 
 ## API
 

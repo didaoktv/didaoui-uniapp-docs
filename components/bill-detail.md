@@ -40,7 +40,7 @@ const items = [
 </DemoBlock>
 :::
 
-> 完整可交互演示：运行 `npm run dev:h5`（端口 5174）后访问账单明细页。
+> 完整可交互演示：运行 `npm run dev:h5`（端口 5274）后访问账单明细页。
 
 ## API
 

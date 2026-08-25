@@ -26,7 +26,8 @@
 npm install
 cd h5-demo && npm install && cd ..
 
-# 同时启动文档站(5173)和 H5 demo(5174)
+# 同时启动文档站(5273)和 H5 demo(5274)
+# 端口刻意避开 Vite 默认带(5173+)，且 strictPort：被占会直接报错而不是静默漂移
 npm run dev
 ```
 

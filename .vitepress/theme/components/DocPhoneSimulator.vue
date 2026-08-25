@@ -4,7 +4,7 @@
  * 固定在文档右侧，读取当前路由，提取组件名，
  * 在 iframe 中加载 H5 demo 真实运行组件交互。
  *
- * - dev:  http://localhost:5174/#/pages/{component}/demo
+ * - dev:  http://localhost:5274/#/pages/{component}/demo
  * - prod: ${base}h5-demo/#/pages/{component}/demo
  *
  * 非组件页 (路径不以 /components/ 开头) 隐藏模拟器。
@@ -25,14 +25,14 @@ const componentSlug = computed(() => {
 /** 是否为组件页 (显示模拟器) */
 const isComponentPage = computed(() => Boolean(componentSlug.value))
 
-/** iframe URL：dev 走本地 5174，prod 走 base 子路径 */
+/** iframe URL：dev 走本地 5274（h5-demo 固定端口，见 manifest.json），prod 走 base 子路径 */
 const demoUrl = computed(() => {
   const slug = componentSlug.value
   if (!slug) return ''
   // ponytail: import.meta.env.DEV 由 Vite 注入，区分 dev/prod
   const isDev = import.meta.env?.DEV
   const base = isDev ? '' : site.value.base
-  const origin = isDev ? 'http://localhost:5174' : `${base}h5-demo/`
+  const origin = isDev ? 'http://localhost:5274' : `${base}h5-demo/`
   return `${origin}/#/pages/${slug}/demo`
 })
 

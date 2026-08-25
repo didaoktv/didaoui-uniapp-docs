@@ -49,7 +49,7 @@ function onCheck({ item }: { item: { id: string; done: boolean } }) {
 </DemoBlock>
 :::
 
-> 完整可交互演示：运行 `npm run dev:h5`（端口 5174）后访问工单卡片页（可勾选清单实时联动进度）。
+> 完整可交互演示：运行 `npm run dev:h5`（端口 5274）后访问工单卡片页（可勾选清单实时联动进度）。
 
 ## API
 

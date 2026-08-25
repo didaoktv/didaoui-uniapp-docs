@@ -271,5 +271,9 @@ export default defineConfig({
   },
 
   // 合并 vite 配置：处理 .vue + alias @didaoktv/didaoui-uniapp
-  vite: viteAlias,
+  // strictPort：5273 被占时直接报错而非静默漂移（漂移会抢 h5-demo 的端口，破坏 iframe 契约）
+  vite: {
+    ...viteAlias,
+    server: { strictPort: true },
+  },
 })
