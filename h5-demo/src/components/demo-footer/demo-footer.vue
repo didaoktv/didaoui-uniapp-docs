@@ -41,23 +41,23 @@ function openAuthor() {
 
 .demo-footer__label {
   font-size: 22rpx;
-  color: #616161;
+  color: var(--dd-text-tertiary, #616161);
 }
 
 .demo-footer__name {
   font-size: 22rpx;
-  color: #f5a623;
+  color: var(--dd-primary, #f5a623);
   text-decoration: underline;
   text-underline-offset: 4rpx;
 }
 
 .demo-footer__sep {
   font-size: 22rpx;
-  color: #424242;
+  color: var(--dd-text-tertiary, #424242);
 }
 
 .demo-footer__copyright {
   font-size: 22rpx;
-  color: #424242;
+  color: var(--dd-text-tertiary, #424242);
 }
 </style>

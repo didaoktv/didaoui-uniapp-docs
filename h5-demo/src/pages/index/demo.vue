@@ -232,7 +232,7 @@ function go(path: string) {
   display: block;
   font-size: 48rpx;
   font-weight: 800;
-  color: #f5a623;
+  color: var(--dd-primary, #f5a623);
   letter-spacing: 2rpx;
   margin-bottom: 12rpx;
 }
@@ -240,7 +240,7 @@ function go(path: string) {
 .home-subtitle {
   display: block;
   font-size: 24rpx;
-  color: #9e9e9e;
+  color: var(--dd-muted, #9e9e9e);
   line-height: 1.5;
 }
 
@@ -252,7 +252,7 @@ function go(path: string) {
   display: block;
   font-size: 28rpx;
   font-weight: 700;
-  color: #f5f5f5;
+  color: var(--dd-fg, #f5f5f5);
   padding: 16rpx;
   letter-spacing: 1rpx;
 }
@@ -265,7 +265,7 @@ function go(path: string) {
 
 .home-item {
   position: relative;
-  background: #171717;
+  background: var(--dd-bg-card, #171717);
   border-radius: 12rpx;
   padding: 24rpx 16rpx;
   display: flex;
@@ -276,7 +276,7 @@ function go(path: string) {
 }
 
 .home-item:active {
-  background: #2a2a2a;
+  background: var(--dd-surface-hover, #2a2a2a);
 }
 
 .home-item-name-wrap {
@@ -288,7 +288,7 @@ function go(path: string) {
 
 .home-item-name {
   font-size: 24rpx;
-  color: #f5f5f5;
+  color: var(--dd-fg, #f5f5f5);
   font-weight: 500;
 }
 
@@ -297,7 +297,7 @@ function go(path: string) {
   top: 0rpx;
   right: 0rpx;
   font-size: 18rpx;
-  color: #f5a623;
+  color: var(--dd-primary, #f5a623);
   background: rgba(245, 166, 35, 0.12);
   border-radius: 6rpx;
   padding: 2rpx 8rpx;
@@ -305,7 +305,7 @@ function go(path: string) {
 
 .home-item-en {
   font-size: 20rpx;
-  color: #9e9e9e;
+  color: var(--dd-muted, #9e9e9e);
 }
 
 .home-author {
@@ -315,19 +315,19 @@ function go(path: string) {
   gap: 12rpx;
   margin-top: 20rpx;
   padding: 12rpx 20rpx;
-  background: #171717;
+  background: var(--dd-bg-card, #171717);
   border-radius: 32rpx;
   align-self: flex-start;
 }
 
 .home-author-label {
   font-size: 22rpx;
-  color: #616161;
+  color: var(--dd-text-tertiary, #616161);
 }
 
 .home-author-name {
   font-size: 22rpx;
-  color: #f5a623;
+  color: var(--dd-primary, #f5a623);
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 4rpx;
@@ -340,6 +340,6 @@ function go(path: string) {
 
 .home-footer-text {
   font-size: 22rpx;
-  color: #424242;
+  color: var(--dd-text-tertiary, #424242);
 }
 </style>
