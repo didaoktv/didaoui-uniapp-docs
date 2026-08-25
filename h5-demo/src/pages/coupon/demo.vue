@@ -2,8 +2,8 @@
   <dd-top-navbar title="优惠券" />
   <view class="demo-page">
 
-    <!-- 形状 shape -->
-    <view class="demo-section">
+    <!-- 形状 shape（券直接放在页面底色上，打孔与背景融合） -->
+    <view class="demo-section demo-section--plain">
       <text class="demo-title">形状 shape（coupon / envelope / card）</text>
       <view class="demo-col">
         <dd-coupon
@@ -20,7 +20,16 @@
           amount="66"
           limit="满 199 可用"
           title="中秋欢唱红包"
-          desc="限时 3 天"
+          desc="黑金红包 · 限时 3 天"
+          action-text="抢"
+        />
+        <dd-coupon
+          shape="envelope"
+          type="error"
+          amount="66"
+          limit="满 199 可用"
+          title="经典红封红包"
+          desc="type=error 组合"
           action-text="抢"
         />
         <dd-coupon
@@ -35,7 +44,7 @@
     </view>
 
     <!-- 尺寸 size -->
-    <view class="demo-section">
+    <view class="demo-section demo-section--plain">
       <text class="demo-title">尺寸 size（small / medium / large）</text>
       <view class="demo-col">
         <dd-coupon size="small" amount="20" title="小尺寸券" />
@@ -45,7 +54,7 @@
     </view>
 
     <!-- 主题色 type -->
-    <view class="demo-section">
+    <view class="demo-section demo-section--plain">
       <text class="demo-title">主题色 type</text>
       <view class="demo-col">
         <dd-coupon type="primary" amount="30" title="会员日券" action-text="领取" />
@@ -56,7 +65,7 @@
     </view>
 
     <!-- 禁用 disabled -->
-    <view class="demo-section">
+    <view class="demo-section demo-section--plain">
       <text class="demo-title">禁用 disabled</text>
       <dd-coupon
         :disabled="true"
@@ -69,7 +78,7 @@
     </view>
 
     <!-- 自定义插槽 -->
-    <view class="demo-section">
+    <view class="demo-section demo-section--plain">
       <text class="demo-title">自定义插槽</text>
       <dd-coupon amount="66" title="插槽示例券">
         <template #title="{ title }">
@@ -86,7 +95,7 @@
     </view>
 
     <!-- 自定义颜色 bgColor / color -->
-    <view class="demo-section">
+    <view class="demo-section demo-section--plain">
       <text class="demo-title">自定义颜色 bgColor / color</text>
       <dd-coupon
         bg-color="#1F2937"
@@ -109,7 +118,10 @@ function onUse() {
 </script>
 
 <style scoped>
-.demo-page { padding: 24rpx 0; }
+/* 券需放在 $dd-bg 页面底色上（打孔色取 $dd-bg），此节去掉了 demo-section 的浅一层底色 */
+.demo-section--plain {
+  background: transparent;
+}
 
 .cp-slot-title {
   font-size: 32rpx;
