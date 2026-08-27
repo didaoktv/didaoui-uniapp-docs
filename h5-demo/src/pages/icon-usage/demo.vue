@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="组件库图标" />
   <view class="demo-page">
 
@@ -86,7 +86,7 @@ const grouped = computed(() => {
   align-items: center;
   gap: 24rpx;
   padding: 20rpx 24rpx;
-  background: #1a1a1a;
+  background: var(--dd-bg-card);
   border-radius: 12rpx;
   margin-bottom: 12rpx;
 }
@@ -114,7 +114,7 @@ const grouped = computed(() => {
 }
 .icon-row__comps {
   font-size: 22rpx;
-  color: #9E9E9E;
+  color: var(--dd-muted);
   word-break: break-all;
 }
 </style>

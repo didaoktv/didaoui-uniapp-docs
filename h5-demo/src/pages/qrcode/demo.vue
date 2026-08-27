@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="二维码" />
   <view class="demo-page">
 
@@ -13,7 +13,7 @@
     <view class="demo-section">
       <text class="demo-title">尺寸 size / 前景色 foreground</text>
       <view class="demo-row" style="justify-content:space-between">
-        <dd-qrcode val="didaoktv.com" :size="120" foreground="#2D4BA0" />
+        <dd-qrcode val="didaoktv.com" :size="120" foreground="var(--dd-accent)" />
         <dd-qrcode val="didaoktv.com" :size="200" foreground="#F5A623" />
         <dd-qrcode val="didaoktv.com" :size="260" foreground="#0A0A0A" />
       </view>
@@ -32,7 +32,7 @@
       <text class="demo-title">定位角点颜色 pdground</text>
       <view class="demo-row" style="justify-content:space-around">
         <dd-qrcode val="didaoktv.com" :size="160" foreground="#0A0A0A" />
-        <dd-qrcode val="didaoktv.com" :size="160" foreground="#2D4BA0" pdground="#F5A623" />
+        <dd-qrcode val="didaoktv.com" :size="160" foreground="var(--dd-accent)" pdground="#F5A623" />
       </view>
       <text class="demo-note">pdground 单独控制三个定位角点颜色</text>
     </view>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="底部导航" />
   <view class="demo-page">
 
@@ -38,7 +38,7 @@
         <template #icon="{ item, active }">
           <dd-icon
             :name="item.icon"
-            :color="active ? '#F5A623' : '#9E9E9E'"
+            :color="active ? '#F5A623' : 'var(--dd-muted)'"
             size="36rpx"
           />
         </template>

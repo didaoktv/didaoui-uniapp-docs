@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="海报" />
   <view class="demo-page">
 
@@ -38,7 +38,7 @@ const posterJson = {
   css: {
     width: '600rpx',
     height: '900rpx',
-    background: 'linear-gradient(180deg, #1A1A2E 0%, #2D4BA0 100%)',
+    background: 'linear-gradient(180deg, #1A1A2E 0%, var(--dd-accent) 100%)',
   },
   views: [
     {

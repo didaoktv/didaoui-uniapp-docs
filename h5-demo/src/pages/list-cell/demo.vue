@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="列表项" />
   <view class="demo-page">
 
@@ -51,7 +51,7 @@
       <view class="dd-list-col">
         <dd-list-cell title="自定义右侧" icon="setting-o">
           <template #value><text style="color:#FFC107">自定义值</text></template>
-          <template #right-icon><text style="color:#757575;font-size:22rpx">附加</text></template>
+          <template #right-icon><text style="color:var(--dd-text-tertiary);font-size:22rpx">附加</text></template>
         </dd-list-cell>
       </view>
     </view>
@@ -78,5 +78,5 @@ function tip(m){ showToast(m) }
 
 <style scoped>
 .demo-page { }
-.dd-list-col{display:flex;flex-direction:column;background:#1a1a1a;border-radius:12rpx;overflow:hidden;}
+.dd-list-col{display:flex;flex-direction:column;background:var(--dd-bg-card);border-radius:12rpx;overflow:hidden;}
 </style>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="空状态" />
   <view class="demo-page">
 
@@ -41,7 +41,7 @@
           </view>
         </template>
         <template #title><text style="color:#FFC107;font-weight:700">恭喜完成任务</text></template>
-        <template #description><text style="color:#9E9E9E">获得 100 积分奖励</text></template>
+        <template #description><text style="color:var(--dd-muted)">获得 100 积分奖励</text></template>
         <template #button><dd-button type="primary" size="sm">领取奖励</dd-button></template>
       </dd-empty-state>
     </view>

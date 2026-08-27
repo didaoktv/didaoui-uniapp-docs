@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="骨架屏" />
   <view class="demo-page">
 
@@ -54,5 +54,5 @@ import { DdSkeleton } from '@didaoktv/didaoui-uniapp'
 
 <style scoped>
 .demo-page { }
-.sk-content{padding:20rpx;background:#2a2a2a;border-radius:12rpx;}
+.sk-content{padding:20rpx;background:var(--dd-surface-container-high);border-radius:12rpx;}
 </style>

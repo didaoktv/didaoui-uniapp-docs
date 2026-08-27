@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="键盘" />
   <view class="demo-page">
 
@@ -130,7 +130,7 @@ function onCarBackspace() {
 
 .kb-btn {
   padding: 16rpx 32rpx;
-  background: #2D4BA0;
+  background: var(--dd-accent);
   color: #fff;
   border-radius: 12rpx;
   font-size: 26rpx;

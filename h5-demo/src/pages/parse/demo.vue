@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="富文本解析器" />
   <view class="demo-page">
 
@@ -44,7 +44,7 @@
       <view class="parse-card">
         <dd-parse
           :content="html"
-          :tagStyle="{ p: 'color:#9e9e9e;line-height:1.8', strong: 'color:#F5A623' }"
+          :tagStyle="{ p: 'color:var(--dd-muted);line-height:1.8', strong: 'color:#F5A623' }"
         />
       </view>
       <text class="demo-note">tagStyle 按标签名注入样式，p 灰色 / strong 金色</text>

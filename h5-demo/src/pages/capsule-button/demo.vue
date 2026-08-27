@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="胶囊按钮" />
   <view class="demo-page">
 
@@ -59,7 +59,7 @@ function tip(m: string) { showToast(m) }
   gap: 24rpx;
 }
 .cap-label {
-  color: #9E9E9E;
+  color: var(--dd-muted);
   font-size: 24rpx;
   width: 180rpx;
 }

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="卡片" />
   <view class="demo-page">
 
@@ -89,7 +89,7 @@ function tip(m){ showToast(m) }
 <style scoped>
 .demo-page { }
 .dd-card-h{color:#F5F5F5;font-weight:600;}
-.dd-card-b{padding:16rpx 0;color:#9E9E9E;}
+.dd-card-b{padding:16rpx 0;color:var(--dd-muted);}
 .dd-card-ext{color:#FFC107;font-size:24rpx;}
-.dd-card-f{color:#757575;font-size:22rpx;}
+.dd-card-f{color:var(--dd-text-tertiary);font-size:22rpx;}
 </style>

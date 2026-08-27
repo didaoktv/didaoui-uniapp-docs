@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="轻提示" />
   <view class="demo-page">
 
@@ -63,7 +63,7 @@ import { showToast, showSuccess, showError, showLoading, hideToast } from '@dida
 .demo-page {  }
 .t-btn {
   padding: 16rpx 28rpx;
-  background: #2A2A2A;
+  background: var(--dd-surface-container-high);
   border-radius: 12rpx;
   color: #FFC107;
   font-size: 26rpx;

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="图片" />
   <view class="demo-page">
 
@@ -72,5 +72,5 @@ function tip(m){ showToast(m) }
 <style scoped>
 .demo-page { }
 .img-loading{display:flex;align-items:center;justify-content:center;color:#FFC107;font-size:36rpx;}
-.img-error{display:flex;align-items:center;justify-content:center;color:#757575;}
+.img-error{display:flex;align-items:center;justify-content:center;color:var(--dd-text-tertiary);}
 </style>

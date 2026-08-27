@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="文本" />
   <view class="demo-page">
 
@@ -98,7 +98,7 @@
     <!-- 外边距 margin / 行高 lineHeight -->
     <view class="demo-section">
       <text class="demo-title">外边距 margin / 行高 lineHeight</text>
-      <view style="background:#0A0A0A;padding:8rpx;border-radius:8rpx">
+      <view style="background: var(--dd-bg);padding:8rpx;border-radius:8rpx">
         <dd-text text="上边距 20px 的文本" margin="20px 0 0 0" block />
         <dd-text text="行高 2 倍的文本，多行时更透气" :line-height="2" :lines="2" block />
       </view>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="对话框" />
   <view class="demo-page">
 
@@ -48,7 +48,7 @@
     <dd-dialog v-model="d4" title="删除确认" message="删除后不可恢复，请谨慎操作" :show-cancel-button="true" @confirm="showToast('删除')" @cancel="showToast('取消')" />
     <dd-dialog v-model="d5" title="仅有取消" message="此对话框只有取消按钮" :show-confirm-button="false" :show-cancel-button="true" />
     <dd-dialog v-model="d6" title="升级 VIP" message="是否升级为 VIP 包房？" :show-cancel-button="true" confirm-text="立即升级" cancel-text="稍后再说" @confirm="showToast('升级')" />
-    <dd-dialog v-model="d7" title="自定义颜色" message="确认按钮使用自定义颜色" theme="round-button" :show-cancel-button="true" confirm-color="#F5A623" cancel-color="#9E9E9E" @confirm="showToast('确认')" />
+    <dd-dialog v-model="d7" title="自定义颜色" message="确认按钮使用自定义颜色" theme="round-button" :show-cancel-button="true" confirm-color="#F5A623" cancel-color="var(--dd-muted)" @confirm="showToast('确认')" />
     <dd-dialog v-model="d8" title="自定义宽度" message="宽度 500rpx" width="500rpx" :show-cancel-button="true" @confirm="showToast('确认')" />
     <dd-dialog v-model="d9" title="遮罩可关闭" message="点击遮罩即可关闭对话框" :close-on-click-overlay="true" :show-cancel-button="true" @confirm="showToast('确认')" @cancel="showToast('取消')" />
     <dd-dialog v-model="d10" theme="round-button" :show-cancel-button="true" @confirm="showToast('确认')" @cancel="showToast('取消')">

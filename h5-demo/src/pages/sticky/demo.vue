@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="吸顶容器" />
   <view class="demo-page">
 
@@ -95,9 +95,9 @@ function onStickyChange(e){ stickyState.value = e.isFixed }
 
 <style scoped>
 .demo-page { }
-.sticky-scroll-outer{height:600rpx;overflow-y:auto;background:#1a1a1a;border-radius:12rpx;}
+.sticky-scroll-outer{height:600rpx;overflow-y:auto;background:var(--dd-bg-card);border-radius:12rpx;}
 .sticky-scroll-inner{position:relative;}
-.sticky-ph{height:60rpx;padding:0 32rpx;display:flex;align-items:center;color:#757575;font-size:26rpx;border-bottom:1px solid #2a2a2a;}
-.sticky-bar{background:linear-gradient(135deg,#FFC107,#D4891A);color:#1a1a1a;padding:20rpx 32rpx;font-weight:600;border-radius:8rpx;text-align:center;}
+.sticky-ph{height:60rpx;padding:0 32rpx;display:flex;align-items:center;color:var(--dd-text-tertiary);font-size:26rpx;border-bottom:1px solid var(--dd-surface-container-high);}
+.sticky-bar{background:linear-gradient(135deg,#FFC107,#D4891A);color:var(--dd-bg-card);padding:20rpx 32rpx;font-weight:600;border-radius:8rpx;text-align:center;}
 .sticky-bar--offset{background:linear-gradient(135deg,#42A5F5,#1565C0);color:#fff;}
 </style>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="动作面板" />
   <view class="demo-page">
 
@@ -83,7 +83,7 @@ const items2 = [
 ]
 const itemsColor = [
   { name: '金色', icon: 'star', color: '#F5A623' },
-  { name: '蓝色', icon: 'music', color: '#2D4BA0' },
+  { name: '蓝色', icon: 'music', color: 'var(--dd-accent)' },
   { name: '红色', icon: 'like-o', color: '#E53935' },
   { name: '绿色', icon: 'success', color: '#4CAF50' },
 ]

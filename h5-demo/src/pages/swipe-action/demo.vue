@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="滑动单元格" />
   <view class="demo-page">
 
@@ -58,14 +58,14 @@ import { showToast } from '@didaoktv/didaoui-uniapp/components/dd-toast/dd-toast
 
 
 const right = [
-  { text: '置顶', color: '#2D4BA0', icon: 'bars' },
+  { text: '置顶', color: 'var(--dd-accent)', icon: 'bars' },
   { text: '删除', color: '#E53935', icon: 'delete-o' },
 ]
 const left = [
   { text: '收藏', color: '#F5A623', icon: 'star' },
 ]
 const coloredRight = [
-  { text: '分享', color: '#2D4BA0', icon: 'share-o' },
+  { text: '分享', color: 'var(--dd-accent)', icon: 'share-o' },
   { text: '升级', color: '#F5A623', icon: 'upgrade' },
   { text: '删除', color: '#E53935', icon: 'cross' },
 ]
@@ -77,7 +77,7 @@ function onClick(e: any) { showToast(e.action.text) }
 .demo-page {  }
 .sa-item {
   padding: 32rpx;
-  background: #171717;
+  background: var(--dd-bg-card);
   color: #F5F5F5;
 }
 .sa-item--disabled {

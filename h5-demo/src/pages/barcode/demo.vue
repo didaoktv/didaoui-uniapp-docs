@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="条形码" />
   <view class="demo-page">
 
@@ -52,7 +52,7 @@
         <dd-barcode value="GOLD-MEMBER" :width="240" :height="70" line-color="#F5A623" />
       </view>
       <view class="bc-wrap">
-        <dd-barcode value="BLUE-MEMBER" :width="240" :height="70" line-color="#2D4BA0" />
+        <dd-barcode value="BLUE-MEMBER" :width="240" :height="70" line-color="var(--dd-accent)" />
       </view>
     </view>
 

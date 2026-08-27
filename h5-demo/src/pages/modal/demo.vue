@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="模态框" />
   <view class="demo-page">
 
@@ -37,7 +37,7 @@
     </view>
 
     <dd-modal v-model="show1" type="dialog" title="提示" :show-close="true">
-      <view style="padding:32rpx;color:#9E9E9E">是否确认删除该包房预订？</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">是否确认删除该包房预订？</view>
       <template #footer>
         <view style="padding:16rpx;display:flex;gap:20rpx;justify-content:flex-end">
           <dd-button size="sm" type="ghost" @click="show1 = false">取消</dd-button>
@@ -47,27 +47,27 @@
     </dd-modal>
 
     <dd-modal v-model="show2" type="dialog" title="预订成功" :show-close="false">
-      <view style="padding:32rpx;color:#9E9E9E;text-align:center">您的包房已预订成功</view>
+      <view style="padding:32rpx;color:var(--dd-muted);text-align:center">您的包房已预订成功</view>
     </dd-modal>
 
     <dd-modal v-model="show3" type="dialog" title="自定义宽度" width="800rpx">
-      <view style="padding:32rpx;color:#9E9E9E">宽度 800rpx 的对话框</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">宽度 800rpx 的对话框</view>
     </dd-modal>
 
     <dd-modal v-model="show4" type="bottom-sheet" title="选择操作">
-      <view style="padding:32rpx;color:#9E9E9E">底部弹层内容</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">底部弹层内容</view>
     </dd-modal>
 
     <dd-modal v-model="show5" type="bottom-sheet">
-      <view style="padding:32rpx;color:#9E9E9E">无标题底部弹层</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">无标题底部弹层</view>
     </dd-modal>
 
     <dd-modal v-model="show6" type="bottom-sheet" title="点击遮罩不关闭" :close-on-click-modal="false">
-      <view style="padding:32rpx;color:#9E9E9E">点击遮罩不会关闭此弹层</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">点击遮罩不会关闭此弹层</view>
     </dd-modal>
 
     <dd-modal v-model="show7" type="dialog" title="不可关闭" :show-close="false" :close-on-click-modal="false">
-      <view style="padding:32rpx;color:#9E9E9E">无关闭按钮，遮罩点击不关闭</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">无关闭按钮，遮罩点击不关闭</view>
       <template #footer>
         <view style="padding:16rpx;display:flex;justify-content:center">
           <dd-button size="sm" type="primary" @click="show7 = false">我知道了</dd-button>
@@ -79,7 +79,7 @@
       <template #header>
         <text style="font-size:32rpx;font-weight:700;color:#FFC107">自定义 Header</text>
       </template>
-      <view style="padding:32rpx;color:#9E9E9E">这是通过默认插槽传入的内容</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">这是通过默认插槽传入的内容</view>
       <template #footer>
         <view style="padding:16rpx;display:flex;gap:20rpx;justify-content:flex-end">
           <dd-button size="sm" type="ghost" @click="show8 = false">取消</dd-button>

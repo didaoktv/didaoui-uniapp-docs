@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="级联选择器" />
   <view class="demo-page">
 
@@ -198,7 +198,7 @@ function onConfirm5(val: Array<string | number>) {
 
 .cs-btn {
   padding: 20rpx;
-  background: #2D4BA0;
+  background: var(--dd-accent);
   color: #fff;
   border-radius: 12rpx;
   font-size: 28rpx;

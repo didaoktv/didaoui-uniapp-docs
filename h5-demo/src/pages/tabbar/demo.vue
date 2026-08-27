@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="标签栏" />
   <view class="demo-page">
 
@@ -39,7 +39,7 @@
         :fixed="false"
         :placeholder="false"
         :border="true"
-        active-color="#2D4BA0"
+        active-color="var(--dd-accent)"
         inactive-color="#616161"
       >
         <dd-tabbar-item name="home" icon="wap-home-o" label="首页" />
@@ -56,7 +56,7 @@
         :placeholder="false"
         :border="true"
         active-color="#FF6B35"
-        inactive-color="#757575"
+        inactive-color="var(--dd-text-tertiary)"
       >
         <dd-tabbar-item name="home" icon="music-o" label="点歌" />
         <dd-tabbar-item name="rank" icon="star" label="收藏" />

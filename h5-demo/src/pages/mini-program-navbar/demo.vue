@@ -16,7 +16,7 @@
     <view class="demo-section">
       <text class="demo-title">Transparent — 透明导航栏</text>
       <dd-mini-program-navbar variant="default" title="透明导航" transparent show-back @back="tip('返回')" />
-      <view style="height:200rpx;background:linear-gradient(180deg,#2D4BA0,#0A0A0A);display:flex;align-items:center;justify-content:center">
+      <view style="height:200rpx;background:linear-gradient(180deg,var(--dd-accent),var(--dd-bg));display:flex;align-items:center;justify-content:center">
         <text style="color:#FFC107;font-size:28rpx">背景内容可见</text>
       </view>
     </view>
@@ -44,7 +44,7 @@
       <dd-mini-program-navbar variant="custom">
         <view class="custom-title" style="color:#FFC107">自定义内容</view>
         <template #below>
-          <view style="padding:16rpx;background:#171717;display:flex;gap:16rpx">
+          <view style="padding:16rpx;background:var(--dd-bg-card);display:flex;gap:16rpx">
             <dd-button size="sm" type="primary">关注</dd-button>
             <dd-button size="sm" type="ghost">分享</dd-button>
           </view>

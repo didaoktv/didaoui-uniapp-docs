@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="商品SKU" />
   <view class="demo-page">
 
@@ -156,7 +156,7 @@ const goods3 = {
 
 .sku-btn {
   padding: 20rpx;
-  background: #2D4BA0;
+  background: var(--dd-accent);
   color: #fff;
   border-radius: 12rpx;
   font-size: 28rpx;

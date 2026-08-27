@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="下拉菜单" />
   <view class="demo-page">
 
@@ -22,11 +22,11 @@
 
     <view class="demo-section">
       <text class="demo-title">自定义激活色</text>
-      <dd-dropdown-menu active-color="#2D4BA0">
+      <dd-dropdown-menu active-color="var(--dd-accent)">
         <dd-dropdown-item v-model="type3" :options="types" title="房型" />
         <dd-dropdown-item v-model="sort3" :options="sorts" title="排序" />
       </dd-dropdown-menu>
-      <text class="demo-note">activeColor: #2D4BA0</text>
+      <text class="demo-note">activeColor: var(--dd-accent)</text>
     </view>
 
     <view class="demo-section">

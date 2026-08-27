@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="倒计时" />
   <view class="demo-page">
 
@@ -64,9 +64,9 @@ function onFinish(){ cdState.value = '已结束!' }
 
 <style scoped>
 .demo-page { }
-.cd-row{display:flex;align-items:center;justify-content:space-between;padding:16rpx 0;border-bottom:1px solid #2a2a2a;}
-.cd-label{color:#9E9E9E;font-size:26rpx;}
+.cd-row{display:flex;align-items:center;justify-content:space-between;padding:16rpx 0;border-bottom:1px solid var(--dd-surface-container-high);}
+.cd-label{color:var(--dd-muted);font-size:26rpx;}
 .cd-custom{display:flex;align-items:center;gap:4rpx;font-family:monospace;font-size:28rpx;}
-.cd-num{color:#FFC107;font-weight:700;background:#2a2a2a;padding:4rpx 12rpx;border-radius:6rpx;}
-.cd-sep{color:#757575;margin:0 2rpx;}
+.cd-num{color:#FFC107;font-weight:700;background:var(--dd-surface-container-high);padding:4rpx 12rpx;border-radius:6rpx;}
+.cd-sep{color:var(--dd-text-tertiary);margin:0 2rpx;}
 </style>

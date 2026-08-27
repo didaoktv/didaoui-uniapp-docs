@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="弹出层" />
   <view class="demo-page">
 
@@ -106,7 +106,7 @@ function openCustomSize() { showCustomSize.value = true }
 .demo-page {  }
 .popup-content {
   padding: 48rpx;
-  color: #9E9E9E;
+  color: var(--dd-muted);
   min-height: 200rpx;
 }
 </style>

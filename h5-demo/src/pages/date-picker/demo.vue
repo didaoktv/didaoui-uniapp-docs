@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="日期选择" />
   <view class="demo-page">
 
@@ -61,5 +61,5 @@ function open(t, title){
 
 <style scoped>
 .demo-page { }
-.dp-btn{padding:16rpx 28rpx;background:#2A2A2A;border-radius:12rpx;color:#FFC107;font-size:26rpx;display:inline-block;}
+.dp-btn{padding:16rpx 28rpx;background:var(--dd-surface-container-high);border-radius:12rpx;color:#FFC107;font-size:26rpx;display:inline-block;}
 </style>

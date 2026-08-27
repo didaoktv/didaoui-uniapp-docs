@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="签名" />
   <view class="demo-page">
 
@@ -32,7 +32,7 @@
         <dd-signature :width="300" :height="150" :thickness="6" color="#E60012" bg-color="#FFFBEF" />
       </view>
       <view class="sg-wrap" style="margin-top:16rpx">
-        <dd-signature :width="300" :height="150" :thickness="2" color="#2D4BA0" />
+        <dd-signature :width="300" :height="150" :thickness="2" color="var(--dd-accent)" />
       </view>
       <text class="demo-note">上：粗笔 6px 红色 / 米黄底；下：细笔 2px 蓝色 / 默认白底。工具栏内也可实时调整笔画与颜色</text>
     </view>

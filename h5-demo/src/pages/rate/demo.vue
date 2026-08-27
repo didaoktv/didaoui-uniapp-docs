@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="评分" />
   <view class="demo-page">
 
@@ -42,7 +42,7 @@
       </view>
       <view class="demo-col" style="margin-top:16rpx">
         <text class="demo-label">红色 Red</text>
-        <dd-rate v-model="red" color="#FF6B6B" void-color="#2A2A2A" />
+        <dd-rate v-model="red" color="#FF6B6B" void-color="var(--dd-surface-container-high)" />
         <text class="demo-note">{{ red }} 星</text>
       </view>
       <view class="demo-col" style="margin-top:16rpx">

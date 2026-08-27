@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="复制" />
   <view class="demo-page">
 
@@ -75,7 +75,7 @@ function onSuccess() {
 
 .copy-btn {
   padding: 12rpx 28rpx;
-  background: #2D4BA0;
+  background: var(--dd-accent);
   color: #fff;
   border-radius: 32rpx;
   font-size: 24rpx;

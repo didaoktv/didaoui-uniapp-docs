@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="图片裁剪" />
   <view class="demo-page">
 
@@ -60,7 +60,7 @@ function onConfirm(res: { avatar: unknown; path: string; index: unknown; data: u
 
 .crop-btn {
   padding: 20rpx;
-  background: #2D4BA0;
+  background: var(--dd-accent);
   color: #fff;
   border-radius: 12rpx;
   font-size: 28rpx;

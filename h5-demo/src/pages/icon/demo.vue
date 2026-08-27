@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="图标" />
   <view class="demo-page">
 
@@ -86,13 +86,13 @@ import { DdIcon, iconGroups } from '@didaoktv/didaoui-uniapp'
   align-items: center;
   gap: 8rpx;
   padding: 20rpx 8rpx;
-  background: #171717;
+  background: var(--dd-bg-card);
   border-radius: 12rpx;
 }
 
 .demo-icon-name {
   font-size: 20rpx;
-  color: #9e9e9e;
+  color: var(--dd-muted);
   text-align: center;
   word-break: break-all;
 }

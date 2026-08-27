@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="遮罩层" />
   <view class="demo-page">
 
@@ -78,7 +78,7 @@ const show5 = ref(false)
 <style scoped>
 .demo-page {  }
 .overlay-card {
-  background: #171717;
+  background: var(--dd-bg-card);
   padding: 48rpx;
   border-radius: 16rpx;
   color: #FFC107;

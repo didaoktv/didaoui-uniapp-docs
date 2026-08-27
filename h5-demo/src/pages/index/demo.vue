@@ -240,7 +240,7 @@ function go(path: string) {
 .home-subtitle {
   display: block;
   font-size: 24rpx;
-  color: var(--dd-muted, #9e9e9e);
+  color: var(--dd-muted, var(--dd-muted));
   line-height: 1.5;
 }
 
@@ -265,7 +265,7 @@ function go(path: string) {
 
 .home-item {
   position: relative;
-  background: var(--dd-bg-card, #171717);
+  background: var(--dd-bg-card, var(--dd-bg-card));
   border-radius: 12rpx;
   padding: 24rpx 16rpx;
   display: flex;
@@ -276,7 +276,7 @@ function go(path: string) {
 }
 
 .home-item:active {
-  background: var(--dd-surface-hover, #2a2a2a);
+  background: var(--dd-surface-hover, var(--dd-surface-container-high));
 }
 
 .home-item-name-wrap {
@@ -305,7 +305,7 @@ function go(path: string) {
 
 .home-item-en {
   font-size: 20rpx;
-  color: var(--dd-muted, #9e9e9e);
+  color: var(--dd-muted, var(--dd-muted));
 }
 
 .home-author {
@@ -315,7 +315,7 @@ function go(path: string) {
   gap: 12rpx;
   margin-top: 20rpx;
   padding: 12rpx 20rpx;
-  background: var(--dd-bg-card, #171717);
+  background: var(--dd-bg-card, var(--dd-bg-card));
   border-radius: 32rpx;
   align-self: flex-start;
 }

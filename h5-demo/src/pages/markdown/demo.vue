@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="Markdown 渲染" />
   <view class="demo-page">
 
@@ -109,6 +109,6 @@ const linkMd = `更多请访问 [帝到KTV 官网](https://didaoktv.com) 或 [�
 }
 
 .md-card--dark {
-  border: 1px solid #2d2d2d;
+  border: 1px solid var(--dd-surface-container);
 }
 </style>

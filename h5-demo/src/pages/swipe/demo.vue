@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="轮播" />
   <view class="demo-page">
 
@@ -93,7 +93,7 @@ import { DdSwipe, DdSwipeItem } from '@didaoktv/didaoui-uniapp'
   font-weight: 700;
 }
 .b1 { background: linear-gradient(135deg, #F5A623, #D4891A); }
-.b2 { background: linear-gradient(135deg, #2D4BA0, #1E3A8A); }
+.b2 { background: linear-gradient(135deg, var(--dd-accent), #1E3A8A); }
 .b3 { background: linear-gradient(135deg, #9C27B0, #6A1B9A); }
 
 .custom-indicator {

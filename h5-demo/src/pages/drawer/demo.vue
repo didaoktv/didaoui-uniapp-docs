@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="抽屉" />
   <view class="demo-page">
 
@@ -46,7 +46,7 @@
       username="张先生"
       vip-level="黄金会员"
     >
-      <view style="padding:32rpx;color:#9E9E9E">
+      <view style="padding:32rpx;color:var(--dd-muted)">
         <view style="display:flex;flex-direction:column;gap:24rpx">
           <text>个人中心</text>
           <text>我的订单</text>
@@ -63,7 +63,7 @@
       username=""
       vip-level=""
     >
-      <view style="padding:32rpx;color:#9E9E9E">筛选条件内容</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">筛选条件内容</view>
     </dd-drawer>
 
     <dd-drawer
@@ -73,7 +73,7 @@
       username="窄抽屉"
       vip-level=""
     >
-      <view style="padding:32rpx;color:#9E9E9E">宽度 60%</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">宽度 60%</view>
     </dd-drawer>
 
     <dd-drawer
@@ -83,7 +83,7 @@
       username="宽抽屉"
       vip-level=""
     >
-      <view style="padding:32rpx;color:#9E9E9E">宽度 90%</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">宽度 90%</view>
     </dd-drawer>
 
     <dd-drawer
@@ -93,7 +93,7 @@
       username="不可关闭"
       vip-level=""
     >
-      <view style="padding:32rpx;color:#9E9E9E">点击遮罩无法关闭，只能通过按钮关闭</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">点击遮罩无法关闭，只能通过按钮关闭</view>
       <view style="padding:24rpx">
         <dd-button type="primary" @click="showNM = false">关闭</dd-button>
       </view>
@@ -106,7 +106,7 @@
       username="李小明"
       vip-level="钻石会员 · 余额 8888"
     >
-      <view style="padding:32rpx;color:#9E9E9E">
+      <view style="padding:32rpx;color:var(--dd-muted)">
         <view style="display:flex;flex-direction:column;gap:24rpx">
           <text>会员等级：钻石</text>
           <text>累计消费：¥88,888</text>
@@ -120,11 +120,11 @@
       position="left"
     >
       <template #header>
-        <view style="padding:32rpx;background:#2D4BA0;color:#fff;font-weight:700">
+        <view style="padding:32rpx;background:var(--dd-accent);color:#fff;font-weight:700">
           自定义头部
         </view>
       </template>
-      <view style="padding:32rpx;color:#9E9E9E">自定义头部内容</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">自定义头部内容</view>
     </dd-drawer>
 
     <dd-drawer
@@ -137,7 +137,7 @@
       @opened="drawerEvent = 'opened 触发'"
       @closed="drawerEvent = 'closed 触发'"
     >
-      <view style="padding:32rpx;color:#9E9E9E">查看事件日志变化</view>
+      <view style="padding:32rpx;color:var(--dd-muted)">查看事件日志变化</view>
     </dd-drawer>
 
     <dd-toast />

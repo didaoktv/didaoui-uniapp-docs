@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="头像" />
   <view class="demo-page">
 
@@ -8,7 +8,7 @@
       <view class="demo-row">
         <dd-avatar src="https://picsum.photos/seed/dd-av1/100/100" />
         <dd-avatar text="帝" bgColor="#F5A623" />
-        <dd-avatar icon="star" bgColor="#2D4BA0" />
+        <dd-avatar icon="star" bgColor="var(--dd-accent)" />
         <dd-avatar text="客" bgColor="#67C23A" color="#0A0A0A" />
       </view>
       <text class="demo-note">text / icon 优先于 src；size 默认 40px</text>
@@ -42,7 +42,7 @@
       <text class="demo-title">文字头像（bgColor / color / fontSize）</text>
       <view class="demo-row">
         <dd-avatar :size="56" text="金" bgColor="#F5A623" color="#0A0A0A" :fontSize="20" />
-        <dd-avatar :size="56" text="蓝" bgColor="#2D4BA0" color="#FFFFFF" :fontSize="24" />
+        <dd-avatar :size="56" text="蓝" bgColor="var(--dd-accent)" color="#FFFFFF" :fontSize="24" />
         <dd-avatar :size="56" text="VIP" bgColor="#E60012" color="#FFD700" :fontSize="14" />
       </view>
     </view>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="触底加载" />
   <view class="demo-page">
 
@@ -139,7 +139,7 @@ function onLoadMore2() {
   position: sticky;
   top: 88rpx;
   z-index: 10;
-  background: #0a0a0a;
+  background: var(--dd-bg);
 }
 .demo-section {
   padding: 24rpx 32rpx;
@@ -154,17 +154,17 @@ function onLoadMore2() {
 .demo-note {
   display: block;
   font-size: 24rpx;
-  color: #9E9E9E;
+  color: var(--dd-muted);
   margin-bottom: 24rpx;
 }
 .lm-item {
   padding: 32rpx;
-  background: #171717;
+  background: var(--dd-bg-card);
   color: #F5F5F5;
   margin-bottom: 16rpx;
 }
 .state-preview {
-  background: #171717;
+  background: var(--dd-bg-card);
   border-radius: 12rpx;
   margin-bottom: 24rpx;
 }

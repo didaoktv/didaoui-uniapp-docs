@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="徽标" />
   <view class="demo-page">
 
@@ -117,7 +117,7 @@ import { DdBadge } from '@didaoktv/didaoui-uniapp'
 .badge-box {
   min-width: 100rpx;
   height: 100rpx;
-  background: #2a2a2a;
+  background: var(--dd-surface-container-high);
   border-radius: 12rpx;
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ import { DdBadge } from '@didaoktv/didaoui-uniapp'
 .badge-box-sm {
   width: 80rpx;
   height: 80rpx;
-  background: #2a2a2a;
+  background: var(--dd-surface-container-high);
   border-radius: 12rpx;
   display: flex;
   align-items: center;

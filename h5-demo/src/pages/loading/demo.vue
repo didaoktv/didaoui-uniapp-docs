@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="加载" />
   <view class="demo-page">
 
@@ -56,7 +56,7 @@
       <text class="demo-title">Color — 自定义颜色</text>
       <view class="demo-row">
         <dd-loading type="spinner" color="#F5A623" />
-        <dd-loading type="dots" color="#2D4BA0" />
+        <dd-loading type="dots" color="var(--dd-accent)" />
         <dd-loading type="pulse" color="#E53935" />
       </view>
     </view>

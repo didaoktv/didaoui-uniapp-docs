@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="顶部导航栏" />
   <view class="demo-page">
 
@@ -24,7 +24,7 @@
         show-back
         @back="tip('返回')"
       />
-      <view style="height:60rpx;background:linear-gradient(135deg,#2D4BA0,#F5A623);border-radius:8rpx;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22rpx">
+      <view style="height:60rpx;background:linear-gradient(135deg,var(--dd-accent),#F5A623);border-radius:8rpx;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22rpx">
         透明背景下的内容区域
       </view>
     </view>
@@ -104,7 +104,7 @@
         <template #default>
           <view style="display:flex;align-items:center;gap:8rpx">
             <text style="color:#F5A623;font-size:30rpx;font-weight:700">豪华大包</text>
-            <text style="color:#9E9E9E;font-size:22rpx">容量10人</text>
+            <text style="color:var(--dd-muted);font-size:22rpx">容量10人</text>
           </view>
         </template>
       </dd-top-navbar>

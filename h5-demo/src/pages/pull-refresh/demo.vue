@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <dd-top-navbar title="下拉刷新" />
   <view class="demo-page">
 
@@ -138,11 +138,11 @@ function onLoadMore4() {
   position: sticky;
   top: 88rpx;
   z-index: 10;
-  background: #0a0a0a;
+  background: var(--dd-bg);
 }
 .pr-item {
   padding: 32rpx;
-  background: #171717;
+  background: var(--dd-bg-card);
   color: #F5F5F5;
   margin-bottom: 16rpx;
 }
