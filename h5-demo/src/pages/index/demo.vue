@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <view class="demo-page">
     <view class="home-header">
       <text class="home-title">DidaoUI-uniapp</text>
@@ -141,6 +141,7 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/signature/demo', name: '签名', en: 'Signature', ver: 'v1.2.0' },
     { path: 'pages/goods-sku/demo', name: '商品SKU', en: 'GoodsSku', ver: 'v1.2.0' },
     { path: 'pages/button/demo', name: '按钮', en: 'Button' },
+    { path: 'pages/code-button/demo', name: '验证码按钮', en: 'CodeButton' },
   ],
   navigation: [
     // 页面结构流：顶部 → 内容标签 → 侧边 → 底部 → 滚动

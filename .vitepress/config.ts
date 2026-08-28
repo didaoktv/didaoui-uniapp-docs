@@ -39,6 +39,7 @@ const componentSidebar = [
       { text: 'Signature 签名', link: '/components/signature' },
       { text: 'GoodsSku 商品SKU', link: '/components/goods-sku' },
       { text: 'Button 按钮', link: '/components/button' },
+      { text: 'CodeButton 验证码按钮', link: '/components/code-button' },
     ],
   },
   {
