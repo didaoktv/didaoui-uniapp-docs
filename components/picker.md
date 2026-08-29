@@ -116,6 +116,7 @@ const show = ref(false)
 | title | 工具栏标题 | `string` | `''` |
 | loading | 是否加载中（显示蒙层并阻止确定） | `boolean` | `false` |
 | readonly | 是否只读（仅展示不可确定） | `boolean` | `false` |
+| defaultIndexes | 每次打开时各列定位到的索引（按列传入，用于回显已有选中项） | `number[]` | `[]` |
 
 > `PickerItem = { text: string; value: any }`
 
