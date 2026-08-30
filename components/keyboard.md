@@ -260,5 +260,5 @@ const plate = ref('')
 
 ::: warning 注意事项
 - v1.3 起组件由「纯键盘面板」重构为「格子 + 键盘一体」，旧 `change` / `backspace` / `random` / `autoChange` API 已移除；需要纯键盘面板时用 `dd-number-keyboard` 或 `dd-keyboard`。
-- 键盘弹层为 `fixed` 定位，`z-index` 取组件库 popup 层级（10075）；键盘弹出会遮挡页面底部内容。
+- 键盘经 `dd-popup` 弹出（遮罩 + 底部滑入动效 + 安全区适配，`z-index` 取 popup 层级 10075），点击遮罩 / 取消 / 完成均可收起并触发 `blur`；键盘弹出会遮挡页面底部内容。
 :::
