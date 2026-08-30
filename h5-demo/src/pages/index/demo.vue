@@ -135,7 +135,7 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/cascader/demo', name: '级联选择器', en: 'Cascader', ver: 'v1.2.0' },
     { path: 'pages/date-picker/demo', name: '日期选择', en: 'DatePicker' },
     { path: 'pages/calendar/demo', name: '日历', en: 'Calendar' },
-    { path: 'pages/keyboard/demo', name: '键盘', en: 'Keyboard', ver: 'v1.2.0' },
+    { path: 'pages/keyboard/demo', name: '键盘', en: 'Keyboard', ver: 'v1.3.5' },
     { path: 'pages/upload/demo', name: '上传', en: 'Upload' },
     { path: 'pages/cropper/demo', name: '图片裁剪', en: 'Cropper', ver: 'v1.2.0' },
     { path: 'pages/signature/demo', name: '签名', en: 'Signature', ver: 'v1.2.0' },
