@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <dd-top-navbar title="键盘" />
   <view class="demo-page">
 
@@ -65,23 +65,14 @@
       <text class="demo-note">非弹窗形态，直接嵌入页面，change / backspace 事件驱动输入</text>
     </view>
 
-    <!-- dd-car-keyboard 车牌键盘 -->
+    <!-- dd-car-keyboard 车牌输入（格子+键盘一体） -->
     <view class="demo-section">
-      <text class="demo-title">dd-car-keyboard 车牌键盘</text>
+      <text class="demo-title">dd-car-keyboard 车牌输入（格子 + 键盘一体）</text>
+      <view class="kb-inline">
+        <dd-car-keyboard v-model="carVal" />
+      </view>
       <text class="demo-note">车牌号：{{ carVal || '尚未输入' }}</text>
-      <view class="kb-inline">
-        <dd-car-keyboard @change="onCarChange" @backspace="onCarBackspace" />
-      </view>
-      <text class="demo-note">默认省份简称，第 4 行「中/英」切换字母，autoChange 可在输完中文后自动切英文</text>
-    </view>
-
-    <!-- 车牌乱序 + 自动切换 -->
-    <view class="demo-section">
-      <text class="demo-title">车牌键盘 random 乱序 + autoChange</text>
-      <text class="demo-note">车牌号：{{ carVal2 || '尚未输入' }}</text>
-      <view class="kb-inline">
-        <dd-car-keyboard :random="true" :autoChange="true" @change="v => carVal2 += v" @backspace="carVal2 = carVal2.slice(0, -1)" />
-      </view>
+      <text class="demo-note">点击格子弹出键盘：0 位省份简称，其余位字母数字按位锁键，末位为新能源绿牌位（v-model 双向绑定）</text>
     </view>
 
     <demo-footer />
@@ -113,16 +104,8 @@ function onInlineBackspace() {
   inlineVal.value = inlineVal.value.slice(0, -1)
 }
 
-/* dd-car-keyboard 车牌键盘 */
+/* dd-car-keyboard 车牌输入（v-model） */
 const carVal = ref('')
-const carVal2 = ref('')
-
-function onCarChange(v: string) {
-  carVal.value += v
-}
-function onCarBackspace() {
-  carVal.value = carVal.value.slice(0, -1)
-}
 </script>
 
 <style scoped>

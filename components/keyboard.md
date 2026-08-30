@@ -1,10 +1,10 @@
 # 键盘 DdKeyboard
 
-> 键盘面板组件，内置三种模式：数字键盘 / 身份证键盘（含 X 键）/ 车牌键盘（省份简称 + 字母），带顶部工具条（取消 / 提示 / 完成），支持乱序与安全区适配。
+> 键盘面板组件，内置两种模式：数字键盘 / 身份证键盘（含 X 键），带顶部工具条（取消 / 提示 / 完成），支持乱序与安全区适配。车牌号输入请使用下方独立的 [DdCarKeyboard](#车牌键盘-ddcarkeyboard)。
 
 ## 介绍
 
-DdKeyboard 以底部弹层呈现。`mode` 切换内部键盘：`number` 数字（可选小数点）、`card` 身份证（含 X）、`car` 车牌（内部渲染 `dd-car-keyboard`，中/英自动切换）。`random` 打乱按键顺序防止偷窥输入；`overlay=false` 时不显示遮罩，方便用户边看输入框边输入。输入值由调用方自行拼接维护（监听 `change` / `backspace`）。
+DdKeyboard 以底部弹层呈现。`mode` 切换内部键盘：`number` 数字（可选小数点）、`card` 身份证（含 X）。`random` 打乱按键顺序防止偷窥输入；`overlay=false` 时不显示遮罩，方便用户边看输入框边输入。输入值由调用方自行拼接维护（监听 `change` / `backspace`）。
 
 ## 代码演示
 
@@ -43,9 +43,9 @@ function onBackspace() {
 </DemoBlock>
 :::
 
-### 身份证键盘 / 车牌键盘
+### 身份证键盘
 
-`mode="card"` 含 X 键；`mode="car"` 省份与字母切换输入。
+`mode="card"` 含 X 键。
 
 :::demo
 <DemoBlock>
@@ -54,16 +54,13 @@ function onBackspace() {
 <template>
   <view>
     <dd-button type="primary" @click="showCard = true">身份证键盘</dd-button>
-    <dd-button type="primary" @click="showCar = true">车牌键盘</dd-button>
     <dd-keyboard v-model:show="showCard" mode="card" :random="true" @change="onChange" @backspace="onBackspace" />
-    <dd-keyboard v-model:show="showCar" mode="car" :auto-change="true" @change="onChange" @backspace="onBackspace" />
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 const showCard = ref(false)
-const showCar = ref(false)
 const value = ref('')
 function onChange(val: string) {
   value.value += val
@@ -83,7 +80,7 @@ function onBackspace() {
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| mode | 键盘类型，`number` 数字 / `card` 身份证 / `car` 车牌 | `string` | `'number'` |
+| mode | 键盘类型，`number` 数字 / `card` 身份证 | `string` | `'number'` |
 | dotDisabled | 是否不显示"."按键（仅 mode=number 有效） | `boolean` | `false` |
 | tooltip | 是否显示键盘顶部工具条 | `boolean` | `true` |
 | showTips | 是否显示工具条中间的提示 | `boolean` | `true` |
@@ -98,7 +95,6 @@ function onBackspace() {
 | zIndex | 键盘的 z-index 值 | `string \| number` | `10075` |
 | cancelText | 取消按钮的文字 | `string` | `'取消'` |
 | confirmText | 确认按钮的文字 | `string` | `'确认'` |
-| autoChange | mode=car 时输入一个中文后是否自动切换到英文 | `boolean` | `false` |
 
 ### Events
 
@@ -125,7 +121,7 @@ function onBackspace() {
 :::
 
 ::: warning 注意事项
-- `dotDisabled` 仅在 `mode="number"` 下生效；`autoChange` 仅在 `mode="car"` 下生效。
+- `dotDisabled` 仅在 `mode="number"` 下生效。
 - 需要让用户看到输入框时设 `overlay=false`，并注意页面内容会被键盘遮挡。
 :::
 
@@ -214,55 +210,25 @@ function onBackspace() {}
 
 ## 车牌键盘 DdCarKeyboard
 
-> 车牌输入键盘（不含弹层）：省份简称与字母（含车牌专用序号）双布局切换，支持乱序与输入中文后自动切英文。
+> 完整车牌号输入组件：车牌格子（7 位普通 + 新能源绿牌位）与弹出键盘一体，按位锁键，`v-model` 双向绑定。
 
-DdCarKeyboard 是 `dd-keyboard` 在 `mode="car"` 时内部使用的键盘主体，也可单独内嵌。默认显示省份简称布局，点击"中/英"或输入一个汉字后（`autoChange` 开启时）切换到字母布局；字母布局含"港澳学警"等车牌专用字。退格键支持长按连删。
+DdCarKeyboard 为一体式车牌输入：点击格子在页面底部弹出键盘，第 1 位为省份简称布局，其余位为字母数字布局。键盘按输入位置自动锁定不可用按键——第 2 位只能字母，中间位禁 `O` 与 学/挂/警/港/澳，新能源位（第 6 位）放开 学/挂/警/港/澳 且行 2 换为新能源变体布局。填完第 7 位自动收起键盘，第 8 位（绿框"新能源"位）由用户主动点选。
 
 ### 代码演示
 
-#### 基础用法（内嵌）
+#### 基础用法
 
 :::demo
 <DemoBlock>
 
 ```vue
 <template>
-  <view>
-    <dd-text :text="plate || '请输入车牌'" :size="20" align="center" />
-    <dd-car-keyboard @change="onChange" @backspace="onBackspace" />
-  </view>
+  <dd-car-keyboard v-model="plate" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 const plate = ref('')
-function onChange(val: string) {
-  plate.value += val
-}
-function onBackspace() {
-  plate.value = plate.value.slice(0, -1)
-}
-</script>
-```
-
-</DemoBlock>
-:::
-
-#### 自动切换 + 乱序
-
-`autoChange` 输入一个中文后自动切到英文布局。
-
-:::demo
-<DemoBlock>
-
-```vue
-<template>
-  <dd-car-keyboard :auto-change="true" :random="true" @change="onChange" @backspace="onBackspace" />
-</template>
-
-<script setup lang="ts">
-function onChange(val: string) { console.log(val) }
-function onBackspace() {}
 </script>
 ```
 
@@ -273,24 +239,26 @@ function onBackspace() {}
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| random | 是否打乱键盘按键的顺序 | `boolean` | `false` |
-| autoChange | 输入一个中文后是否自动切换到英文 | `boolean` | `false` |
+| modelValue | 车牌号（`v-model`），支持清空与部分更新 | `string` | `''` |
+| customClass | 自定义根节点类名 | `string` | `''` |
+| customStyle | 自定义根节点样式 | `string` | `''` |
 
 ### Events
 
 | 事件名 | 说明 | 回调参数 |
 |--------|------|----------|
-| change | 按键被点击（省份简称或字母，不含退格键） | `val: string` |
-| backspace | 退格键被点击（支持长按连删） | — |
+| update:modelValue | 输入变化时触发 | `val: string` |
+| focus | 键盘弹出时触发 | `val: string` |
+| blur | 键盘收起时触发 | `val: string` |
 
 ### 设计规范
 
 ::: tip 最佳实践
-- 代驾登记、会员车辆绑定等场景配合 `dd-keyboard mode="car"` 弹出使用。
-- 开启 `autoChange` 减少用户手动切换中/英的操作成本。
+- 会员车辆绑定、代客登记车牌等场景直接 `v-model` 绑定，无需自行拼接输入值。
+- 车牌格式校验（省份简称 + 6/7 位、新能源位）在提交时统一处理。
 :::
 
 ::: warning 注意事项
-- 组件不拼接车牌值，新能源 8 位车牌长度校验需调用方自行处理。
-- 键盘内置省份与字母两套布局，无法自定义按键内容。
+- v1.3 起组件由「纯键盘面板」重构为「格子 + 键盘一体」，旧 `change` / `backspace` / `random` / `autoChange` API 已移除；需要纯键盘面板时用 `dd-number-keyboard` 或 `dd-keyboard`。
+- 键盘弹层为 `fixed` 定位，`z-index` 取组件库 popup 层级（10075）；键盘弹出会遮挡页面底部内容。
 :::
