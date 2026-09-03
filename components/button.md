@@ -1,10 +1,10 @@
 # 按钮 DdButton
 
-> 7-type 系统（primary/secondary/ghost/text/success/warning/danger）搭配 3 种尺寸；primary/secondary 默认圆角 var(--radius-md)，text 为零圆角自适应高度，round 可切换为胶囊圆角；disabled 使用 opacity 0.5。
+> 8-type 系统（default/primary/secondary/ghost/text/success/warning/danger）搭配 3 种尺寸；primary/secondary 默认圆角 var(--radius-md)，text 为零圆角自适应高度，round 可切换为胶囊圆角；plain 为线框形态，disabled 使用 opacity 0.5。
 
 ## 介绍
 
-DdButton 是迪道 KTV 体系中的核心操作触发器，覆盖预订包房、表单提交、工具栏动作、状态确认等场景。通过 `type` 区分七种语义（主操作、次操作、幽灵、文字、成功/警告/危险），配合 `size` 三档尺寸与 `round` 胶囊形态可组合出绝大多数 CTA 需求。loading 状态会替换图标为旋转指示并阻止点击，disabled 通过半透明降低视觉权重。
+DdButton 是迪道 KTV 体系中的核心操作触发器，覆盖预订包房、表单提交、工具栏动作、状态确认等场景。通过 `type` 区分八种语义（默认、主操作、次操作、幽灵、文字、成功/警告/危险），配合 `size` 三档尺寸与 `round` 胶囊形态可组合出绝大多数 CTA 需求；`plain` 提供透明底的线框形态，适合弱化操作。loading 状态会替换图标为旋转指示并阻止点击，disabled 通过半透明降低视觉权重。
 
 ## 代码演示
 
@@ -16,6 +16,7 @@ DdButton 是迪道 KTV 体系中的核心操作触发器，覆盖预订包房、
 ```vue
 <template>
   <view style="display:flex;gap:12rpx;flex-wrap:wrap">
+    <dd-button type="default">默认</dd-button>
     <dd-button type="primary">主要</dd-button>
     <dd-button type="secondary">次要</dd-button>
     <dd-button type="ghost">幽灵</dd-button>
@@ -71,15 +72,37 @@ success / warning / danger 用于状态匹配的动作；sm / md / lg 对应内�
 </DemoBlock>
 :::
 
+### 线框按钮
+
+`plain` 使按钮变为透明底 + 保留 type 主题色文字/描边，适合表格行内弱化操作。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:flex;gap:12rpx;flex-wrap:wrap;align-items:center">
+    <dd-button type="primary" plain>线框主按钮</dd-button>
+    <dd-button type="default" plain>线框默认</dd-button>
+    <dd-button type="danger" plain>线框危险</dd-button>
+    <dd-button type="success" plain size="sm">线框小号</dd-button>
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| type | 按钮类型 | `'primary' \| 'secondary' \| 'ghost' \| 'text' \| 'success' \| 'warning' \| 'danger'` | `'primary'` |
+| type | 按钮类型 | `'default' \| 'primary' \| 'secondary' \| 'ghost' \| 'text' \| 'success' \| 'warning' \| 'danger'` | `'primary'` |
 | size | 按钮尺寸 | `'sm' \| 'md' \| 'lg'` | `'md'` |
 | round | 是否胶囊圆角 | `boolean` | `false` |
+| plain | 线框形态（透明底 + 保留 type 主题色文字/描边） | `boolean` | `false` |
 | iconPosition | 图标位置 | `'left' \| 'right'` | `'left'` |
 | icon | 图标字符（文本字形） | `string` | `''` |
 | loading | 是否加载中（替换图标为旋转指示并阻止点击） | `boolean` | `false` |
@@ -103,6 +126,7 @@ success / warning / danger 用于状态匹配的动作；sm / md / lg 对应内�
 ::: tip 最佳实践
 - 每屏只用一个 primary 作为主 CTA。
 - ghost / text 用于工具栏和取消动作。
+- 表格行内弱化操作（置顶/删除等）用 plain 线框形态。
 - success / warning / danger 用于状态匹配的动作。
 - 需要胶囊形态时设置 round。
 - 按内容密度匹配尺寸（sm caption / md body / lg lead）。

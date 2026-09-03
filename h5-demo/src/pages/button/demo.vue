@@ -5,6 +5,7 @@
     <view class="demo-section">
       <text class="demo-title">按钮类型 Type</text>
       <view class="demo-row">
+        <dd-button type="default">默认 Default</dd-button>
         <dd-button type="primary" @click="tip('主要按钮')">主要 Primary</dd-button>
         <dd-button type="secondary">次要 Secondary</dd-button>
         <dd-button type="ghost">幽灵 Ghost</dd-button>
@@ -14,6 +15,22 @@
         <dd-button type="success">成功 Success</dd-button>
         <dd-button type="warning">警告 Warning</dd-button>
         <dd-button type="danger">危险 Danger</dd-button>
+      </view>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">线框按钮 Plain</text>
+      <view class="demo-row">
+        <dd-button type="primary" plain>线框主按钮</dd-button>
+        <dd-button type="default" plain>线框默认</dd-button>
+        <dd-button type="success" plain>线框成功</dd-button>
+        <dd-button type="danger" plain>线框危险</dd-button>
+      </view>
+      <text class="demo-label" style="margin-top:24rpx">Plain + Round + 尺寸</text>
+      <view class="demo-row">
+        <dd-button type="primary" plain round>圆角线框</dd-button>
+        <dd-button type="warning" plain size="sm">小号线框</dd-button>
+        <dd-button type="danger" plain size="sm" round>小号圆角</dd-button>
       </view>
     </view>
 

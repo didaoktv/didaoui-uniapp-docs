@@ -9,6 +9,7 @@
         <dd-input v-model="pwd" type="password" show-password clearable placeholder="请输入密码" />
         <dd-input v-model="search" type="search" placeholder="搜索歌曲、歌手" />
         <dd-input v-model="num" type="number" placeholder="请输入手机号" />
+        <dd-input v-model="amount" type="digit" placeholder="请输入金额（小数）" />
       </view>
     </view>
 
@@ -50,6 +51,7 @@
       <text class="demo-note">text1 = {{ text1 }}</text>
       <text class="demo-note">search = {{ search }}</text>
       <text class="demo-note">num = {{ num }}</text>
+      <text class="demo-note">amount = {{ amount }}</text>
       <text class="demo-note">clear1 = {{ clear1 }}</text>
       <text class="demo-note">limited1 = {{ limited1 }} / 5</text>
     </view>
@@ -67,6 +69,7 @@ const text1 = ref('张先生')
 const pwd = ref('123456')
 const search = ref('')
 const num = ref('')
+const amount = ref('')
 const clear1 = ref('可清除')
 const clear2 = ref('')
 const pwd1 = ref('')

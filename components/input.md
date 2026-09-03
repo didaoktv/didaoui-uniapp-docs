@@ -1,10 +1,10 @@
 # 输入框 DdInput
 
-> 单一高度（44px）输入框基于 var(--neutral-800) 与 var(--radius-md)；4 种类型（text/password/search/number）；聚焦加金色边框 + 发光，错误加红色边框 + 红色发光；clearable 与 showPassword 组合后缀；search 在小程序降级为 text。
+> 单一高度（44px）输入框基于 var(--neutral-800) 与 var(--radius-md)；5 种类型（text/password/search/number/digit）；聚焦加金色边框 + 发光，错误加红色边框 + 红色发光；clearable 与 showPassword 组合后缀；search 在小程序降级为 text。
 
 ## 介绍
 
-DdInput 是统一的文本输入控件，支持 text、password、search、number 四种类型。聚焦时金色边框 + 发光形成品牌识别，错误状态以红色边框 + 红色发光提示校验失败。`clearable` 提供一键清空，`showPassword` 在密码框中提供可见性切换。password 类型使用 uni 原生 password 布尔属性以兼容多端，search 类型在小程序端降级为 text。
+DdInput 是统一的文本输入控件，支持 text、password、search、number、digit 五种类型（digit 为带小数点的数字键盘，适合金额/时长等输入）。聚焦时金色边框 + 发光形成品牌识别，错误状态以红色边框 + 红色发光提示校验失败。`clearable` 提供一键清空，`showPassword` 在密码框中提供可见性切换。password 类型使用 uni 原生 password 布尔属性以兼容多端，search 类型在小程序端降级为 text。
 
 ## 代码演示
 
@@ -21,6 +21,31 @@ DdInput 是统一的文本输入控件，支持 text、password、search、numbe
 <script setup>
 import { ref } from 'vue'
 const text = ref('')
+</script>
+```
+
+</DemoBlock>
+:::
+
+### 数字输入
+
+`type="number"` 为纯数字键盘；`type="digit"` 为带小数点的数字键盘，适合金额、时长等输入。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view>
+    <dd-input v-model="amount" type="digit" placeholder="请输入金额" />
+    <dd-input v-model="count" type="number" placeholder="请输入数量" />
+  </view>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const amount = ref('')
+const count = ref('')
 </script>
 ```
 
@@ -82,7 +107,7 @@ const phone = ref('138')
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | modelValue (v-model) | 输入值 | `string \| number` | `''` |
-| type | 输入类型 | `'text' \| 'password' \| 'search' \| 'number'` | `'text'` |
+| type | 输入类型 | `'text' \| 'password' \| 'search' \| 'number' \| 'digit'` | `'text'` |
 | placeholder | 占位提示文字 | `string` | `''` |
 | disabled | 是否禁用 | `boolean` | `false` |
 | clearable | 是否显示清空按钮 | `boolean` | `false` |
