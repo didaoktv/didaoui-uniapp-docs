@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <dd-top-navbar title="图标" />
   <view class="demo-page">
 
@@ -56,9 +56,10 @@
     >
       <text class="demo-title">{{ group }}（{{ names.length }}）</text>
       <view class="demo-grid">
-        <view v-for="n in names" :key="n" class="demo-icon-cell">
+        <view v-for="n in names" :key="n" class="demo-icon-cell" @click="copyIcon(n)">
           <dd-icon :name="n" size="24" />
-          <text class="demo-icon-name">{{ n }}</text>
+          <text class="demo-icon-name">{{ iconLabels[n] ?? n }}</text>
+          <text class="demo-icon-en">{{ n }}</text>
         </view>
       </view>
     </view>
@@ -68,7 +69,14 @@
 </template>
 
 <script setup lang="ts">
-import { DdIcon, iconGroups } from '@didaoktv/didaoui-uniapp'
+import { DdIcon, iconGroups, iconLabels } from '@didaoktv/didaoui-uniapp'
+
+function copyIcon(name: string) {
+  uni.setClipboardData({
+    data: `<dd-icon name="${name}" />`,
+    success: () => uni.showToast({ title: `已复制 <dd-icon name="${name}" />`, icon: 'none' }),
+  })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -88,10 +96,22 @@ import { DdIcon, iconGroups } from '@didaoktv/didaoui-uniapp'
   padding: 20rpx 8rpx;
   background: var(--dd-bg-card);
   border-radius: 12rpx;
+  transition: opacity 0.15s ease;
+}
+
+.demo-icon-cell:active {
+  opacity: 0.6;
 }
 
 .demo-icon-name {
   font-size: 20rpx;
+  color: var(--dd-text);
+  text-align: center;
+  word-break: break-all;
+}
+
+.demo-icon-en {
+  font-size: 18rpx;
   color: var(--dd-muted);
   text-align: center;
   word-break: break-all;
