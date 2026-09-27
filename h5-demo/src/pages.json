@@ -526,6 +526,41 @@
       }
     },
     {
+      "path": "pages/tree-select/demo",
+      "style": {
+        "navigationBarTitleText": "分类选择 DdTreeSelect",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/sidebar/demo",
+      "style": {
+        "navigationBarTitleText": "侧边栏导航 DdSidebar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/sidebar-item/demo",
+      "style": {
+        "navigationBarTitleText": "侧边栏子项 DdSidebarItem",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/submit-bar/demo",
+      "style": {
+        "navigationBarTitleText": "提交订单栏 DdSubmitBar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/price/demo",
+      "style": {
+        "navigationBarTitleText": "价格 DdPrice",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/barcode/demo",
       "style": {
         "navigationBarTitleText": "条形码 DdBarcode",
