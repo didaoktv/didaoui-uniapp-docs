@@ -71,6 +71,7 @@ const componentSidebar = [
       // 容器族：通用卡片 → 业务卡片 → 网格 → 折叠容器 → 定位容器
       { text: 'Card 卡片', link: '/components/card' },
       { text: 'RoomCard 房间卡片', link: '/components/room-card' },
+      { text: 'GoodsCard 商品卡片', link: '/components/goods-card' },
       { text: 'FeatureGrid 功能网格', link: '/components/feature-grid' },
       { text: 'Collapse 折叠面板', link: '/components/collapse' },
       { text: 'Sticky 吸顶容器', link: '/components/sticky' },

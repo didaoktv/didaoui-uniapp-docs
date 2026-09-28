@@ -2,7 +2,7 @@
   <view class="demo-page">
     <view class="home-header">
       <text class="home-title">DidaoUI-uniapp</text>
-      <text class="home-subtitle">帝到KTV UniApp 组件库 · 95 组件 · 5 端编译</text>
+      <text class="home-subtitle">帝到KTV UniApp 组件库 · 96 组件 · 5 端编译</text>
       <view class="home-author" @click="openAuthor">
         <text class="home-author-label" @click="openAuthor">作者</text>
         <text class="home-author-name">i@duminghong.com</text>
@@ -165,6 +165,7 @@ const categories: Record<string, CompDef[]> = {
     // 容器族：通用卡片 → 业务卡片 → 网格 → 折叠容器 → 定位容器
     { path: 'pages/card/demo', name: '卡片', en: 'Card' },
     { path: 'pages/room-card/demo', name: '房间卡片', en: 'RoomCard' },
+    { path: 'pages/goods-card/demo', name: '商品卡片', en: 'GoodsCard', ver: 'v1.4.3' },
     { path: 'pages/feature-grid/demo', name: '功能网格', en: 'FeatureGrid' },
     { path: 'pages/collapse/demo', name: '折叠面板', en: 'Collapse' },
     { path: 'pages/sticky/demo', name: '吸顶容器', en: 'Sticky' },

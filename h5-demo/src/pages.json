@@ -211,6 +211,13 @@
       }
     },
     {
+      "path": "pages/goods-card/demo",
+      "style": {
+        "navigationBarTitleText": "商品卡片 DdGoodsCard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/feature-grid/demo",
       "style": {
         "navigationBarTitleText": "功能网格 DdFeatureGrid",
