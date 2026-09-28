@@ -31,7 +31,7 @@ Playfair Display 是拉丁衬线字体，**不含中文字形**。中文标题�
 
 ## 字号阶梯
 
-9 级字号，从 Display 32px 到 Caption 12px，对齐 Vant 4 尺度：
+9 级字号，从 Display 32px 到 Caption 12px：
 
 | Token | 字号 | 用途 |
 | --- | --- | --- |

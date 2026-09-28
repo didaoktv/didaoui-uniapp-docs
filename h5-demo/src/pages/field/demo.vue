@@ -98,7 +98,7 @@
     </view>
 
     <view class="demo-section">
-      <text class="demo-title">vant 对齐补充</text>
+      <text class="demo-title">尺寸与能力补充</text>
       <dd-cell-group>
         <dd-field v-model="a1" label="尺寸 large" size="large" placeholder="行高 112rpx" />
         <dd-field v-model="a2" label="自定义清空图标" clearable clear-icon="close" placeholder="输入后聚焦看图标" />

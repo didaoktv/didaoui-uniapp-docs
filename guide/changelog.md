@@ -12,7 +12,7 @@
 
 #### 组件（新增 17 个，总数 84）
 
-面向三端页面（customer / staff / boss）补齐文本/富媒体、键盘输入、商城规格与 canvas 绘制能力，新组件统一参考 **Vant + mp-html 等主流组件库**同名组件 API、符合 uni-app 多端规范，并同步进设计系统（消费 `scss/_variables.scss` 既有 `$dd-*` token）。文档站新增「Canvas 绘制」分类。
+面向三端页面（customer / staff / boss）补齐文本/富媒体、键盘输入、商城规格与 canvas 绘制能力，新组件统一参考 **mp-html 等主流组件库**同名组件 API、符合 uni-app 多端规范，并同步进设计系统（消费 `scss/_variables.scss` 既有 `$dd-*` token）。文档站新增「Canvas 绘制」分类。
 
 | 组件 | 类型 | 用途 | 参考基准 |
 |------|------|------|---------|
@@ -26,7 +26,7 @@
 | `dd-number-keyboard` | 表单输入 | 数字键盘（数字 / 身份证、小数点、乱序、长按连删） | 主流组件库同名组件 |
 | `dd-car-keyboard` | 表单输入 | 车牌键盘（省份简称 / 字母切换、中→英自动切换、乱序） | 主流组件库同名组件 |
 | `dd-cascader` | 表单输入 | 级联选择器（多级联动、单/双列布局、垂直步骤头部、v-model 回显） | 主流组件库同名组件 |
-| `dd-goods-sku` | 表单输入 | 商品规格选择（SKU 树 / 无效组合置灰 / 库存联动 / 步进器） | Vant SKU |
+| `dd-goods-sku` | 表单输入 | 商品规格选择（SKU 树 / 无效组合置灰 / 库存联动 / 步进器） | 主流商城 SKU 组件 |
 | `dd-coupon` | 数据展示 | 优惠券（券 / 红包 / 卡片三形状、尺寸、内置渐变主题） | 主流组件库同名组件 |
 | `dd-avatar-group` | 数据展示 | 头像组（maxCount / 遮挡比例 / +N 更多提示） | 主流组件库同名组件 |
 | `dd-barcode` | Canvas 绘制 | 条形码（CODE128 / CODE39 / EAN / UPC 系列，canvas 或图片输出） | JsBarcode 同族 API |
@@ -56,13 +56,13 @@
 
 #### 组件（新增 4 个，总数 67）
 
-基于三端页面（customer / staff / boss）承接性评估补齐，新组件统一参考 **Vant 等主流组件库**同名组件 API、符合 uni-app 多端规范，并同步进设计系统（消费 `scss/_variables.scss` 既有 `$dd-*` token）。
+基于三端页面（customer / staff / boss）承接性评估补齐，新组件统一参考 **主流组件库**同名组件 API、符合 uni-app 多端规范，并同步进设计系统（消费 `scss/_variables.scss` 既有 `$dd-*` token）。
 
 | 组件 | 类型 | 用途 | 参考基准 |
 |------|------|------|---------|
-| `dd-bill-detail` | 布局/业务卡片 | 账单明细（商品项/小计/合计/状态/操作插槽） | Vant `Card` + GoodsAction 聚合 |
-| `dd-workorder-card` | 布局/业务卡片 | 工单条目（类型/状态/进度/布置 checklist/完成确认） | Vant `Card` + `Tag` + Checklist |
-| `dd-calendar` | 布局/业务卡片 | 月历 + 时段（日期单选/区间/禁选/时段格） | Vant `Calendar` |
+| `dd-bill-detail` | 布局/业务卡片 | 账单明细（商品项/小计/合计/状态/操作插槽） | 卡片 + 底部操作条聚合 |
+| `dd-workorder-card` | 布局/业务卡片 | 工单条目（类型/状态/进度/布置 checklist/完成确认） | 卡片 + 标签 + 清单聚合 |
+| `dd-calendar` | 布局/业务卡片 | 月历 + 时段（日期单选/区间/禁选/时段格） | 主流日历组件 |
 | `dd-qrcode` | 布局/业务卡片 | canvas 二维码（无三方依赖，本地生成矩阵） | 主流二维码组件 API |
 
 `dd-qrcode` 默认前景/背景为黑白，是保证可扫描性的刻意例外（仅此组件一处）。
@@ -105,7 +105,7 @@
 - **色彩**：8 色彩组（primary 帝王金 / accent 皇家蓝 / success / warning / error / info / neutral 纯黑系 / vip 紫），完整 50-950 色阶
 - **排版**：4 字体族（Playfair Display / Noto Sans SC / JetBrains Mono），9 字号 / 9 字重 / 9 行高
 - **间距**：8 级（4-64px），4px 栅格基础
-- **圆角**：6 级（sm 2px - full 9999px），Vant 对齐 + 抖音商城风柔和
+- **圆角**：6 级（sm 2px - full 9999px），克制小圆角 + 抖音商城风柔和
 - **阴影**：5 层（Card → Overlay）+ 13+ 发光变体（金/蓝/绿/黄/红/青/紫 × sm/md/lg）
 - **玻璃拟态**：3 档透明度（72% / 85% / 95%）+ 20px 模糊，含小程序降级方案
 
@@ -134,7 +134,7 @@
 - **暗色优先**：纯黑背景（`#0A0A0A`）+ 卡片表面（`#171717`）
 - **金色霓虹**：主操作金色发光，模拟夜街霓虹招牌
 - **金色签名渐变**：卡片媒体与品牌渐变统一采用 primary-400 → primary-600 金色对角渐变
-- **柔和圆角**：Vant 式小圆角 + 抖音商城式容器大圆角
+- **柔和圆角**：克制小圆角 + 抖音商城式容器大圆角
 - **厚重排版**：标题 700-800 字重，正文 500 中等字重
 
 ### 📦 安装

@@ -1,6 +1,6 @@
 # 单元格 DdCell
 
-> Vant 风格列表单元格，支持 sm/md 尺寸、可选必填星号，isLink 控制箭头并门控 click 触发。
+> 列表单元格，支持 sm/md 尺寸、可选必填星号，isLink 控制箭头并门控 click 触发。
 
 ## 介绍
 

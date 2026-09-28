@@ -1,6 +1,6 @@
 # 表单 DdForm
 
-> 轻量校验调度器：规则分散在各 dd-field 上，dd-form 只做注册、触发与聚合（vant runRules 思想，自研无依赖）。
+> 轻量校验调度器：规则分散在各 dd-field 上，dd-form 只做注册、触发与聚合（自研无依赖）。
 
 ## 介绍
 
@@ -95,7 +95,7 @@ const emailRules = [
 
 ### 异步校验
 
-validator 返回 Promise，适合查重等接口校验；返回字符串可直接作为错误消息（vant 语义）。
+validator 返回 Promise，适合查重等接口校验；返回字符串可直接作为错误消息。
 
 :::demo
 <DemoBlock>
