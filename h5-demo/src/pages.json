@@ -587,6 +587,62 @@
         "navigationBarTitleText": "海报 DdPoster",
         "navigationStyle": "custom"
       }
+    },
+    {
+      "path": "pages/checkbox-group/demo",
+      "style": {
+        "navigationBarTitleText": "复选框组 DdCheckboxGroup",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/radio-group/demo",
+      "style": {
+        "navigationBarTitleText": "单选框组 DdRadioGroup",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/number-keyboard/demo",
+      "style": {
+        "navigationBarTitleText": "数字键盘 DdNumberKeyboard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/car-keyboard/demo",
+      "style": {
+        "navigationBarTitleText": "车牌键盘 DdCarKeyboard",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/avatar-group/demo",
+      "style": {
+        "navigationBarTitleText": "头像组 DdAvatarGroup",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cell-group/demo",
+      "style": {
+        "navigationBarTitleText": "单元格分组 DdCellGroup",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/portal/demo",
+      "style": {
+        "navigationBarTitleText": "传送门 DdPortal",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/canvas/demo",
+      "style": {
+        "navigationBarTitleText": "画布 DdCanvas",
+        "navigationStyle": "custom"
+      }
     }
   ]
 }

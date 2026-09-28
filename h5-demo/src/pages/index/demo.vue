@@ -2,7 +2,7 @@
   <view class="demo-page">
     <view class="home-header">
       <text class="home-title">DidaoUI-uniapp</text>
-      <text class="home-subtitle">帝到KTV UniApp 组件库 · 87 组件 · 5 端编译</text>
+      <text class="home-subtitle">帝到KTV UniApp 组件库 · 95 组件 · 5 端编译</text>
       <view class="home-author" @click="openAuthor">
         <text class="home-author-label" @click="openAuthor">作者</text>
         <text class="home-author-name">i@duminghong.com</text>
@@ -127,7 +127,9 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/search-bar/demo', name: '搜索栏', en: 'SearchBar' },
     { path: 'pages/switch/demo', name: '开关', en: 'Switch' },
     { path: 'pages/checkbox/demo', name: '复选框', en: 'Checkbox' },
+    { path: 'pages/checkbox-group/demo', name: '复选框组', en: 'CheckboxGroup', ver: 'v1.2.0' },
     { path: 'pages/radio/demo', name: '单选框', en: 'Radio' },
+    { path: 'pages/radio-group/demo', name: '单选框组', en: 'RadioGroup', ver: 'v1.2.0' },
     { path: 'pages/slider/demo', name: '滑块', en: 'Slider' },
     { path: 'pages/stepper/demo', name: '步进器', en: 'Stepper' },
     { path: 'pages/rate/demo', name: '评分', en: 'Rate' },
@@ -137,6 +139,8 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/date-picker/demo', name: '日期选择', en: 'DatePicker' },
     { path: 'pages/calendar/demo', name: '日历', en: 'Calendar' },
     { path: 'pages/keyboard/demo', name: '键盘', en: 'Keyboard', ver: 'v1.2.0' },
+    { path: 'pages/number-keyboard/demo', name: '数字键盘', en: 'NumberKeyboard', ver: 'v1.2.0' },
+    { path: 'pages/car-keyboard/demo', name: '车牌键盘', en: 'CarKeyboard', ver: 'v1.2.0' },
     { path: 'pages/upload/demo', name: '上传', en: 'Upload' },
     { path: 'pages/cropper/demo', name: '图片裁剪', en: 'Cropper', ver: 'v1.2.0' },
     { path: 'pages/signature/demo', name: '签名', en: 'Signature', ver: 'v1.2.0' },
@@ -176,7 +180,9 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/tag/demo', name: '标签', en: 'Tag' },
     { path: 'pages/badge/demo', name: '徽标', en: 'Badge' },
     { path: 'pages/avatar/demo', name: '头像', en: 'Avatar' },
+    { path: 'pages/avatar-group/demo', name: '头像组', en: 'AvatarGroup', ver: 'v1.2.0' },
     { path: 'pages/cell/demo', name: '单元格', en: 'Cell' },
+    { path: 'pages/cell-group/demo', name: '单元格分组', en: 'CellGroup' },
     { path: 'pages/list-cell/demo', name: '列表项', en: 'ListCell' },
     { path: 'pages/image/demo', name: '图片', en: 'Image' },
     { path: 'pages/album/demo', name: '相册', en: 'Album', ver: 'v1.2.0' },
@@ -195,11 +201,13 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/price/demo', name: '价格', en: 'Price', ver: 'v1.4.0' },
     { path: 'pages/qrcode/demo', name: '二维码', en: 'Qrcode' },
     { path: 'pages/submit-bar/demo', name: '提交订单栏', en: 'SubmitBar', ver: 'v1.4.0' },
+    { path: 'pages/canvas/demo', name: '画布', en: 'Canvas', ver: 'v1.2.0' },
     { path: 'pages/barcode/demo', name: '条形码', en: 'Barcode', ver: 'v1.2.0' },
     { path: 'pages/poster/demo', name: '海报', en: 'Poster', ver: 'v1.2.0' },
   ],
   overlay: [
     // 基座层（Overlay/Popup）→ 对话类 → 锚定气泡 → 瞬时提示 → 加载
+    { path: 'pages/portal/demo', name: '传送门', en: 'Portal', ver: 'v1.3.5' },
     { path: 'pages/overlay/demo', name: '遮罩层', en: 'Overlay' },
     { path: 'pages/popup/demo', name: '弹出层', en: 'Popup' },
     { path: 'pages/modal/demo', name: '模态框', en: 'Modal' },
