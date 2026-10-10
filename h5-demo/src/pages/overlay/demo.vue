@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <dd-top-navbar title="遮罩层" />
   <view class="demo-page">
 
@@ -16,7 +16,7 @@
     <view class="demo-section">
       <text class="demo-title">ZIndex / Duration</text>
       <view class="demo-row">
-        <dd-button size="sm" type="primary" @click="show3 = true">高 z-index</dd-button>
+        <dd-button size="sm" type="primary" @click="show3 = true">默认层级</dd-button>
         <dd-button size="sm" type="primary" @click="show4 = true">慢速过渡</dd-button>
       </view>
     </view>
@@ -42,9 +42,9 @@
       </view>
     </dd-overlay>
 
-    <dd-overlay v-model="show3" :z-index="3000">
+    <dd-overlay v-model="show3">
       <view style="display:flex;align-items:center;justify-content:center;height:100vh">
-        <view class="overlay-card">Z-Index: 3000</view>
+        <view class="overlay-card">默认层级（overlay 档）</view>
       </view>
     </dd-overlay>
 
