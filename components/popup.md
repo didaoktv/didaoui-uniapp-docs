@@ -94,6 +94,7 @@ const show = ref(false)
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | modelValue | 是否显示（支持 v-model） | `boolean` | `false` |
+| title | 标题行纯文字（可被 `title` 插槽覆盖） | `string` | `''` |
 | position | 弹出位置 | `'top' \| 'bottom' \| 'left' \| 'right' \| 'center'` | `'bottom'` |
 | round | 是否圆角（方向随位置自适应） | `boolean` | `false` |
 | overlay | 是否显示遮罩 | `boolean` | `true` |
@@ -122,6 +123,7 @@ const show = ref(false)
 
 | 名称 | 说明 |
 |------|------|
+| title | 标题行自定义内容（覆盖 `title` prop 纯文字，带分隔线） |
 | default | 弹出层内容 |
 
 ## 设计规范
