@@ -145,6 +145,7 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/cropper/demo', name: '图片裁剪', en: 'Cropper', ver: 'v1.2.0' },
     { path: 'pages/signature/demo', name: '签名', en: 'Signature', ver: 'v1.2.0' },
     { path: 'pages/goods-sku/demo', name: '商品SKU', en: 'GoodsSku', ver: 'v1.2.0' },
+    { path: 'pages/package-sku/demo', name: '套餐可选组', en: 'PackageSku', ver: 'v2.3.0' },
     { path: 'pages/button/demo', name: '按钮', en: 'Button' },
     { path: 'pages/code-button/demo', name: '验证码按钮', en: 'CodeButton', ver: 'v1.3.3' },
   ],

@@ -526,6 +526,13 @@
       }
     },
     {
+      "path": "pages/package-sku/demo",
+      "style": {
+        "navigationBarTitleText": "套餐可选组 DdPackageSku",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/cascader/demo",
       "style": {
         "navigationBarTitleText": "级联选择器 DdCascader",

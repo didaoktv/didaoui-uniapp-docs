@@ -43,6 +43,7 @@ const componentSidebar = [
       { text: 'Cropper 图片裁剪', link: '/components/cropper' },
       { text: 'Signature 签名', link: '/components/signature' },
       { text: 'GoodsSku 商品SKU', link: '/components/goods-sku' },
+      { text: 'PackageSku 套餐可选组', link: '/components/package-sku' },
       { text: 'Button 按钮', link: '/components/button' },
       { text: 'CodeButton 验证码按钮', link: '/components/code-button' },
     ],
