@@ -8,7 +8,7 @@
 ├── .vitepress/          # VitePress 配置与自定义主题
 │   ├── config.ts        # 站点配置（侧边栏 / 导航 / alias）
 │   └── theme/           # DemoBlock、ColorCard、手机模拟器等主题组件
-├── components/          # 61 个组件文档（md）
+├── components/          # 91 个组件文档（md）
 ├── design/              # 设计规范文档（色彩 / 字体 / 间距 / 玻璃拟态...）
 ├── guide/               # 指南（快速上手 / 多端编译 / 主题定制）
 ├── h5-demo/             # uni-app H5 演示应用（iframe 嵌入文档站）
