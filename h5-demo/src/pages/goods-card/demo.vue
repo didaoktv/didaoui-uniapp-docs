@@ -43,6 +43,11 @@
           disabled
         />
       </view>
+      <text class="demo-label" style="margin-top:24rpx">无图占位（主题随机底色 + 名称前 2 字）</text>
+      <view class="demo-col">
+        <dd-goods-card title="青岛啤酒经典" desc="目录暂无封面图" :price="8" />
+        <dd-goods-card title="科罗娜啤酒" desc="目录暂无封面图" :price="15" />
+      </view>
     </view>
 
     <view class="demo-section">

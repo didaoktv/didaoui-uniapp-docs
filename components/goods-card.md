@@ -103,13 +103,33 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 </DemoBlock>
 :::
 
+### 价格行右侧（操作同排）
+
+`price-right` 插槽位于价格行右端，适合放步进器/加购按钮，使价格与操作同排并一起贴在卡片底部；不传该插槽时回退渲染 `num`（`×2`）。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-goods-card thumb="https://dummyimage.com/140x140" title="单份果盘" desc="当季水果现切" :price="38">
+    <template #price-right>
+      <dd-button type="primary" size="sm">加入购物车</dd-button>
+    </template>
+  </dd-goods-card>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| thumb | 商品图片地址 | `string` | `''` |
+| thumb | 商品图片地址；缺图时显示文字占位块（主题随机底色 + 名称前 2 字） | `string` | `''` |
 | title | 商品名称 | `string` | `''` |
 | desc | 商品描述/规格说明 | `string` | `''` |
 | price | 单价（元，直接展示，不传不渲染） | `string \| number` | `undefined` |
@@ -136,7 +156,8 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 |--------|------|
 | thumb | 自定义缩略图区域 |
 | default | 覆盖默认信息区（title/desc/价格等） |
-| bottom | 底部扩展区（放步进器/加购按钮） |
+| price-right | 价格行右侧扩展区（步进器/加购按钮，与价格同排贴底；未用时渲染 num） |
+| bottom | 底部扩展区（独占一行的步进器/加购按钮） |
 
 ## 设计规范
 
@@ -149,6 +170,7 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 
 ::: warning 注意事项
 - `price` 以「元」为单位直接传入（与 dd-price 口径一致），勿传「分」。
+- 目录商品无图时直接不传 `thumb`，组件自动渲染主题随机底色 + 名称前 2 字的占位块；需完全自定义时再用 `#thumb` 插槽覆盖。
 - 同一列表内不要混用横向与竖向布局。
 - `disabled` 用于售罄等不可点场景时，建议同时设置 `tag="售罄"` 明确语义。
 :::

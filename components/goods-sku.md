@@ -94,7 +94,7 @@ function onConfirm(payload: any) {
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
-| goodsInfo | 商品信息（image/picture、price/price_fee、stock/quantity） | `Record<string, any>` | `{}` |
+| goodsInfo | 商品信息（image/picture、price/price_fee、stock/quantity、name）；缺图时头部以主题随机底色 + 名称前 2 字占位 | `Record<string, any>` | `{}` |
 | skuTree | SKU 规格树：`[{ name, label, children: [{ id, name }] }]` | `SkuTreeItem[]` | `[]` |
 | skuList | SKU 组合列表，每项含各维度字段值 + price + stock | `Record<string, any>[]` | `[]` |
 | maxBuy | 最大购买数量 | `number` | `999` |
@@ -138,5 +138,5 @@ function onConfirm(payload: any) {
 ::: warning 注意事项
 - 确认回调中的 `sku` 为 `skuList` 中匹配到的完整记录；未选满维度时按钮禁用、不会回调。
 - `maxBuy` 与实时库存取较小值作为步进器上限。
-- 商品图请传可访问的绝对路径。
+- 商品图请传可访问的绝对路径；未传时头部图块以主题随机底色 + 商品名前 2 字占位。
 :::

@@ -4,7 +4,9 @@
 
 ## 介绍
 
-DdPackageSku 用于欢唱套餐等「含可选组」商品的下单前选择（如「饮料 3 选 1」「小食最多选 2 项」）。`groups` 为通用分组形状（不绑定业务 DTO）：`groupType='FIXED'` 的固定组只读展示、不参与校验；`OPTIONAL` 组按 `minSel`/`maxSel` 约束多选，标题区自动生成「3选1 / 选1~2项 / 最多选2项」提示。子项 `priceFen` 为加价（分），选中后以「+¥X」标注；`enabled=false` 或 `qty<=0` 自动置灰并显示「已售罄」角标。任一必选组未选满时确认按钮禁用并在底部红字提示差额；确认后弹层不自动关闭，由调用方通过 `ref.close()` 关闭。
+DdPackageSku 用于欢唱套餐等「含可选组」商品的下单前选择（如「饮料 3 选 1」「小食最多选 2 项」）。`groups` 为通用分组形状（不绑定业务 DTO）：`groupType='FIXED'` 的固定组只读展示、不参与校验；`OPTIONAL` 组按 `minSel`/`maxSel` 约束多选，单选组（`maxSel=1`）点击未选中项直接替换已选项，标题区自动生成「3选1 / 选1~2项 / 最多选2项」提示。子项 `priceFen` 为加价（分），选中后以「+¥X」标注；`enabled=false` 或 `qty<=0` 自动置灰并显示「已售罄」角标。任一必选组未选满时确认按钮禁用并在底部红字提示差额；确认后弹层不自动关闭，由调用方通过 `ref.close()` 关闭。
+
+传 `goodsInfo` 时头部展示套餐图、价格（底价 + 已选加价实时联动）、库存与已选项摘要；图块必有，缺图时以主题随机底色块 + 套餐名前 2 字占位。
 
 ## 代码演示
 
@@ -17,13 +19,16 @@ DdPackageSku 用于欢唱套餐等「含可选组」商品的下单前选择（�
 <template>
   <view>
     <dd-button type="primary" @click="open">选择套餐内容</dd-button>
-    <dd-package-sku ref="skuRef" :groups="groups" @confirm="onConfirm" />
+    <dd-package-sku ref="skuRef" :groups="groups" :goods-info="goodsInfo" @confirm="onConfirm" />
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 const skuRef = ref()
+
+// 缺图时头部以主题随机底色 + 名称前 2 字占位
+const goodsInfo = { name: '欢唱酒水套餐', price: 299, stock: 12 }
 
 const groups = [
   {
@@ -156,6 +161,7 @@ function onConfirm({ selectedText }: any) {
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | groups | 分组列表 `[{ id, name, minSel?, maxSel?, groupType?, items: [{ id, name, priceFen?, qty?, enabled? }] }]` | `PackageSkuGroup[]` | `[]` |
+| goodsInfo | 头部展示信息：`image`/`picture` 主图、`name` 名称（缺图占位文字来源）、`price` 底价（元，随已选加价联动）、`stock`/`quantity` 库存；图块必有，缺图时以主题随机底色 + 名称前 2 字占位 | `Record<string, any>` | `{}` |
 | title | 弹层标题 | `string` | `'选择套餐内容'` |
 | confirmText | 确认按钮文字 | `string` | `'确定'` |
 | closeable | 是否显示关闭弹窗按钮 | `boolean` | `true` |
@@ -194,6 +200,6 @@ function onConfirm({ selectedText }: any) {
 
 ::: warning 注意事项
 - 组内 `maxSel` 缺省取子项数、`minSel` 缺省 0；`FIXED` 组不传 `minSel/maxSel` 也不影响校验。
-- 达到 `maxSel` 后继续点击其他子项会 toast「最多选择 X 项」，不会替换已选项。
+- 多选组达到 `maxSel` 后继续点击其他子项会 toast「最多选择 X 项」；单选组（`maxSel=1`）点击未选中项直接替换已选项，无需先取消。
 - 确认仅在前端做「选满」拦截；服务端仍应以自身校验（如 min/max 范围 400）为权威。
 :::
