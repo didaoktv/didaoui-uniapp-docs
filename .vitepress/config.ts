@@ -112,6 +112,7 @@ const componentSidebar = [
       { text: 'Price 价格', link: '/components/price' },
       { text: 'Qrcode 二维码', link: '/components/qrcode' },
       { text: 'SubmitBar 提交订单栏', link: '/components/submit-bar' },
+      { text: 'CartBar 购物车栏', link: '/components/cart-bar' },
       { text: 'Canvas 画布', link: '/components/canvas' },
       { text: 'Barcode 条形码', link: '/components/barcode' },
       { text: 'Poster 海报', link: '/components/poster' },

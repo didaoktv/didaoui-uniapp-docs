@@ -2,7 +2,7 @@
   <view class="demo-page">
     <view class="home-header">
       <text class="home-title">DidaoUI-uniapp</text>
-      <text class="home-subtitle">帝到KTV UniApp 组件库 · 96 组件 · 5 端编译</text>
+      <text class="home-subtitle">帝到KTV UniApp 组件库 · 97 组件 · 5 端编译</text>
       <view class="home-author" @click="openAuthor">
         <text class="home-author-label" @click="openAuthor">作者</text>
         <text class="home-author-name">i@duminghong.com</text>
@@ -203,6 +203,7 @@ const categories: Record<string, CompDef[]> = {
     { path: 'pages/price/demo', name: '价格', en: 'Price', ver: 'v1.4.0' },
     { path: 'pages/qrcode/demo', name: '二维码', en: 'Qrcode' },
     { path: 'pages/submit-bar/demo', name: '提交订单栏', en: 'SubmitBar', ver: 'v1.4.0' },
+    { path: 'pages/cart-bar/demo', name: '购物车栏', en: 'CartBar', ver: 'v2.6.0' },
     { path: 'pages/canvas/demo', name: '画布', en: 'Canvas', ver: 'v1.2.0' },
     { path: 'pages/barcode/demo', name: '条形码', en: 'Barcode', ver: 'v1.2.0' },
     { path: 'pages/poster/demo', name: '海报', en: 'Poster', ver: 'v1.2.0' },

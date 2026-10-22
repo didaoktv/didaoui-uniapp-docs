@@ -568,6 +568,13 @@
       }
     },
     {
+      "path": "pages/cart-bar/demo",
+      "style": {
+        "navigationBarTitleText": "购物车栏 DdCartBar",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/price/demo",
       "style": {
         "navigationBarTitleText": "价格 DdPrice",
