@@ -11,7 +11,9 @@ const viteAlias = existsSync(libEntry)
   ? { resolve: { alias: { '@didaoktv/didaoui-uniapp': libEntry } } }
   : {}
 
-// 侧边栏由 home-registry.ts 派生（与 h5-demo 首页导航单一事实源），自动携带 ver 版本标签。
+// 侧边栏由 home-registry.ts 派生（与 h5-demo 首页导航单一事实源）。
+// ver 版本以徽标 span 内嵌（VPSidebarItem 用 v-html 渲染 text，样式见 theme/custom.css；
+// 内容为构建期自家常量，无注入面）。
 // 路径 /components/{slug} 对应 components/{slug}.md (cleanUrls)。
 // 豁免 icon-usage（check-md.mjs allowlist 的纯演示页，无对应 md）。
 const SIDEBAR_EXCLUDE = new Set(['icon-usage'])
@@ -22,7 +24,7 @@ const componentSidebar = homeSections.map((s) => ({
   items: s.comps
     .filter((c) => !SIDEBAR_EXCLUDE.has(compSlug(c.path)))
     .map((c) => ({
-      text: `${c.en} ${c.sideName ?? c.name}${c.ver ? ` ${c.ver}` : ''}`,
+      text: `${c.en} ${c.sideName ?? c.name}${c.ver ? ` <span class="dd-ver-badge">${c.ver}</span>` : ''}`,
       link: `/components/${compSlug(c.path)}`,
     })),
 }))
