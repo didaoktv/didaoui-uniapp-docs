@@ -24,7 +24,7 @@ const componentSidebar = homeSections.map((s) => ({
   items: s.comps
     .filter((c) => !SIDEBAR_EXCLUDE.has(compSlug(c.path)))
     .map((c) => ({
-      text: `${c.en} ${c.sideName ?? c.name}${c.ver ? ` <span class="dd-ver-badge">${c.ver}</span>` : ''}`,
+      text: `<span class="dd-item-label">${c.en} ${c.sideName ?? c.name}</span>${c.ver ? ` <span class="dd-ver-badge">${c.ver}</span>` : ''}`,
       link: `/components/${compSlug(c.path)}`,
     })),
 }))

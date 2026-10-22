@@ -96,18 +96,31 @@ html {
   background: var(--vp-c-bg);
 }
 
-/* 侧边栏组件版本徽标（text 由 config.ts 派生时内嵌 span，VPSidebarItem 以 v-html 渲染） */
+/* 侧边栏组件版本徽标（text 由 config.ts 派生时内嵌 span，VPSidebarItem 以 v-html 渲染）。
+   .text flex 化：名字单行省略截断，徽标永不收缩换行 */
+.VPSidebarItem .text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.VPSidebarItem .text .dd-item-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .VPSidebarItem .text .dd-ver-badge {
+  flex-shrink: 0;
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
   line-height: 1;
   padding: 3px 6px;
-  margin-left: 6px;
   border-radius: 6px;
   color: var(--vp-c-brand-1);
   background: color-mix(in srgb, var(--vp-c-brand-1) 14%, transparent);
-  vertical-align: 1px;
 }
 
 body {
