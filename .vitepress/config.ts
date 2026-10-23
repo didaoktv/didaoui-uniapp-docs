@@ -98,7 +98,8 @@ export default defineConfig({
           items: [
             { text: '快速上手', link: '/guide/quick-start' },
             { text: '多端编译', link: '/guide/multi-platform' },
-            { text: '主题定制', link: '/guide/theming' },
+            { text: '主题定制', link: '/guide/theme' },
+            { text: '更新日志', link: '/guide/changelog' },
           ],
         },
       ],

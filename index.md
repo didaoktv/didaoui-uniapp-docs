@@ -35,6 +35,6 @@ features:
   - icon: 🔒
     title: TypeScript
     details: 全量类型定义，IDE 智能提示；SCSS 变量可主题化定制。
-    link: /guide/theming
+    link: /guide/theme
     linkText: 主题定制
 ---
