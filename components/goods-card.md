@@ -4,7 +4,7 @@
 
 ## 介绍
 
-DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（左图右文，贴合点单列表）；`layout="vertical"` 切换为竖向上图下文（宫格/瀑布流）。价格高亮为红色强调，可叠加灰色划线原价；`bottom` 插槽可承载数量步进器或加购按钮，卡片本身保持纯展示。
+DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（左图右文，贴合点单列表）；`layout="vertical"` 切换为竖向上图下文（宫格/瀑布流）。价格高亮为红色强调，可叠加灰色划线原价；`bottom` 插槽可承载数量步进器或加购按钮，卡片本身保持纯展示。`size="sm"` 提供小一号档位：横向小号用于购物车列表行，竖向小号适配一行三列的规格点选宫格。
 
 ## 代码演示
 
@@ -83,6 +83,45 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 </DemoBlock>
 :::
 
+### 横向小号（购物车列表）
+
+`size="sm"` 叠加默认横向布局：图缩至 96rpx、字号收紧、不渲染描述（`desc` 传入也不显示）、价格整体小一号，适合购物车/已点列表逐行陈列，数量用 `num` 或 `price-right` 插槽。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:flex;flex-direction:column;gap:16rpx">
+    <dd-goods-card size="sm" thumb="https://dummyimage.com/140x140" title="经典果盘" :price="38" :num="1" />
+    <dd-goods-card size="sm" thumb="https://dummyimage.com/140x140" title="青岛啤酒经典" :price="8" :num="2" />
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
+### 竖向小号（一行三列）
+
+`layout="vertical"` + `size="sm"`：方图 + 标题最多两行，外层三列栅格即得规格点选宫格（对齐套餐自选页样式）。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:grid;grid-template-columns:repeat(3,1fr);gap:16rpx">
+    <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300" title="香辣鸡腿堡" :price="23" tag="人气必点" />
+    <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300" title="味滋脆鸡肉堡（微辣）" :price="25" />
+    <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300" title="阳光果蔬鸡肉堡" :price="21" />
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ### 自定义插槽
 
 `bottom` 插槽可放入数量步进器或加购按钮，实现下单页「点单」交互。
@@ -138,6 +177,7 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 | decimalLength | 价格小数位数 | `string \| number` | `2` |
 | tag | 角标文案（如「热卖」「售罄」） | `string` | `''` |
 | layout | 布局：横向/竖向 | `'horizontal' \| 'vertical'` | `'horizontal'` |
+| size | 尺寸：md 常规 / sm 小号（横向用于购物车列表行，不渲染描述；竖向用于一行三列宫格） | `'sm' \| 'md'` | `'md'` |
 | num | 已选数量（右下角，不传不渲染） | `string \| number` | `''` |
 | disabled | 置灰且不可点击（售罄等场景） | `boolean` | `false` |
 | thumbMode | 图片裁剪模式，透传 image mode | `string` | `'aspectFill'` |
@@ -164,6 +204,7 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 ::: tip 最佳实践
 - 点单列表逐行展示用默认横向布局。
 - 宫格/瀑布流陈列用 `layout="vertical"`。
+- 购物车/已点列表行用 `size="sm"` 横向小号；规格点选一行三列用 `layout="vertical"` + `size="sm"`。
 - 价格展示统一走组件内置的 dd-price，保持与库内金额样式一致。
 - 数量步进/加购通过 `bottom` 插槽注入，卡片保持纯展示、逻辑留给业务侧。
 :::

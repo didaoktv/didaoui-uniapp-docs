@@ -29,6 +29,19 @@
         <dd-goods-card layout="vertical" thumb="https://dummyimage.com/300x300/4caf50/ffffff&text=果盘" title="水果拼盘" :price="68" />
         <dd-goods-card layout="vertical" thumb="https://dummyimage.com/300x300/f5a623/0a0a0a&text=全家福" title="果盘全家福" :price="128" tag="新品" />
       </view>
+
+      <text class="demo-label" style="margin-top:24rpx">Horizontal Sm 横向小号（购物车列表）</text>
+      <view class="demo-col">
+        <dd-goods-card size="sm" thumb="https://dummyimage.com/140x140/f5a623/0a0a0a&text=果盘" title="经典果盘" :price="38" :num="1" />
+        <dd-goods-card size="sm" thumb="https://dummyimage.com/140x140/ffc107/0a0a0a&text=啤酒" title="青岛啤酒经典" :price="8" :num="2" />
+      </view>
+
+      <text class="demo-label" style="margin-top:24rpx">Vertical Sm 竖向小号（一行三列）</text>
+      <view class="demo-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16rpx">
+        <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300/e53935/ffffff&text=汉堡" title="香辣鸡腿堡" :price="23" tag="人气必点" />
+        <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300/ff9800/ffffff&text=鸡卷" title="味滋脆鸡肉堡（微辣）" :price="25" />
+        <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300/4caf50/ffffff&text=蔬堡" title="阳光果蔬鸡肉堡" :price="21" />
+      </view>
     </view>
 
     <view class="demo-section">

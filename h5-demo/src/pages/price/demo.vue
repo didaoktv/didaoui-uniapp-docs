@@ -24,6 +24,17 @@
       <text class="demo-note">decimalLength=0 隐藏小数；string rate 原样拆分不补位</text>
     </view>
 
+    <!-- 尺寸 -->
+    <view class="demo-section">
+      <text class="demo-title">尺寸 Size</text>
+      <view class="demo-price-row">
+        <dd-price :rate="88" size="sm" />
+        <dd-price :rate="88" />
+        <dd-price :rate="88" size="lg" />
+      </view>
+      <text class="demo-note">sm 购物车行/小卡 · md 默认常规列表 · lg 结算条/合计</text>
+    </view>
+
     <!-- submit-bar 内的用法 -->
     <view class="demo-section">
       <text class="demo-title">在提交订单栏中（内部复用）</text>

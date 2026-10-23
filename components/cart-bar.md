@@ -4,7 +4,7 @@
 
 ## 介绍
 
-DdCartBar 用于点单/点餐页底部（对标美团/饿了么购物车交互）：左上角购物车圆钮带数量角标（数量变化时角标弹跳），中间合计价（内部按 `items` 汇总，单位**分**自动转元），右侧结算按钮。点击圆钮弹出已选商品弹层（复用 DdPopup）：标题 + 清空（默认 `uni.showModal` 二次确认）+ 商品列表（图/名称/规格/单价/数量步进器）+ 提示条。数量减到 1 再减即移除该商品；弹层开着时底栏抬升到弹层之上仍可直接结算；减空/清空后弹层自动收起。
+DdCartBar 用于点单/点餐页底部（对标美团/饿了么购物车交互）：左上角购物车圆钮带数量角标（数量变化时角标弹跳），中间合计价（内部按 `items` 汇总，单位**分**自动转元），右侧结算按钮。点击圆钮弹出已选商品弹层（复用 DdPopup）：标题 + 清空（默认库内 DdDialog 二次确认，H5 端恒在弹层之上）+ 商品列表（复用 DdGoodsCard 小号横卡：紧凑图/名称/规格/单价/数量步进器）+ 提示条。数量减到 1 再减即移除该商品；弹层开着时底栏抬升到弹层之上且保持到关闭动画结束，减空/清空后弹层自动收起。
 
 ::: warning 注意事项
 - `items` 为受控数据：组件不内部持有状态，数量增减/清空通过 `change` 事件回传**新数组**（count 减到 0 的项已剔除），由消费方替换 `items`。
@@ -137,12 +137,12 @@ function onSubmit() {
 |------|------|------|--------|
 | items | 购物车条目（受控），增减/清空经 `change` 回传新数组 | `DdCartItem[]` | — |
 | v-model / modelValue | 购物车弹层显隐 | `boolean` | `false` |
-| label | 合计左侧文案 | `string` | `'合计：'` |
+| label | 合计左侧文案 | `string` | `''` |
 | suffixLabel | 合计右侧附加文案（如「共减¥19」） | `string` | `''` |
 | tips | 弹层顶部提示条文案 | `string` | `''` |
 | title | 弹层标题 | `string` | `'已选商品'` |
 | clearText | 清空按钮文案 | `string` | `'清空购物车'` |
-| clearConfirm | 清空前是否二次确认（uni.showModal） | `boolean` | `true` |
+| clearConfirm | 清空前是否二次确认（库内 DdDialog） | `boolean` | `true` |
 | currency | 货币符号 | `string` | `'¥'` |
 | buttonText | 结算按钮文案 | `string` | `'结算'` |
 | buttonType | 结算按钮类型（dd-button type） | `string` | `'primary'` |

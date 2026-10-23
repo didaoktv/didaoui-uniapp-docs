@@ -252,6 +252,10 @@ uni.onThemeChange((res) => {
 `--primary`（帝王金）与 `--accent`（皇家蓝）在暗色/亮色下保持一致，确保品牌识别稳定。仅中性色与表面色随主题翻转。
 :::
 
+### 平台提示类弹层（H5）
+
+引入 `@didaoktv/didaoui-uniapp/scss/theme` 后，H5 端的 `uni.showModal` / `uni.showToast` / `uni.showActionSheet` 弹层会被统一补丁接管：层级抬到 2050（恒高于库内弹层，避免被打开的弹层面板盖住），底色/文字/按钮颜色跟随 `--dd-*` CSS 变量在明暗主题下换肤，toast 呈玻璃胶囊风格。注意 `uni.showModal({ confirmColor })` 自定义确认色会被补丁忽略——需要自定义色时改用库内 [DdDialog](/components/dialog)。小程序/App 端平台弹层为原生实现，不受影响。
+
 ---
 
 ## 自定义主题示例
