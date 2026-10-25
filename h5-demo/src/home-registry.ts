@@ -123,6 +123,7 @@ export const homeSections: HomeSection[] = [
       { path: 'pages/qrcode/demo', name: '二维码', en: 'Qrcode' },
       { path: 'pages/submit-bar/demo', name: '提交订单栏', en: 'SubmitBar', ver: 'v1.4.0' },
       { path: 'pages/cart-bar/demo', name: '购物车栏', en: 'CartBar', ver: 'v2.6.0' },
+      { path: 'pages/order-list/demo', name: '订单列表', en: 'OrderList', ver: 'v2.8.0' },
       { path: 'pages/canvas/demo', name: '画布', en: 'Canvas', ver: 'v1.2.0' },
       { path: 'pages/barcode/demo', name: '条形码', en: 'Barcode', ver: 'v1.2.0' },
       { path: 'pages/poster/demo', name: '海报', en: 'Poster', ver: 'v1.2.0' },

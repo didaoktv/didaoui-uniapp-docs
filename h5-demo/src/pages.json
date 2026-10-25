@@ -575,6 +575,13 @@
       }
     },
     {
+      "path": "pages/order-list/demo",
+      "style": {
+        "navigationBarTitleText": "订单列表 DdOrderList",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/price/demo",
       "style": {
         "navigationBarTitleText": "价格 DdPrice",

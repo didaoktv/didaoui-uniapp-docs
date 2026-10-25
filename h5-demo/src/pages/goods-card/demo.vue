@@ -42,6 +42,14 @@
         <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300/ff9800/ffffff&text=鸡卷" title="味滋脆鸡肉堡（微辣）" :price="25" />
         <dd-goods-card layout="vertical" size="sm" thumb="https://dummyimage.com/300x300/4caf50/ffffff&text=蔬堡" title="阳光果蔬鸡肉堡" :price="21" />
       </view>
+
+      <text class="demo-label" style="margin-top:24rpx">Vertical Xs 竖向超小号（一行四列）</text>
+      <view class="demo-row" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16rpx">
+        <dd-goods-card layout="vertical" size="xs" thumb="https://dummyimage.com/300x300/e53935/ffffff&text=鸡腿堡" title="香辣鸡腿堡" :num="2" />
+        <dd-goods-card layout="vertical" size="xs" thumb="https://dummyimage.com/300x300/ff9800/ffffff&text=鸡排堡" title="香辣鸡排堡" />
+        <dd-goods-card layout="vertical" size="xs" thumb="https://dummyimage.com/300x300/4caf50/ffffff&text=薯条" title="黄金薯条" :num="3" />
+        <dd-goods-card layout="vertical" size="xs" title="青岛啤酒经典" />
+      </view>
     </view>
 
     <view class="demo-section">
