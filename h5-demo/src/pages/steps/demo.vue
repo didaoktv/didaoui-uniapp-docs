@@ -59,6 +59,53 @@
     </view>
 
     <view class="demo-section">
+      <text class="demo-title">圆点图标 Circle Icon</text>
+      <dd-steps direction="horizontal" :active="2">
+        <dd-step title="下单" description="待支付" icon="orders-o" />
+        <dd-step title="发货" description="运输中" icon="logistics" />
+        <dd-step title="收货" description="已签收" icon="tosend" />
+        <dd-step title="完成" icon="success" />
+      </dd-steps>
+      <view style="height:16rpx"></view>
+      <dd-steps direction="vertical" :active="1">
+        <dd-step title="提交申请" description="填写申请信息" icon="description-o" />
+        <dd-step title="审核" description="等待审核" icon="clock-o" />
+        <dd-step title="通过" description="审核通过" icon="passed" />
+      </dd-steps>
+    </view>
+
+    <view class="demo-section">
+      <text class="demo-title">尺寸 Size</text>
+      <text class="demo-label">size = sm</text>
+      <dd-steps direction="horizontal" :active="1" size="sm">
+        <dd-step title="步骤一" />
+        <dd-step title="步骤二" />
+        <dd-step title="步骤三" />
+      </dd-steps>
+
+      <text class="demo-label" style="margin-top:24rpx">size = md（默认）</text>
+      <dd-steps direction="horizontal" :active="1" size="md">
+        <dd-step title="步骤一" />
+        <dd-step title="步骤二" />
+        <dd-step title="步骤三" />
+      </dd-steps>
+
+      <text class="demo-label" style="margin-top:24rpx">size = lg</text>
+      <dd-steps direction="horizontal" :active="1" size="lg">
+        <dd-step title="步骤一" description="已完成" />
+        <dd-step title="步骤二" description="进行中" />
+        <dd-step title="步骤三" description="待执行" />
+      </dd-steps>
+
+      <text class="demo-label" style="margin-top:24rpx">size = lg（垂直）</text>
+      <dd-steps direction="vertical" :active="1" size="lg">
+        <dd-step title="提交申请" description="填写申请信息" icon="description-o" />
+        <dd-step title="审核" description="等待审核" icon="clock-o" />
+        <dd-step title="完成" description="完成所有流程" />
+      </dd-steps>
+    </view>
+
+    <view class="demo-section">
       <text class="demo-title">步骤数量 Step Count</text>
       <dd-steps direction="horizontal" :active="1">
         <dd-step title="1" />

@@ -56,7 +56,7 @@ const active = ref(1)
 
 ### 自定义颜色
 
-`activeColor` / `inactiveColor` 覆盖默认金色（#F5A623）与灰色（#9E9E9E）。
+`activeColor` / `inactiveColor` 覆盖默认的品牌金（`--dd-primary`）与未激活灰（`--dd-step-inactive-color`）。
 
 :::demo
 <DemoBlock>
@@ -74,6 +74,52 @@ const active = ref(1)
 </DemoBlock>
 :::
 
+### 圆点图标
+
+通过 `icon` 传入 `dd-icon` 图标名，替代默认序号/完成对勾。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-steps :active="2">
+    <dd-step title="下单" description="待支付" icon="orders-o" />
+    <dd-step title="发货" description="运输中" icon="logistics" />
+    <dd-step title="收货" description="已签收" icon="tosend" />
+    <dd-step title="完成" icon="success" />
+  </dd-steps>
+</template>
+```
+
+</DemoBlock>
+:::
+
+### 尺寸
+
+`size` 控制圆点直径与标题/描述字号。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-steps :active="1" size="sm">
+    <dd-step title="步骤一" />
+    <dd-step title="步骤二" />
+    <dd-step title="步骤三" />
+  </dd-steps>
+  <dd-steps :active="1" size="lg">
+    <dd-step title="步骤一" description="已完成" />
+    <dd-step title="步骤二" description="进行中" />
+    <dd-step title="步骤三" description="待执行" />
+  </dd-steps>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -82,8 +128,9 @@ const active = ref(1)
 |------|------|------|--------|
 | active | 当前激活步骤索引（0-indexed） | `number` | `0` |
 | direction | 布局方向 | `'horizontal' \| 'vertical'` | `'horizontal'` |
-| activeColor | 激活态颜色（为空取默认 #F5A623） | `string` | `''` |
-| inactiveColor | 未激活态颜色（为空取默认 #9E9E9E） | `string` | `''` |
+| activeColor | 激活态颜色（为空取主题 token `--dd-primary`） | `string` | `''` |
+| inactiveColor | 未激活态颜色（为空取主题 token `--dd-step-inactive-color`） | `string` | `''` |
+| size | 尺寸档位（圆点直径 16/20/24px，字号 10/12/14px） | `'sm' \| 'md' \| 'lg'` | `'md'` |
 
 ### Events
 
@@ -122,6 +169,7 @@ DdStep 是步骤条的子项组件，**必须配合 `dd-steps` 父组件使用**
 |------|------|------|--------|
 | title | 步骤标题 | `string` | `''` |
 | description | 步骤描述（可选） | `string` | `''` |
+| icon | 圆点内图标（`dd-icon` 名称），传入后替代序号/完成对勾 | `string` | `''` |
 
 ### 注入上下文
 
