@@ -28,11 +28,12 @@
     <view class="demo-section">
       <text class="demo-title">尺寸 Size</text>
       <view class="demo-price-row">
+        <dd-price :rate="88" size="xxs" suffix="/时" />
         <dd-price :rate="88" size="sm" />
         <dd-price :rate="88" />
         <dd-price :rate="88" size="lg" />
       </view>
-      <text class="demo-note">sm 购物车行/小卡 · md 默认常规列表 · lg 结算条/合计</text>
+      <text class="demo-note">xxs 紧凑行（22rpx 正文旁） · sm 购物车行/小卡 · md 默认常规列表 · lg 结算条/合计</text>
     </view>
 
     <!-- submit-bar 内的用法 -->

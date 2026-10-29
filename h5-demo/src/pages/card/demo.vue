@@ -74,6 +74,26 @@
         </dd-card>
       </view>
     </view>
+    <view class="demo-section">
+      <text class="demo-title">内边距 Padding</text>
+      <view class="demo-row" style="flex-wrap:wrap">
+        <dd-card variant="compact" padding="none">
+          <view class="dd-card-b">none 贴边</view>
+        </dd-card>
+        <dd-card variant="compact" padding="sm">
+          <view class="dd-card-b">sm 12px</view>
+        </dd-card>
+        <dd-card variant="compact" padding="md">
+          <view class="dd-card-b">md 16px</view>
+        </dd-card>
+        <dd-card variant="compact" padding="lg">
+          <view class="dd-card-b">lg 24px</view>
+        </dd-card>
+        <dd-card variant="compact" :padding="8">
+          <view class="dd-card-b">数字 8px</view>
+        </dd-card>
+      </view>
+    </view>
     <dd-toast />
     <demo-footer />
   </view>

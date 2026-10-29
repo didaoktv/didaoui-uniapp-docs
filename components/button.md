@@ -1,10 +1,10 @@
 # 按钮 DdButton
 
-> 8-type 系统（default/primary/secondary/ghost/text/success/warning/danger）搭配 3 种尺寸；primary/secondary 默认圆角 var(--radius-md)，text 为零圆角自适应高度，round 可切换为胶囊圆角；plain 为线框形态，disabled 使用 opacity 0.5。
+> 8-type 系统（default/primary/secondary/ghost/text/success/warning/danger）搭配 4 种尺寸（xs/sm/md/lg）；primary/secondary 默认圆角 var(--radius-md)，text 为零圆角自适应高度，round 可切换为胶囊圆角；plain 为线框形态，disabled 使用 opacity 0.5。
 
 ## 介绍
 
-DdButton 是帝到 KTV 体系中的核心操作触发器，覆盖预订包房、表单提交、工具栏动作、状态确认等场景。通过 `type` 区分八种语义（默认、主操作、次操作、幽灵、文字、成功/警告/危险），配合 `size` 三档尺寸与 `round` 胶囊形态可组合出绝大多数 CTA 需求；`plain` 提供透明底的线框形态，适合弱化操作。loading 状态会替换图标为旋转指示并阻止点击，disabled 通过半透明降低视觉权重。
+DdButton 是帝到 KTV 体系中的核心操作触发器，覆盖预订包房、表单提交、工具栏动作、状态确认等场景。通过 `type` 区分八种语义（默认、主操作、次操作、幽灵、文字、成功/警告/危险），配合 `size` 四档尺寸（xs ~ lg）与 `round` 胶囊形态可组合出绝大多数 CTA 需求；`plain` 提供透明底的线框形态，适合弱化操作。loading 状态会替换图标为旋转指示并阻止点击，disabled 通过半透明降低视觉权重。
 
 ## 代码演示
 
@@ -30,7 +30,7 @@ DdButton 是帝到 KTV 体系中的核心操作触发器，覆盖预订包房、
 
 ### 状态色与尺寸
 
-success / warning / danger 用于状态匹配的动作；sm / md / lg 对应内容密度。
+success / warning / danger 用于状态匹配的动作；xs / sm / md / lg 对应内容密度（xs 为 26px 高紧凑档，适合表格行内/密集排序动作）。
 
 :::demo
 <DemoBlock>
@@ -41,6 +41,7 @@ success / warning / danger 用于状态匹配的动作；sm / md / lg 对应内�
     <dd-button type="success">成功</dd-button>
     <dd-button type="warning">警告</dd-button>
     <dd-button type="danger">危险</dd-button>
+    <dd-button size="xs" type="primary">超小</dd-button>
     <dd-button size="sm" type="primary">小</dd-button>
     <dd-button size="lg" type="primary">大</dd-button>
   </view>
@@ -100,7 +101,7 @@ success / warning / danger 用于状态匹配的动作；sm / md / lg 对应内�
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | type | 按钮类型 | `'default' \| 'primary' \| 'secondary' \| 'ghost' \| 'text' \| 'success' \| 'warning' \| 'danger'` | `'primary'` |
-| size | 按钮尺寸 | `'sm' \| 'md' \| 'lg'` | `'md'` |
+| size | 按钮尺寸 | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` |
 | round | 是否胶囊圆角 | `boolean` | `false` |
 | plain | 线框形态（透明底 + 保留 type 主题色文字/描边） | `boolean` | `false` |
 | iconPosition | 图标位置 | `'left' \| 'right'` | `'left'` |

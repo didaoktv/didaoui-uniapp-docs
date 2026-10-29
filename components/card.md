@@ -76,6 +76,28 @@ DdCard 是通用的内容承载容器，覆盖列表项、特色内容、可选�
 </DemoBlock>
 :::
 
+### 内边距
+
+`padding` 与 variant 正交，统一作用于 header / body / footer：档位 `none`（贴边）/ `sm`（12px）/ `md`（16px）/ `lg`（24px），也可直接给数字（按 px）；不传沿用 variant 默认档。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:flex;gap:16rpx;flex-wrap:wrap">
+    <dd-card variant="compact" padding="none">none 贴边</dd-card>
+    <dd-card variant="compact" padding="sm">sm 12px</dd-card>
+    <dd-card variant="compact" padding="md">md 16px</dd-card>
+    <dd-card variant="compact" padding="lg">lg 24px</dd-card>
+    <dd-card variant="compact" :padding="8">数字 8px</dd-card>
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -83,6 +105,7 @@ DdCard 是通用的内容承载容器，覆盖列表项、特色内容、可选�
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | variant | 布局变体 | `'vertical' \| 'horizontal' \| 'compact'` | `'vertical'` |
+| padding | 内边距（与 variant 正交，统一作用于 header/body/footer）：档位 `none` 贴边 / `sm` 12px / `md` 16px / `lg` 24px；也可直接给数字（按 px，如 `padding="24"`）；不传=沿用 variant 默认档 | `'' \| 'none' \| 'sm' \| 'md' \| 'lg' \| number` | `''` |
 | border | 是否显示边框 | `boolean` | `true` |
 | active | 是否选中态（金色描边 + 发光） | `boolean` | `false` |
 | hover | 是否悬停上浮态 | `boolean` | `false` |
@@ -109,6 +132,7 @@ DdCard 是通用的内容承载容器，覆盖列表项、特色内容、可选�
 - 列表场景使用 horizontal 变体，特色内容使用 vertical 变体，密集可选网格使用 compact 变体。
 - 选中态叠加 `active` 以金色描边 + 发光强调。
 - 通过 header / footer / extra 插槽组织结构化内容。
+- 需要调整留白时用 `padding`（与 variant 正交）：整图/贴边内容用 `none`，其余按 `sm`/`md`/`lg`（12/16/24px）择一，也可直接给数字（px）；不传则沿用 variant 默认档。
 :::
 
 ::: warning 注意事项

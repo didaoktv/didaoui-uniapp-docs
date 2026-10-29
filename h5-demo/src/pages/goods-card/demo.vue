@@ -79,6 +79,17 @@
           <dd-button type="primary" size="sm" style="width:100%">加入购物车</dd-button>
         </template>
       </dd-goods-card>
+      <text class="demo-label" style="margin-top:24rpx">Title-suffix 名称后缀 / Price 价格位替换</text>
+      <view class="demo-col">
+        <dd-goods-card thumb="https://dummyimage.com/140x140/00bcd4/ffffff&text=果盘" title="单份果盘" desc="当季水果现切 · 含蘸酱" :price="38">
+          <template #title-suffix><text style="color:#999;font-size:24rpx">×2</text></template>
+        </dd-goods-card>
+        <dd-goods-card thumb="https://dummyimage.com/140x140/4caf50/ffffff&text=赠饮" title="开业赠饮" desc="满额赠送 · 不重复计数">
+          <template #price>
+            <dd-tag variant="warning">赠送</dd-tag>
+          </template>
+        </dd-goods-card>
+      </view>
     </view>
     <dd-toast />
     <demo-footer />
@@ -86,7 +97,7 @@
 </template>
 
 <script setup lang="ts">
-import { DdGoodsCard, DdToast, DdButton } from '@didaoktv/didaoui-uniapp'
+import { DdGoodsCard, DdToast, DdButton, DdTag } from '@didaoktv/didaoui-uniapp'
 import { showToast } from '@didaoktv/didaoui-uniapp/components/dd-toast/dd-toast.vue'
 
 function onClick() {

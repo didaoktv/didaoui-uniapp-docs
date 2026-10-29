@@ -183,6 +183,31 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 </DemoBlock>
 :::
 
+### 名称后缀与价格位
+
+`title-suffix` 与名称同排贴右（名称占满剩余宽度并省略），适合只读的 `×N` 数量等；`price` 插槽整块替换默认价格位，如赠品改「赠送」标签——此时 `price` / `originPrice` / `currency` 均不生效，由插槽内容自行展示。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:flex;flex-direction:column;gap:16rpx">
+    <dd-goods-card thumb="https://dummyimage.com/140x140" title="单份果盘" desc="当季水果现切 · 含蘸酱" :price="38">
+      <template #title-suffix><text style="color:#999;font-size:24rpx">×2</text></template>
+    </dd-goods-card>
+    <dd-goods-card thumb="https://dummyimage.com/140x140" title="开业赠饮" desc="满额赠送 · 不重复计数">
+      <template #price>
+        <dd-tag variant="warning">赠送</dd-tag>
+      </template>
+    </dd-goods-card>
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -217,6 +242,8 @@ DdGoodsCard 是面向商品下单场景的业务卡片，默认横向布局（�
 |--------|------|
 | thumb | 自定义缩略图区域 |
 | default | 覆盖默认信息区（title/desc/价格等） |
+| title-suffix | 名称行后缀（如只读的 `×N` 数量）：与名称同排贴右，名称占满剩余宽度并省略 |
+| price | 整块替换价格位（如赠品改「赠送」标签）；使用时 `price` / `originPrice` / `currency` 不再生效 |
 | price-right | 价格行右侧扩展区（步进器/加购按钮，与价格同排贴底；未用时渲染 num） |
 | bottom | 底部扩展区（独占一行的步进器/加购按钮） |
 

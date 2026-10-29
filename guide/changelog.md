@@ -4,6 +4,26 @@
 
 ---
 
+## v2.9.0
+
+发布日期：2026-10-29
+
+### ✨ 新增
+
+- `dd-button` 新增 `xs` 尺寸档（52rpx 高、caption 字号），适合表格行内与密集排序动作。
+- `dd-price` 新增 `xxs` 尺寸档（整数 22rpx，对齐正文，房态卡片等紧凑行使用）与 `color` 主色：整数、货币符、小数统一起色，不传仍 `inherit`（货币符/小数保持次级灰）。
+- `dd-card` 新增 `padding` 内边距属性：档位 `none` / `sm` / `md` / `lg` 或直接给数字（px），与 `variant` 正交，统一作用于 header / body / footer。
+- `dd-goods-card` 新增 `price` 插槽（整块替换价格位，如赠品改「赠送」标签）与 `title-suffix` 插槽（名称行贴右后缀，如只读 `×N`）。
+
+### 🐛 修复
+
+- `dd-picker` / `dd-date-picker` 遮罩层级改为 `popup + 1`：修复在 `dd-popup` 面板内打开时遮罩被父面板压住、点面板无法关闭。
+- `dd-date-picker` `datetime` 模式日期联动列索引修正（日列取第 2 列）。
+- `dd-cart-bar` / `dd-submit-bar` 占位块高度对齐真实固定栏（原固定 100rpx，比真实栏矮约 16px，底部内容被遮挡）。
+- `dd-order-list` 商品横向滚动隐藏滚动条（保留滚动能力）。
+
+---
+
 ## v2.8.0
 
 发布日期：2026-10-25

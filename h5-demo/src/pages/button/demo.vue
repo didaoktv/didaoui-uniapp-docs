@@ -37,6 +37,7 @@
     <view class="demo-section">
       <text class="demo-title">按钮尺寸 Size</text>
       <view class="demo-row">
+        <dd-button size="xs" type="primary">超小 XS</dd-button>
         <dd-button size="sm" type="primary">小号 SM</dd-button>
         <dd-button size="md" type="primary">中号 MD</dd-button>
         <dd-button size="lg" type="primary">大号 LG</dd-button>
