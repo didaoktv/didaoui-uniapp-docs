@@ -31,6 +31,7 @@
     <view class="demo-section">
       <text class="demo-title">尺寸 Size</text>
       <view class="dd-list-col">
+        <dd-list-cell title="最紧凑 xs" value="值" size="xs" />
         <dd-list-cell title="紧凑 sm" value="值" size="sm" />
         <dd-list-cell title="标准 md（默认）" value="值" />
         <dd-list-cell title="宽松 lg" value="值" size="lg" />

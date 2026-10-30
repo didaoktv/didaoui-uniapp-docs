@@ -23,6 +23,9 @@
 
     <view class="demo-section">
       <text class="demo-title">标题尺寸 Size</text>
+      <dd-cell-group title="xs 最紧凑标题" size="xs">
+        <dd-cell title="标题" value="值" />
+      </dd-cell-group>
       <dd-cell-group title="sm 紧凑标题" size="sm">
         <dd-cell title="标题" value="值" />
       </dd-cell-group>

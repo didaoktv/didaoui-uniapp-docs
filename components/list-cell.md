@@ -49,7 +49,7 @@ DdListCell 是个人中心、设置页、订单列表等场景的通用列表行
 
 ### 尺寸档
 
-`size` 三档 `sm`/`md`/`lg`，行高 44/48/56px（`sm` 即 44px 触控下限），字号 12/14/16px 同步缩放。
+`size` 四档 `xs`/`sm`/`md`/`lg`，行高 32/44/48/56px（`md` 48px 为默认；`sm` 44px 触控下限；`xs` 32px 为紧凑元信息行，低于触控下限，仅限非交互展示），字号 12/12/14/16px 同步缩放。
 
 :::demo
 <DemoBlock>
@@ -57,6 +57,7 @@ DdListCell 是个人中心、设置页、订单列表等场景的通用列表行
 ```vue
 <template>
   <view style="background:#1f1f1f">
+    <dd-list-cell title="最紧凑 xs" subtitle="详情卡元信息行" value="值" size="xs" />
     <dd-list-cell title="紧凑 sm" subtitle="高密度列表" value="值" size="sm" />
     <dd-list-cell title="标准 md（默认）" subtitle="通用列表行" value="值" />
     <dd-list-cell title="宽松 lg" subtitle="强调行" value="值" size="lg" />
@@ -104,7 +105,7 @@ DdListCell 是个人中心、设置页、订单列表等场景的通用列表行
 | subtitle | 副标题文字 | `string` | `''` |
 | value | 右侧数值文字（金色） | `string` | `''` |
 | icon | 左侧图标字符 | `string` | `''` |
-| size | 尺寸档（行高 44/48/56px + 字号 12/14/16px） | `'sm' \| 'md' \| 'lg'` | `'md'` |
+| size | 尺寸档（行高 32/44/48/56px + 字号 12/12/14/16px；`xs` 低于触控下限，仅限非交互展示） | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` |
 | arrow | 是否显示右侧箭头 | `boolean` | `false` |
 | isLink | 是否为导航行（显示箭头 + 按压态） | `boolean` | `false` |
 | borderless | 是否去除底部分割线 | `boolean` | `false` |

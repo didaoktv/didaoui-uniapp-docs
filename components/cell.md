@@ -49,7 +49,7 @@ DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（labe
 
 ### 尺寸档
 
-`size` 三档 `sm`/`md`/`lg`，同时改变行高（竖直 padding 8/12/16px）与字号（12/14/16px）。密集设置页用 `sm`，突出单行用 `lg`。
+`size` 四档 `xs`/`sm`/`md`/`lg`，同时改变竖直留白（4/8/12/16px）与字号（12/12/14/16px）。`xs` 为最低档（实测约 28px 行高），仅用于详情卡内的密集键值行——低于 44px 触控下限，不要用于可点击行；密集设置页用 `sm`，突出单行用 `lg`。
 
 :::demo
 <DemoBlock>
@@ -57,6 +57,7 @@ DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（labe
 ```vue
 <template>
   <view style="background:#1f1f1f">
+    <dd-cell title="最紧凑 xs" label="详情卡键值行" value="12px" size="xs" />
     <dd-cell title="紧凑 sm" label="高密度设置列表" value="12px" size="sm" />
     <dd-cell title="标准 md（默认）" label="通用列表行" value="14px" />
     <dd-cell title="宽松 lg" label="首页入口/强调行" value="16px" size="lg" />
@@ -96,7 +97,7 @@ DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（labe
 | label | 标题下方的描述文字 | `string` | `''` |
 | value | 右侧数值文字 | `string` | `''` |
 | icon | 左侧图标字符 | `string` | `''` |
-| size | 尺寸档（竖直 padding 8/12/16px + 字号 12/14/16px，实测行高 36.4/47.8/59.2px） | `'sm' \| 'md' \| 'lg'` | `'md'` |
+| size | 尺寸档（竖直留白 4/8/12/16px + 字号 12/12/14/16px，实测行高约 28.4/36.4/47.8/59.2px；`xs` 低于触控下限，仅限非交互展示） | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` |
 | isLink | 是否为导航行（渲染箭头，开启 click） | `boolean` | `false` |
 | arrowDirection | 箭头方向 | `'left' \| 'right' \| 'up' \| 'down'` | `'right'` |
 | required | 是否必填（显示红色星号） | `boolean` | `false` |

@@ -81,7 +81,7 @@ DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | title | 分组标题 | `string` | `''` |
-| size | 标题尺寸档（只影响标题排版，不向子 cell 传递） | `'sm' \| 'md' \| 'lg'` | `'md'` |
+| size | 标题尺寸档（只影响标题排版，不向子 cell 传递） | `'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` |
 | inset | 是否圆角卡片内嵌 | `boolean` | `false` |
 | border | 是否显示首尾外框发丝线 | `boolean` | `true` |
 

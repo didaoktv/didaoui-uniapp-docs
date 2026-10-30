@@ -100,6 +100,7 @@
     <view class="demo-section">
       <text class="demo-title">尺寸与能力补充</text>
       <dd-cell-group>
+        <dd-field v-model="a1c" label="尺寸 xs" size="xs" placeholder="竖直 padding 4px · 36px 行高" />
         <dd-field v-model="a1" label="尺寸 lg" size="lg" placeholder="竖直 padding 16px" />
         <dd-field v-model="a1b" label="尺寸 sm" size="sm" placeholder="竖直 padding 8px" />
         <dd-field v-model="a2" label="自定义清空图标" clearable clear-icon="close" placeholder="输入后聚焦看图标" />
@@ -149,6 +150,7 @@ const l3 = ref('')
 const e1 = ref('123')
 const e2 = ref('')
 const a1 = ref('')
+const a1c = ref('')
 const a1b = ref('')
 const a2 = ref('')
 const a3 = ref('')
