@@ -105,6 +105,7 @@ export const homeSections: HomeSection[] = [
       { path: 'pages/cell/demo', name: '单元格', en: 'Cell' },
       { path: 'pages/cell-group/demo', name: '单元格分组', en: 'CellGroup' },
       { path: 'pages/list-cell/demo', name: '列表项', en: 'ListCell' },
+      { path: 'pages/fold/demo', name: '折叠容器', en: 'Fold', ver: 'v2.13.0' },
       { path: 'pages/image/demo', name: '图片', en: 'Image' },
       { path: 'pages/album/demo', name: '相册', en: 'Album', ver: 'v1.2.0' },
       { path: 'pages/parse/demo', name: '富文本解析器', en: 'Parse', ver: 'v1.2.0' },

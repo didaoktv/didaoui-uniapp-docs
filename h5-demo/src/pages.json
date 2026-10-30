@@ -274,6 +274,13 @@
       }
     },
     {
+      "path": "pages/fold/demo",
+      "style": {
+        "navigationBarTitleText": "折叠容器 DdFold",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/cell/demo",
       "style": {
         "navigationBarTitleText": "单元格 DdCell",
