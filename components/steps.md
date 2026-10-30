@@ -120,6 +120,37 @@ const active = ref(1)
 </DemoBlock>
 :::
 
+### 自定义内容
+
+`dd-step` 提供默认插槽：传入内容即整体接管标题/描述区（可放 tag、右对齐时间等富文本行），不传时回退 `title` / `description`。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-steps :active="1" direction="vertical">
+    <dd-step>
+      <view class="step-row">
+        <text class="step-row__title">房态 · 开房</text>
+        <text class="step-row__time">10-29 11:18</text>
+      </view>
+      <text class="step-row__desc">黄志强（门店经理）· 房态 空闲 → 使用中</text>
+    </dd-step>
+    <dd-step>
+      <view class="step-row">
+        <text class="step-row__title">房态 · 续时</text>
+        <text class="step-row__time">10-29 16:55</text>
+      </view>
+      <text class="step-row__desc">黄志强（门店经理）· 续时 2 小时</text>
+    </dd-step>
+  </dd-steps>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -170,6 +201,12 @@ DdStep 是步骤条的子项组件，**必须配合 `dd-steps` 父组件使用**
 | title | 步骤标题 | `string` | `''` |
 | description | 步骤描述（可选） | `string` | `''` |
 | icon | 圆点内图标（`dd-icon` 名称），传入后替代序号/完成对勾 | `string` | `''` |
+
+### Slots
+
+| 名称 | 说明 |
+|------|------|
+| default | 步骤内容区；传入即整体接管标题/描述，未传时渲染 `title` / `description` 兜底 |
 
 ### 注入上下文
 

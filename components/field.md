@@ -27,6 +27,33 @@ const name = ref('')
 </DemoBlock>
 :::
 
+### 尺寸档
+
+`size` 与 DdCell 共用 8/12/16px 竖直 padding，混用 dd-cell-group 时行高对齐；`min-height` 恒保 44px 触控下限。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="background:#1f1f1f">
+    <dd-field v-model="s" label="紧凑 sm" size="sm" placeholder="8px 竖直留白" />
+    <dd-field v-model="m" label="标准 md（默认）" placeholder="12px 竖直留白" />
+    <dd-field v-model="l" label="宽松 lg" size="lg" placeholder="16px 竖直留白" />
+  </view>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const s = ref('')
+const m = ref('')
+const l = ref('')
+</script>
+```
+
+</DemoBlock>
+:::
+
 ### 多行文本与字数限制
 
 `type="textarea"` 配合 `autosize` 与 `show-word-limit`。
@@ -95,6 +122,7 @@ const phone = ref('138')
 | type | 输入类型 | `'text' \| 'textarea' \| 'password' \| 'number' \| 'digit'` | `'text'` |
 | label | 标签文字 | `string` | `''` |
 | placeholder | 占位提示文字 | `string` | `''` |
+| size | 尺寸档（与 dd-cell 同一套竖直 rhythm 8/12/16px） | `'sm' \| 'md' \| 'lg'` | `'md'` |
 | disabled | 是否禁用 | `boolean` | `false` |
 | required | 是否必填（显示星号） | `boolean` | `false` |
 | borderless | 是否无边框 | `boolean` | `false` |

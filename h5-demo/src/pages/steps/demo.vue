@@ -131,6 +131,29 @@
         <dd-step title="开通会员" description="选择会员套餐" />
       </dd-steps>
     </view>
+    <view class="demo-section">
+      <text class="demo-title">自定义内容（默认插槽）</text>
+      <dd-steps direction="vertical" :active="1">
+        <dd-step>
+          <view style="display:flex;justify-content:space-between;align-items:center">
+            <text style="font-size:28rpx;font-weight:600">房态 · 开房</text>
+            <text style="font-size:22rpx;color:#9E9E9E">10-29 11:18</text>
+          </view>
+          <text style="display:block;margin-top:8rpx;font-size:24rpx;color:#9E9E9E">
+            黄志强（门店经理）· 房态 空闲 → 使用中
+          </text>
+        </dd-step>
+        <dd-step>
+          <view style="display:flex;justify-content:space-between;align-items:center">
+            <text style="font-size:28rpx;font-weight:600">房态 · 续时</text>
+            <text style="font-size:22rpx;color:#9E9E9E">10-29 16:55</text>
+          </view>
+          <text style="display:block;margin-top:8rpx;font-size:24rpx;color:#9E9E9E">
+            黄志强（门店经理）· 续时 2 小时
+          </text>
+        </dd-step>
+      </dd-steps>
+    </view>
   <demo-footer />
   </view>
 </template>

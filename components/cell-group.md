@@ -29,6 +29,32 @@ DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾
 </DemoBlock>
 :::
 
+### 标题尺寸
+
+`size` 只调分组标题的排版（竖直 padding + 字号），不级联到子 cell —— 子项自己的 `size` 才是唯一真源。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:flex;flex-direction:column;gap:16rpx">
+    <dd-cell-group title="sm 紧凑标题" size="sm">
+      <dd-cell title="标题" value="值" />
+    </dd-cell-group>
+    <dd-cell-group title="md 默认标题">
+      <dd-cell title="标题" value="值" />
+    </dd-cell-group>
+    <dd-cell-group title="lg 宽松标题" size="lg">
+      <dd-cell title="标题" value="值" />
+    </dd-cell-group>
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ### title 插槽
 
 :::demo
@@ -55,6 +81,7 @@ DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | title | 分组标题 | `string` | `''` |
+| size | 标题尺寸档（只影响标题排版，不向子 cell 传递） | `'sm' \| 'md' \| 'lg'` | `'md'` |
 | inset | 是否圆角卡片内嵌 | `boolean` | `false` |
 | border | 是否显示首尾外框发丝线 | `boolean` | `true` |
 

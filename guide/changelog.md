@@ -4,6 +4,26 @@
 
 ---
 
+## v2.11.0
+
+发布日期：2026-10-30
+
+### 💥 破坏性变更
+
+- `dd-cell` / `dd-field` 的 `size` 由 `'normal' | 'large'` 改为 `'sm' | 'md' | 'lg'`：`normal` → `md`（默认值不变）、`large` → `lg`。旧枚举值不再生效，需同步改调用处。
+
+### ✨ 新增 / 组件增强
+
+- `dd-cell` / `dd-list-cell` / `dd-cell-group` / `dd-field` 统一 `size` 三档（`sm` 紧凑 / `md` 默认 / `lg` 宽松）：
+  - `dd-cell`：竖直 padding 8 / 12 / 16px，根字号 12 / 14 / 16px 同步缩放，子元素字号统一改 `em` 跟随；
+  - `dd-list-cell`：行高定档 44 / 48 / 56px（`md` 48px 与原值一致），同套 padding 与字号；
+  - `dd-cell-group`：`size` 只作用于分节标题排版，不级联子 cell；
+  - `dd-field`：竖直 padding 8 / 12 / 16px，`md` 由 10px 调为 12px 与 `dd-cell` 对齐。
+- `dd-step` 新增默认插槽：传入内容即整体接管标题 / 描述区（可放 tag、右对齐时间等富文本行），不传仍回退 `title` / `description`。
+- `dd-price` 新增 `prefixColor` / `suffixColor`：前后缀单独配色，不传时跟随 `color`（`color` 也不传则保持次级灰）。
+
+---
+
 ## v2.10.0
 
 发布日期：2026-10-29

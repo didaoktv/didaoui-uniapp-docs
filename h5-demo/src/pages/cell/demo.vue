@@ -24,9 +24,11 @@
     <view class="demo-section">
       <text class="demo-title">尺寸 Size</text>
       <dd-cell-group inset>
-        <dd-cell title="标准 normal" value="描述" />
-        <dd-cell title="大号 large" value="描述" size="large" />
+        <dd-cell title="紧凑 sm" value="描述" size="sm" />
+        <dd-cell title="标准 md（默认）" value="描述" />
+        <dd-cell title="宽松 lg" value="描述" size="lg" />
       </dd-cell-group>
+      <text class="demo-note">size 同时改变行高与字号（padding 8/12/16px + 字号 12/14/16px）</text>
     </view>
 
     <view class="demo-section">

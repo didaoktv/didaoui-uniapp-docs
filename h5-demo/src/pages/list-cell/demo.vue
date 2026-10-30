@@ -29,6 +29,15 @@
     </view>
 
     <view class="demo-section">
+      <text class="demo-title">尺寸 Size</text>
+      <view class="dd-list-col">
+        <dd-list-cell title="紧凑 sm" value="值" size="sm" />
+        <dd-list-cell title="标准 md（默认）" value="值" />
+        <dd-list-cell title="宽松 lg" value="值" size="lg" />
+      </view>
+    </view>
+
+    <view class="demo-section">
       <text class="demo-title">箭头 Arrow / Link</text>
       <view class="dd-list-col">
         <dd-list-cell title="我的订单" value="3 条" :arrow="true" :is-link="true" @click="tip('订单')" />

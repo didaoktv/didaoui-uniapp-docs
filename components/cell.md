@@ -1,10 +1,10 @@
 # 单元格 DdCell
 
-> 列表单元格，支持 sm/md 尺寸、可选必填星号，isLink 控制箭头并门控 click 触发。
+> 列表单元格，支持 sm/md/lg 三档尺寸、可选必填星号，isLink 控制箭头并门控 click 触发。
 
 ## 介绍
 
-DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（label）、右侧数值 + 箭头组成。支持 `sm`/`md` 两档尺寸，`required` 显示红色星号，`isLink` 渲染箭头并仅在开启时向外抛 click。`arrowDirection` 控制箭头朝向，`center` 控制垂直对齐，`borderless` 去除底部分割线。
+DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（label）、右侧数值 + 箭头组成。支持 `sm`/`md`/`lg` 三档尺寸（行高与字号同步缩放），`required` 显示红色星号，`isLink` 渲染箭头并仅在开启时向外抛 click。`arrowDirection` 控制箭头朝向，`center` 控制垂直对齐，`borderless` 去除底部分割线。
 
 ## 代码演示
 
@@ -47,6 +47,26 @@ DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（labe
 </DemoBlock>
 :::
 
+### 尺寸档
+
+`size` 三档 `sm`/`md`/`lg`，同时改变行高（竖直 padding 8/12/16px）与字号（12/14/16px）。密集设置页用 `sm`，突出单行用 `lg`。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="background:#1f1f1f">
+    <dd-cell title="紧凑 sm" label="高密度设置列表" value="12px" size="sm" />
+    <dd-cell title="标准 md（默认）" label="通用列表行" value="14px" />
+    <dd-cell title="宽松 lg" label="首页入口/强调行" value="16px" size="lg" />
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ### 箭头方向
 
 `arrow-direction` 控制箭头朝向，配合自定义右侧内容。
@@ -76,7 +96,7 @@ DdCell 是结构化的列表行，由左侧图标、中部标题 + 描述（labe
 | label | 标题下方的描述文字 | `string` | `''` |
 | value | 右侧数值文字 | `string` | `''` |
 | icon | 左侧图标字符 | `string` | `''` |
-| size | 尺寸 | `'sm' \| 'md'` | `'md'` |
+| size | 尺寸档（竖直 padding 8/12/16px + 字号 12/14/16px，实测行高 36.4/47.8/59.2px） | `'sm' \| 'md' \| 'lg'` | `'md'` |
 | isLink | 是否为导航行（渲染箭头，开启 click） | `boolean` | `false` |
 | arrowDirection | 箭头方向 | `'left' \| 'right' \| 'up' \| 'down'` | `'right'` |
 | required | 是否必填（显示红色星号） | `boolean` | `false` |
@@ -169,6 +189,7 @@ DdCellGroup 用于将多个 `dd-cell` 或 `dd-list-cell` 组织为带圆角的�
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|--------|
 | title | 分组标题 | `string` | `''` |
+| size | 标题尺寸档（只影响标题排版，不向子 cell 传递） | `'sm' \| 'md' \| 'lg'` | `'md'` |
 
 ### Slots
 

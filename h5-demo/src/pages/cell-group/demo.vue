@@ -22,6 +22,19 @@
     </view>
 
     <view class="demo-section">
+      <text class="demo-title">标题尺寸 Size</text>
+      <dd-cell-group title="sm 紧凑标题" size="sm">
+        <dd-cell title="标题" value="值" />
+      </dd-cell-group>
+      <dd-cell-group title="md 默认标题">
+        <dd-cell title="标题" value="值" />
+      </dd-cell-group>
+      <dd-cell-group title="lg 宽松标题" size="lg">
+        <dd-cell title="标题" value="值" />
+      </dd-cell-group>
+    </view>
+
+    <view class="demo-section">
       <text class="demo-title">无外框 border=false</text>
       <dd-cell-group title="无边框分组" :border="false">
         <dd-cell title="标题" value="值" />

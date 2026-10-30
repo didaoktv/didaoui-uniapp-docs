@@ -79,8 +79,10 @@ DdPrice 用于金额展示（房卡价、券面额、合计金额等场景）：
 | mark | 整数/小数分隔符 | `string` | `'.'` |
 | prefix | 额外前缀文案（货币符之前） | `string` | `''` |
 | suffix | 额外后缀文案（如「起」） | `string` | `''` |
+| prefixColor | 前缀颜色；不传跟随 `color`（`color` 也不传时保持次级灰） | `string` | `''` |
+| suffixColor | 后缀颜色；不传跟随 `color`（`color` 也不传时保持次级灰） | `string` | `''` |
 | size | 尺寸：xxs 紧凑行最小号（22rpx 正文旁）/ xs 最小号（一行四列小卡）/ sm 小号（购物车行/小卡）/ md 常规 / lg 大号（结算条/合计） | `'xxs' \| 'xs' \| 'sm' \| 'md' \| 'lg'` | `'md'` |
-| color | 主色（CSS 颜色/变量）：整数、货币符、小数统一起色；不传则 `inherit`，货币符/小数保持次级灰 | `string` | `''` |
+| color | 主色（CSS 颜色/变量）：整数、货币符、小数、前后缀统一起色；不传则 `inherit`，货币符/小数/前后缀保持次级灰 | `string` | `''` |
 
 ::: warning 注意事项
 - `rate` 语义为元：与 `dd-submit-bar` 的 `price`（分）不同，后者内部会除以 100 再交给本组件。
