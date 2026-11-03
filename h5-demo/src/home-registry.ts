@@ -83,6 +83,7 @@ export const homeSections: HomeSection[] = [
       { path: 'pages/room-card/demo', name: '房间卡片', en: 'RoomCard' },
       { path: 'pages/goods-card/demo', name: '商品卡片', en: 'GoodsCard', ver: 'v1.4.3' },
       { path: 'pages/feature-grid/demo', name: '功能网格', en: 'FeatureGrid' },
+      { path: 'pages/waterfall/demo', name: '瀑布流', en: 'Waterfall' },
       { path: 'pages/collapse/demo', name: '折叠面板', en: 'Collapse' },
       { path: 'pages/sticky/demo', name: '吸顶容器', en: 'Sticky' },
     ],

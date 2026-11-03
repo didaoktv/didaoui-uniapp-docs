@@ -1,10 +1,10 @@
 # 单元格分组 DdCellGroup
 
-> 单元格分组容器：title 分组标题、inset 圆角卡片内嵌、border 首尾发丝线开关，支持 title / default 插槽。
+> 单元格分组容器：title 分组标题、inset 圆角卡片内嵌、border 首尾发丝线开关，同时兼容 DdCell 与 DdListCell 子项，支持 title / default 插槽。
 
 ## 介绍
 
-DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾外框发丝线；`inset` 切换为圆角卡片内嵌；`border=false` 去掉外框；标题与内容均支持插槽自定义。
+DdCellGroup 用于把多个单元格组织成语义分组，子项同时兼容 **DdCell** 与 **DdListCell**（自动移除末行发丝线）。默认通栏 + 首尾外框发丝线；`inset` 切换为圆角卡片内嵌；`border=false` 去掉外框；标题与内容均支持插槽自定义。
 
 ## 代码演示
 
@@ -55,6 +55,27 @@ DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾
 </DemoBlock>
 :::
 
+### 包裹 DdListCell
+
+DdListCell 作为子项同样生效：末行发丝线自动去除，`inset` 圆角正常裁切。适合订单详情等密集键值行分组。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-cell-group title="订单信息" inset>
+    <dd-list-cell size="xs" title="状态" value="进行中" />
+    <dd-list-cell size="xs" title="订单号" value="KT20260303001" />
+    <dd-list-cell size="xs" title="房间" value="VIP大包" />
+    <dd-list-cell size="xs" title="商品金额" value="¥128.00" />
+  </dd-cell-group>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ### title 插槽
 
 :::demo
@@ -90,7 +111,7 @@ DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾
 | 名称 | 说明 |
 |------|------|
 | title | 自定义分组标题（优先于 title prop） |
-| default | 分组内容（通常为若干 DdCell） |
+| default | 分组内容（DdCell 或 DdListCell） |
 
 ## 设计规范
 
@@ -100,6 +121,6 @@ DdCellGroup 用于把多个 DdCell 组织成语义分组。默认通栏 + 首尾
 :::
 
 ::: warning 注意事项
-- 分组的默认插槽内容应保持同质（均为 DdCell）。
+- 分组的默认插槽内容应保持同质（均为 DdCell 或均为 DdListCell）。
 - 不要在一个分组里混入非 Cell 组件，避免发丝线断裂。
 :::

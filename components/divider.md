@@ -64,6 +64,26 @@ DdDivider 用于内容分节与带文字的分割线。由左右两段线条与�
 </DemoBlock>
 :::
 
+### 自定义最小高度
+
+默认最小高度 24px；`minHeight` 按 rpx 传入自有间距，传 `0` 则完全交给父容器控制。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <view style="display:flex;flex-direction:column;gap:24rpx">
+    <dd-divider :min-height="0">贴紧（交给父容器）</dd-divider>
+    <dd-divider :min-height="64">64rpx 更宽松</dd-divider>
+    <dd-divider :min-height="0" :dashed="true" />
+  </view>
+</template>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -73,6 +93,7 @@ DdDivider 用于内容分节与带文字的分割线。由左右两段线条与�
 | contentPosition | 内容位置 | `'left' \| 'center' \| 'right'` | `'center'` |
 | dashed | 是否虚线 | `boolean` | `false` |
 | hairline | 是否 1px 细线（false 为 4rpx；dashed 自动归一化为 1px） | `boolean` | `true` |
+| minHeight | 最小高度（rpx，运行时转 px）；不传走 SCSS token 24px，内容更高时仍随内容撑开 | `number` | `24px（$dd-space-5）` |
 
 ### Events
 

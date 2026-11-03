@@ -225,6 +225,13 @@
       }
     },
     {
+      "path": "pages/waterfall/demo",
+      "style": {
+        "navigationBarTitleText": "瀑布流 DdWaterfall",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/sticky/demo",
       "style": {
         "navigationBarTitleText": "吸顶容器 DdSticky",

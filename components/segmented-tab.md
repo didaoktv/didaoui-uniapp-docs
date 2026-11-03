@@ -81,6 +81,32 @@ const active = ref(0)
 </DemoBlock>
 :::
 
+### 小号尺寸
+
+`size="sm"` 沿用 24rpx 字号与更紧内边距，用于页面工具行等与胶囊控件同高的紧凑场景。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-segmented-tab
+    v-model="active"
+    :options="['全部', '进行中', '已完成']"
+    variant="pill"
+    size="sm"
+  />
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const active = ref(0)
+</script>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -90,6 +116,13 @@ const active = ref(0)
 | modelValue (v-model) | 当前选中索引 | `number` | `0` |
 | options | 选项数组，字符串或 `{ label }` 对象 | `(string \| { label: string })[]` | `[]` |
 | variant | 变体样式 | `'pill' \| 'text'` | `'pill'` |
+| size | 尺寸档位，`sm` 为紧凑档（caption 字号、更紧内边距） | `'sm' \| 'md'` | `'md'` |
+
+### Methods
+
+| 方法名 | 说明 |
+|--------|------|
+| refresh | 主动重测指示块位置。组件在隐藏容器（弹层 / 抽屉 / 未激活 tab）内挂载时首测拿不到宽度，容器可见后调一次即可收敛 |
 
 ### Events
 
@@ -102,6 +135,7 @@ const active = ref(0)
 
 ::: tip 最佳实践
 - 2-3 个时间筛选类选项使用 pill 变体。
+- pill 变体按容器等分填充，标签单行、超长自动省略（不会撑破容器）；选项更多或标签更长时改用 text 变体（可换行）或 dd-swipeable-tab 的 scrollable 模式。
 - 4+ 排序/筛选选项使用 text 变体。
 - 激活文字使用品牌金（var(--didao-primary-400)）。
 - 标签保持简短（2-4 字）。

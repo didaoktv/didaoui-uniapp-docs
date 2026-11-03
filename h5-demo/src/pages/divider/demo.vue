@@ -39,6 +39,16 @@
     </view>
 
     <view class="demo-section">
+      <text class="demo-title">最小高度 MinHeight</text>
+      <text class="demo-label">默认 24px（不传）</text>
+      <dd-divider />
+      <text class="demo-label" style="margin-top:24rpx">min-height: 0（交给父容器）</text>
+      <dd-divider :min-height="0" />
+      <text class="demo-label" style="margin-top:24rpx">min-height: 64rpx</text>
+      <dd-divider :min-height="64" />
+    </view>
+
+    <view class="demo-section">
       <text class="demo-title">组合 Combinations</text>
       <dd-divider content-position="center" :dashed="true">居中+虚线</dd-divider>
       <dd-divider content-position="left" :hairline="true">靠左+细线</dd-divider>

@@ -72,6 +72,16 @@
       <text class="demo-note">初始选中第二项</text>
     </view>
 
+    <view class="demo-section">
+      <text class="demo-title">小号尺寸 (size=sm)</text>
+      <dd-segmented-tab
+        v-model="smVal"
+        :options="['全部', '进行中', '已完成']"
+        variant="pill"
+        size="sm"
+      />
+    </view>
+
     <dd-toast />
     <demo-footer />
   </view>
@@ -92,6 +102,7 @@ const multiTextVal = ref(0)
 const eventVal = ref(0)
 const segEvent = ref('暂无')
 const startVal = ref(1)
+const smVal = ref(0)
 
 const objOptions = [
   { label: '标准间' },

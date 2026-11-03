@@ -4,7 +4,7 @@
 
 ## 介绍
 
-DdGoodsSku 用于商城下单前的规格选择（酒水套餐、果盘规格等）。`goodsInfo` 提供商品基础信息（image/picture、price/price_fee、stock/quantity）；`skuTree` 定义规格维度（如"规格/数量"），`skuList` 为每个有效组合的记录（含各维度取值 + price + stock）。组件按已选维度实时计算无效组合并置灰；头部价格/库存随选择联动；数量步进器上限取库存与 `maxBuy` 的较小值。选满全部维度后确认按钮才可用。
+DdGoodsSku 用于商城下单前的规格选择（酒水套餐、果盘规格等）。`goodsInfo` 提供商品基础信息（image/picture、price/price_fee、stock/quantity）；`skuTree` 定义规格维度（如"规格/数量"），`skuList` 为每个有效组合的记录（含各维度取值 + price + stock）。组件按已选维度实时计算无效组合并置灰；头部价格/库存随选择联动；未选规格时头部显示灰色提示「请选择规格」，选中后实时显示「已选: xxx」；数量步进器上限取库存与 `maxBuy` 的较小值。选满全部维度后确认按钮才可用。
 
 ## 代码演示
 
