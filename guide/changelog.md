@@ -4,6 +4,21 @@
 
 ---
 
+## v2.16.0
+
+发布日期：2026-11-19
+
+### ✨ 新增 / 组件增强
+
+- `dd-action-sheet` 的 `ActionItem` 新增 `iconColor`：自定义圆形图标内图标 / 首字的颜色。此前 `color` 只染文字、图标底仍是默认金色渐变，浅色 `color` 文字与白图标都不清晰；现在 `color` 同时作为圆形图标实心底，浅色底（金 / 黄等）配 `iconColor` 深色图标即可保证辨识。不传时保持默认金色渐变 + glow。
+
+### 🐛 修复
+
+- `dd-card` 横向卡片（horizontal）相邻区块间距双倍：收窄 header/body/footer 内侧 padding，外缘与区块间统一 32rpx；移除 horizontal + active 下重复的 2px 描边覆盖（基础 `--active` 规则已覆盖）。
+- `dd-sticky` H5 吸顶检测失效：uni H5 模板 ref 拿到的是组件实例包装，真实 DOM 在 `$el` 上，IntersectionObserver 取节点改为 `$el ?? ref`，并加 `Element` 类型守卫。
+
+---
+
 ## v2.13.0
 
 发布日期：2026-10-30

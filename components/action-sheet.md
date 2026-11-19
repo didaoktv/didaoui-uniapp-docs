@@ -77,6 +77,34 @@ const items = [
 </DemoBlock>
 :::
 
+### 自定义图标底色与图标色
+
+传 `color` 时圆形图标底改为该纯色（放弃默认金色渐变 + glow），文字同步变色。底色为浅色（金 / 黄等）时白字看不清，用 `iconColor` 单独把图标 / 首字改成深色。
+
+:::demo
+<DemoBlock>
+
+```vue
+<template>
+  <dd-button type="primary" @click="show = true">自定义颜色</dd-button>
+  <dd-action-sheet v-model="show" title="会员权益" :items="items" />
+</template>
+
+<script setup>
+import { ref } from 'vue'
+const show = ref(false)
+const items = [
+  // 浅色金底 + 深色图标：iconColor 避免白字看不清
+  { name: '黄金会员', icon: 'gem', color: '#F5D76E', iconColor: '#7A5B00' },
+  // 深色底沿用默认白图标
+  { name: '尊享', icon: 'vip-card', color: '#4A3B8C' },
+]
+</script>
+```
+
+</DemoBlock>
+:::
+
 ## API
 
 ### Props
@@ -97,7 +125,8 @@ ActionItem 结构：
 |------|------|------|
 | name | 操作名称（必填） | `string` |
 | icon | 图标文案（缺省取 name 首字） | `string` |
-| color | 文字颜色 | `string` |
+| color | 自定义色：同时作为圆形图标底色与文字颜色（默认金色渐变底 + glow） | `string` |
+| iconColor | 圆形图标内图标 / 首字的颜色；自定义浅色底色（金 / 黄等）时需传深色避免白字看不清，默认白 | `string` |
 
 ### Events
 
@@ -116,9 +145,9 @@ ActionItem 结构：
 ::: tip 最佳实践
 - 用于上下文相关的操作集合（如房间操作）。
 - 根据操作数量配置 `columns`（默认 4）。
-- 图标使用金色渐变圆形背景配 glow。
+- 默认图标用金色渐变圆形背景配 glow；传 `color` 改用纯色底，浅色底配 `iconColor` 深色图标。
 - 点击遮罩或取消按钮关闭。
-- 通过 `items` 驱动操作列表（name + 可选 icon）。
+- 通过 `items` 驱动操作列表（name + 可选 icon / color / iconColor）。
 :::
 
 ::: warning 注意事项

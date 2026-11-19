@@ -82,7 +82,8 @@ const items2 = [
   { name: '取消', icon: 'cross' },
 ]
 const itemsColor = [
-  { name: '金色', icon: 'star', color: '#F5A623' },
+  // 浅色金底 + 深色图标：iconColor 避免白字看不清
+  { name: '金色', icon: 'star', color: '#F5D76E', iconColor: '#7A5B00' },
   { name: '蓝色', icon: 'music', color: 'var(--dd-accent)' },
   { name: '红色', icon: 'like-o', color: '#E53935' },
   { name: '绿色', icon: 'success', color: '#4CAF50' },
