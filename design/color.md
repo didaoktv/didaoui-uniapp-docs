@@ -12,7 +12,7 @@
 | --- | --- | --- | --- |
 | `primary` | 帝王金 | `#F5A623` | 主操作、激活态、焦点环、金色霓虹 |
 | `accent` | 皇家蓝 | `#2D4BA0` | 次级强调、卡片媒体渐变、蓝色霓虹 |
-| `success` | 成功 | `#4CAF50` | 完成、在线、正向反馈 |
+| `success` | 成功 | `#32F08C` | 完成、在线、正向反馈 |
 | `warning` | 警示 | `#F9A825` | 提醒、待处理、限时 |
 | `error` | 错误 | `#E53935` | 失败、危险、删除 |
 | `info` | 信息 | `#00BCD4` | 中性提示、辅助说明 |
@@ -74,14 +74,14 @@
 
 <ColorCard name="success-50" hex="#E8F5E9" />
 <ColorCard name="success-400" hex="#66BB6A" />
-<ColorCard name="success-500" hex="#4CAF50" />
+<ColorCard name="success-500" hex="#32F08C" />
 <ColorCard name="success-600" hex="#388E3C" />
 <ColorCard name="success-800" hex="#1B5E20" />
 
 | Token | Hex | 用法 |
 | --- | --- | --- |
 | `--didao-success-400` | `#66BB6A` | 成功图标浅色 |
-| `--didao-success-500` | `#4CAF50` | **基准**，成功发光源 |
+| `--didao-success-500` | `#32F08C` | **基准**，成功发光源 |
 | `--didao-success-600` | `#388E3C` | 成功深色文本 |
 
 ### Warning · 警示
