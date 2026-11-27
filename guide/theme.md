@@ -47,7 +47,8 @@ SCSS 变量覆盖**必须在 `@import` 之后**，且变量需用 `!default` 声
 /* 色彩 */
 $dd-primary: #f5a623 !default;
 $dd-accent: #2d4ba0 !default;
-$dd-success: #32f08c !default;
+$dd-success: #4caf50 !default;
+$dd-mint: #32f08c !default;
 $dd-warning: #f9a825 !default;
 $dd-error: #e53935 !default;
 $dd-info: #00bcd4 !default;

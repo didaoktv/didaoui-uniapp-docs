@@ -49,7 +49,7 @@
 
 ## 发光矩阵
 
-发光（glow）是 0 offset 的彩色阴影，模拟光源辐射。系统提供 **7 色 × 3 档** 完整矩阵，命名统一为 `--shadow-glow-{color}-{size}`。
+发光（glow）是 0 offset 的彩色阴影，模拟光源辐射。系统提供 **8 色 × 3 档** 完整矩阵，命名统一为 `--shadow-glow-{color}-{size}`。
 
 ### 发光色源
 
@@ -57,7 +57,8 @@
 | --- | --- | --- |
 | 金色 (gold) | `#F5A623` | 主操作、激活态、VIP 金 |
 | 蓝色 (blue) | `#2D4BA0` | 辅色强调、卡片媒体 |
-| 成功 (success) | `#32F08C` | 完成、在线 |
+| 成功 (success) | `#4CAF50` | 完成、在线 |
+| 薄荷 (mint) | `#32F08C` | 高亮标记（无文字场合） |
 | 警示 (warning) | `#F9A825` | 提醒、限时 |
 | 错误 (error) | `#E53935` | 失败、危险 |
 | 信息 (info) | `#00BCD4` | 中性提示 |
@@ -95,10 +96,13 @@
   --shadow-glow-blue-md:  0 0 20px rgba(45,75,160,0.5);
   --shadow-glow-blue-lg:  0 0 24px rgba(45,75,160,0.5), 0 0 48px rgba(45,75,160,0.25);
 
-  /* 语义色发光 — success / warning / error / info / vip */
+  /* 语义色发光 — success / mint / warning / error / info / vip */
   --shadow-glow-success-sm:  0 0 8px rgba(76,175,80,0.4);
   --shadow-glow-success-md:  0 0 16px rgba(76,175,80,0.4), 0 4px 12px rgba(0,0,0,0.3);
   --shadow-glow-success-lg:  0 0 24px rgba(76,175,80,0.5), 0 8px 24px rgba(0,0,0,0.4);
+  --shadow-glow-mint-sm:     0 0 8px rgba(50,240,140,0.45);
+  --shadow-glow-mint-md:     0 0 16px rgba(50,240,140,0.45), 0 4px 12px rgba(0,0,0,0.3);
+  --shadow-glow-mint-lg:     0 0 24px rgba(50,240,140,0.55), 0 8px 24px rgba(0,0,0,0.4);
   --shadow-glow-warning-sm:  0 0 8px rgba(249,168,37,0.4);
   --shadow-glow-warning-md:  0 0 16px rgba(249,168,37,0.4), 0 4px 12px rgba(0,0,0,0.3);
   --shadow-glow-warning-lg:  0 0 24px rgba(249,168,37,0.5), 0 8px 24px rgba(0,0,0,0.4);

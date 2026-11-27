@@ -12,7 +12,8 @@
 | --- | --- | --- | --- |
 | `primary` | 帝王金 | `#F5A623` | 主操作、激活态、焦点环、金色霓虹 |
 | `accent` | 皇家蓝 | `#2D4BA0` | 次级强调、卡片媒体渐变、蓝色霓虹 |
-| `success` | 成功 | `#32F08C` | 完成、在线、正向反馈 |
+| `success` | 成功 | `#4CAF50` | 完成、在线、正向反馈 |
+| `mint` | 薄荷绿 | `#32F08C` | 高亮标记、状态点、徽标、图标底（无文字场合） |
 | `warning` | 警示 | `#F9A825` | 提醒、待处理、限时 |
 | `error` | 错误 | `#E53935` | 失败、危险、删除 |
 | `info` | 信息 | `#00BCD4` | 中性提示、辅助说明 |
@@ -74,15 +75,38 @@
 
 <ColorCard name="success-50" hex="#E8F5E9" />
 <ColorCard name="success-400" hex="#66BB6A" />
-<ColorCard name="success-500" hex="#32F08C" />
+<ColorCard name="success-500" hex="#4CAF50" />
 <ColorCard name="success-600" hex="#388E3C" />
 <ColorCard name="success-800" hex="#1B5E20" />
 
 | Token | Hex | 用法 |
 | --- | --- | --- |
 | `--didao-success-400` | `#66BB6A` | 成功图标浅色 |
-| `--didao-success-500` | `#32F08C` | **基准**，成功发光源 |
+| `--didao-success-500` | `#4CAF50` | **基准**，成功发光源 |
 | `--didao-success-600` | `#388E3C` | 成功深色文本 |
+
+> v2.17.0 起 success-500 由霓虹绿 `#32F08C` 回退为 `#4CAF50`：霓虹绿在暗底上对比度不足且不适合承载文字，高亮标记场景改用 mint 色阶。
+
+### Mint · 薄荷绿
+
+<ColorCard name="mint-50" hex="#E8FDF2" />
+<ColorCard name="mint-300" hex="#7FF0B8" />
+<ColorCard name="mint-400" hex="#5AEEA4" />
+<ColorCard name="mint-500" hex="#32F08C" />
+<ColorCard name="mint-600" hex="#1EC873" />
+<ColorCard name="mint-700" hex="#129B58" />
+<ColorCard name="mint-800" hex="#0A6E3E" />
+
+| Token | Hex | 用法 |
+| --- | --- | --- |
+| `--didao-mint-300` | `#7FF0B8` | 装饰渐变中间色 |
+| `--didao-mint-400` | `#5AEEA4` | 状态点、图标 |
+| `--didao-mint-500` | `#32F08C` | **基准**，薄荷发光源（无文字场合） |
+| `--didao-mint-600` | `#1EC873` | 强调描边 |
+| `--didao-mint-700` | `#129B58` | 文字底色（白字 3.59:1） |
+| `--didao-mint-800` | `#0A6E3E` | 深色文字底（白字 6.34:1） |
+
+> mint-500 是高亮薄荷色，**仅用于无文字场合**（状态点、标记、徽标、图标底）。白字在 mint-500 上仅 1.5:1，需要承载文字时改用 mint-700 或 mint-800。
 
 ### Warning · 警示
 

@@ -470,6 +470,13 @@
       }
     },
     {
+      "path": "pages/week-grid/demo",
+      "style": {
+        "navigationBarTitleText": "周视图排班网格 DdWeekGrid",
+        "navigationStyle": "custom"
+      }
+    },
+    {
       "path": "pages/qrcode/demo",
       "style": {
         "navigationBarTitleText": "二维码 DdQrcode",

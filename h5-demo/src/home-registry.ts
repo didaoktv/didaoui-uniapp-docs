@@ -45,6 +45,7 @@ export const homeSections: HomeSection[] = [
       { path: 'pages/tree-select/demo', name: '分类选择', en: 'TreeSelect', ver: 'v1.4.0' },
       { path: 'pages/date-picker/demo', name: '日期选择', en: 'DatePicker' },
       { path: 'pages/calendar/demo', name: '日历', en: 'Calendar' },
+      { path: 'pages/week-grid/demo', name: '周视图排班网格', en: 'WeekGrid', ver: 'v2.17.0' },
       { path: 'pages/keyboard/demo', name: '键盘', en: 'Keyboard', ver: 'v1.2.0' },
       { path: 'pages/number-keyboard/demo', name: '数字键盘', en: 'NumberKeyboard', ver: 'v1.2.0' },
       { path: 'pages/car-keyboard/demo', name: '车牌键盘', en: 'CarKeyboard', ver: 'v1.2.0' },
